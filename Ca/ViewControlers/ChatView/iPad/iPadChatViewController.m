@@ -6,9 +6,9 @@
 //  Copyright (c) 2023 Mali357. All rights reserved.
 //
 
-#import "ChatViewController.h"
+#import "iPadChatViewController.h"
 
-@interface ChatViewController () <UITextViewDelegate, UITextFieldDelegate, NSURLConnectionDelegate>
+@interface iPadChatViewController () <UITextViewDelegate, UITextFieldDelegate, NSURLConnectionDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *chatTextView;
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation ChatViewController
+@implementation iPadChatViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

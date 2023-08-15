@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pdZ-9K-PwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="5056" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="pdZ-9K-PwU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -38,14 +40,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Begin your conversation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zRC-lF-ARp">
-                                                    <rect key="frame" x="10" y="2" width="212" height="22"/>
+                                                    <rect key="frame" x="10" y="2" width="203" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="(Note, they will NOT be saved.)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m40-gg-zRb">
-                                                    <rect key="frame" x="10" y="24" width="195" height="18"/>
+                                                    <rect key="frame" x="10" y="24" width="200" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,8 +66,11 @@
                                 <string key="footerTitle">Click on the "Save" button in the titlebar to export your conversations to a ".txt" file. This is (for now until i update this) the only way to of saving conversations. Soon there'll be a proper "History" tab here, so stay tuned.</string>
                                 <cells/>
                             </tableViewSection>
-                            <tableViewSection headerTitle="NOTE" id="pvV-6Z-4mW">
+                            <tableViewSection headerTitle="PLEASE READ THROUGH THOROUGHLY" id="pvV-6Z-4mW">
                                 <string key="footerTitle">This app is in it's alpha stages. It has bugs and missing things, take that for granted. If I trust you and you have the app you shall NOT distribute it without letting me know.</string>
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" footerTitle="The Chat interface and GUI of this application are invalid" id="asZ-gW-mfy">
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -105,6 +110,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="malicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-Ek-Tlx">
+                                                    <rect key="frame" x="105" y="9" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="90" id="VWL-4c-EUz"/>
                                                         <constraint firstAttribute="height" constant="90" id="ygH-UL-UeL"/>
@@ -123,13 +129,14 @@
                             <tableViewSection headerTitle="Credit to the API" footerTitle="OpenAI" id="Nss-2k-6ca">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="3FO-yh-uB4">
-                                        <rect key="frame" x="0.0" y="233" width="320" height="110"/>
+                                        <rect key="frame" x="0.0" y="232" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="openaicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3zj-Fg-Tfy">
+                                                    <rect key="frame" x="44" y="9" width="213" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="90" id="MqP-vV-ZOy"/>
                                                         <constraint firstAttribute="width" constant="213" id="QR4-4V-Ld5"/>
@@ -176,13 +183,14 @@
                                 <string key="footerTitle">The API key is very important, In order for this application to even work, you need to create a ChatGPT API key. If you don't know how to create one, please research how on the internet. (this doesnt function as of rn and my key is instead supplied (expiry: november 2023)</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YDd-2D-ODO">
-                                        <rect key="frame" x="0.0" y="142" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="140" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="API key goes into here..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-cK-fnu">
+                                                    <rect key="frame" x="12" y="7" width="284" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="OD8-sx-CVL"/>
                                                         <constraint firstAttribute="width" constant="284" id="lhW-Gf-Knf"/>
@@ -203,20 +211,20 @@
                             <tableViewSection headerTitle="Miscelanneous" footerTitle="Here is misc stuff that just won't fit in with the other toggles" id="f4v-hS-veO">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g7Z-BN-shX" detailTextLabel="SMD-Xa-Bme" style="IBUITableViewCellStyleSubtitle" id="1BQ-00-Rkr">
-                                        <rect key="frame" x="0.0" y="379" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="370" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7Z-BN-shX">
-                                                    <rect key="frame" x="10" y="2" width="52" height="22"/>
+                                                    <rect key="frame" x="10" y="2" width="51" height="22"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="or also &quot;contributors&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SMD-Xa-Bme">
-                                                    <rect key="frame" x="10" y="24" width="129" height="18"/>
+                                                    <rect key="frame" x="10" y="24" width="139" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -229,20 +237,20 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fZH-To-JjU" detailTextLabel="zib-8O-v5Q" style="IBUITableViewCellStyleSubtitle" id="eS2-JX-XS0">
-                                        <rect key="frame" x="0.0" y="424" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="415" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Welcome page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fZH-To-JjU">
-                                                    <rect key="frame" x="10" y="2" width="127" height="22"/>
+                                                    <rect key="frame" x="10" y="2" width="125" height="22"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="only way to re-access it after first launch." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zib-8O-v5Q">
-                                                    <rect key="frame" x="10" y="24" width="253" height="18"/>
+                                                    <rect key="frame" x="10" y="24" width="260" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -274,11 +282,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8b-lh-skH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2R-vu-zOb">
+                                <rect key="frame" x="0.0" y="372" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lW0-yL-OLn"/>
                                     <barButtonItem style="plain" id="YWd-wo-eca">
@@ -300,25 +310,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="B8b-lh-skH" firstAttribute="trailing" secondItem="PF1-aV-dhQ" secondAttribute="trailing" type="default" id="07y-HZ-5jh"/>
-                            <constraint firstItem="P2R-vu-zOb" firstAttribute="bottom" secondItem="PF1-aV-dhQ" secondAttribute="bottom" type="default" id="5M0-bC-73Q"/>
                             <constraint firstItem="P2R-vu-zOb" firstAttribute="trailing" secondItem="PF1-aV-dhQ" secondAttribute="trailing" type="default" id="Fev-og-8UG"/>
-                            <constraint firstItem="P2R-vu-zOb" firstAttribute="leading" secondItem="PF1-aV-dhQ" secondAttribute="leading" type="default" id="bym-5u-dY5"/>
+                            <constraint firstAttribute="bottom" secondItem="P2R-vu-zOb" secondAttribute="bottom" type="default" id="dcF-wt-ret"/>
+                            <constraint firstItem="B8b-lh-skH" firstAttribute="leading" secondItem="P2R-vu-zOb" secondAttribute="leading" type="default" id="ehp-xX-kzY"/>
                             <constraint firstItem="P2R-vu-zOb" firstAttribute="top" secondItem="B8b-lh-skH" secondAttribute="bottom" type="default" id="u02-TN-UDU"/>
                             <constraint firstItem="B8b-lh-skH" firstAttribute="top" secondItem="PF1-aV-dhQ" secondAttribute="top" type="default" id="vCg-Sj-eYj"/>
+                            <constraint firstItem="B8b-lh-skH" firstAttribute="trailing" secondItem="P2R-vu-zOb" secondAttribute="trailing" type="default" id="waw-Gf-FY5"/>
                             <constraint firstItem="B8b-lh-skH" firstAttribute="leading" secondItem="PF1-aV-dhQ" secondAttribute="leading" type="default" id="ydo-mU-z8h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="9ad-ET-lrh">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="uIx-4v-YmH">
                             <connections>
-                                <action selector="showAlertButtonPressed:" destination="7yE-KH-Hrv" id="8FK-0L-h5u"/>
+                                <action selector="exportButtonTapped:" destination="7yE-KH-Hrv" id="E7N-te-u9W"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chatTextView" destination="B8b-lh-skH" id="e0k-nQ-JYY"/>
                         <outlet property="inputTextField" destination="UtB-yS-odN" id="yqm-Be-Q0z"/>
+                        <outlet property="toolbar" destination="P2R-vu-zOb" id="DsO-v6-5Jg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Yt-0aw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,18 +341,7 @@
         <image name="malicon.png" width="510" height="513"/>
         <image name="openaicon.png" width="1322" height="544"/>
     </resources>
-    <classes>
-        <class className="ChatViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="chatTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
+    <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

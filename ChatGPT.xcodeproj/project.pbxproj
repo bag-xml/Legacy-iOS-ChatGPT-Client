@@ -18,14 +18,17 @@
 		C62AEF862A898C8C00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF8E2A898C8C00DD8D5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C62AEF8C2A898C8C00DD8D5A /* InfoPlist.strings */; };
 		C62AEF912A898C8C00DD8D5A /* CaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C62AEF902A898C8C00DD8D5A /* CaTests.m */; };
+		C657290E2A8BB98E0093E1E0 /* ExportMechanicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C657290D2A8BB98E0093E1E0 /* ExportMechanicController.m */; };
 		C67D42C62A89A07200D16A70 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42C52A89A07200D16A70 /* banner.png */; };
 		C67D42C82A89A4C600D16A70 /* malicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42C72A89A4C600D16A70 /* malicon.png */; };
 		C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42C92A89A88100D16A70 /* openaicon.png */; };
 		C67D42CD2A89AC3100D16A70 /* Group 30.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42CB2A89AC3100D16A70 /* Group 30.png */; };
 		C67D42CE2A89AC3100D16A70 /* Group 31.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42CC2A89AC3100D16A70 /* Group 31.png */; };
-		C6A4D44F2A8BA48B007E2DE1 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A4D44E2A8BA48B007E2DE1 /* ChatViewController.m */; };
+		C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */; };
 		C6A4D4592A8BA60A007E2DE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A4D4582A8BA60A007E2DE1 /* AppDelegate.m */; };
 		C6A4D45E2A8BA672007E2DE1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A4D45D2A8BA672007E2DE1 /* Storyboard.storyboard */; };
+		C6B9283B2A8C26FE003F62E7 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B9283A2A8C26FE003F62E7 /* ChatViewController.m */; };
+		C6E1CC872A8C2317004D41C8 /* iPadChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E1CC862A8C2317004D41C8 /* iPadChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,16 +57,21 @@
 		C62AEF8D2A898C8C00DD8D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C62AEF8F2A898C8C00DD8D5A /* CaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaTests.h; sourceTree = "<group>"; };
 		C62AEF902A898C8C00DD8D5A /* CaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaTests.m; sourceTree = "<group>"; };
+		C657290C2A8BB98E0093E1E0 /* ExportMechanicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportMechanicController.h; sourceTree = "<group>"; };
+		C657290D2A8BB98E0093E1E0 /* ExportMechanicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportMechanicController.m; sourceTree = "<group>"; };
 		C67D42C52A89A07200D16A70 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
 		C67D42C72A89A4C600D16A70 /* malicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = malicon.png; sourceTree = "<group>"; };
 		C67D42C92A89A88100D16A70 /* openaicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openaicon.png; sourceTree = "<group>"; };
 		C67D42CB2A89AC3100D16A70 /* Group 30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 30.png"; sourceTree = "<group>"; };
 		C67D42CC2A89AC3100D16A70 /* Group 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 31.png"; sourceTree = "<group>"; };
-		C6A4D44D2A8BA48B007E2DE1 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
-		C6A4D44E2A8BA48B007E2DE1 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../ChatGPT/Images.xcassets; sourceTree = "<group>"; };
 		C6A4D4572A8BA60A007E2DE1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6A4D4582A8BA60A007E2DE1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C6A4D45D2A8BA672007E2DE1 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		C6B928392A8C26FE003F62E7 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		C6B9283A2A8C26FE003F62E7 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		C6E1CC852A8C2317004D41C8 /* iPadChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadChatViewController.h; sourceTree = "<group>"; };
+		C6E1CC862A8C2317004D41C8 /* iPadChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPadChatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +134,6 @@
 				C6A4D45A2A8BA663007E2DE1 /* Storyboards */,
 				C67D42D32A89ADBC00D16A70 /* ViewControlers */,
 				C67D42C22A8995EC00D16A70 /* Assets */,
-				C62AEF772A898C8B00DD8D5A /* MainStoryboard.storyboard */,
 				C62AEF662A898C8B00DD8D5A /* Supporting Files */,
 			);
 			path = Ca;
@@ -162,9 +169,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C657290B2A8BB98E0093E1E0 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				C657290C2A8BB98E0093E1E0 /* ExportMechanicController.h */,
+				C657290D2A8BB98E0093E1E0 /* ExportMechanicController.m */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
 		C67D42C22A8995EC00D16A70 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */,
 				C67D42CB2A89AC3100D16A70 /* Group 30.png */,
 				C67D42CC2A89AC3100D16A70 /* Group 31.png */,
 				C67D42C92A89A88100D16A70 /* openaicon.png */,
@@ -177,6 +194,7 @@
 		C67D42D32A89ADBC00D16A70 /* ViewControlers */ = {
 			isa = PBXGroup;
 			children = (
+				C657290B2A8BB98E0093E1E0 /* misc */,
 				C6A4D4562A8BA552007E2DE1 /* Delegates */,
 				C6A4D4492A8BA459007E2DE1 /* ChatView */,
 			);
@@ -186,8 +204,9 @@
 		C6A4D4492A8BA459007E2DE1 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
-				C6A4D44D2A8BA48B007E2DE1 /* ChatViewController.h */,
-				C6A4D44E2A8BA48B007E2DE1 /* ChatViewController.m */,
+				C6B928392A8C26FE003F62E7 /* ChatViewController.h */,
+				C6B9283A2A8C26FE003F62E7 /* ChatViewController.m */,
+				C6E1CC812A8C2275004D41C8 /* iPad */,
 			);
 			path = ChatView;
 			sourceTree = "<group>";
@@ -221,8 +240,18 @@
 		C6A4D45C2A8BA663007E2DE1 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				C62AEF772A898C8B00DD8D5A /* MainStoryboard.storyboard */,
 			);
 			path = iPhone;
+			sourceTree = "<group>";
+		};
+		C6E1CC812A8C2275004D41C8 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				C6E1CC852A8C2317004D41C8 /* iPadChatViewController.h */,
+				C6E1CC862A8C2317004D41C8 /* iPadChatViewController.m */,
+			);
+			path = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +300,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = Mali357;
+				ORGANIZATIONNAME = Daphne;
 			};
 			buildConfigurationList = C62AEF572A898C8B00DD8D5A /* Build configuration list for PBXProject "ChatGPT" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -296,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
 				C62AEF792A898C8B00DD8D5A /* MainStoryboard.storyboard in Resources */,
 				C67D42C62A89A07200D16A70 /* banner.png in Resources */,
@@ -339,8 +369,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
-				C6A4D44F2A8BA48B007E2DE1 /* ChatViewController.m in Sources */,
 				C6A4D4592A8BA60A007E2DE1 /* AppDelegate.m in Sources */,
+				C6B9283B2A8C26FE003F62E7 /* ChatViewController.m in Sources */,
+				C657290E2A8BB98E0093E1E0 /* ExportMechanicController.m in Sources */,
+				C6E1CC872A8C2317004D41C8 /* iPadChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +409,7 @@
 				C62AEF782A898C8B00DD8D5A /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C62AEF8C2A898C8C00DD8D5A /* InfoPlist.strings */ = {
@@ -417,7 +450,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.1;
 			};
 			name = Debug;
 		};
@@ -441,7 +474,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos7.1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -449,6 +482,8 @@
 		C62AEF952A898C8C00DD8D5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ca/ChatGPT-Prefix.pch";
 				INFOPLIST_FILE = "Ca/ChatGPT-Info.plist";
@@ -462,6 +497,8 @@
 		C62AEF962A898C8C00DD8D5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ca/ChatGPT-Prefix.pch";
 				INFOPLIST_FILE = "Ca/ChatGPT-Info.plist";

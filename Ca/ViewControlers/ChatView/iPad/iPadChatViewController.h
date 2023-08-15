@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChatViewController : UIViewController <NSURLConnectionDelegate>
+@interface iPadChatViewController : UIViewController <NSURLConnectionDelegate>
 
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
