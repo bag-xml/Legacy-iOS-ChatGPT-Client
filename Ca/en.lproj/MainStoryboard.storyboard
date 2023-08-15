@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pdZ-9K-PwU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5YH-Ui-ZLd">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="pdZ-9K-PwU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aWA-Wf-d9u">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bt3-Jm-zrN" kind="relationship" relationship="rootViewController" id="Big-aI-4dg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACh-Xn-3ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1221" y="-267"/>
+        </scene>
+        <!--Table View Controller - ChatGPT-->
+        <scene sceneID="mcu-eo-6af">
+            <objects>
+                <tableViewController id="Bt3-Jm-zrN" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="cUb-oE-bx1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Home" footerTitle="You can interact with OpenAI's ChatGPT AI here." id="sSZ-Oi-RW1">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="josdv" textLabel="zRC-lF-ARp" detailTextLabel="m40-gg-zRb" style="IBUITableViewCellStyleSubtitle" id="7tS-VC-z0q">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Begin your conversation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zRC-lF-ARp">
+                                                    <rect key="frame" x="10" y="2" width="212" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="(Note, they will NOT be saved.)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m40-gg-zRb">
+                                                    <rect key="frame" x="10" y="24" width="195" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="7yE-KH-Hrv" kind="push" id="PVr-bY-m7G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="History" id="ym0-iN-juh">
+                                <string key="footerTitle">Click on the "Save" button in the titlebar to export your conversations to a ".txt" file. This is (for now until i update this) the only way to of saving conversations. Soon there'll be a proper "History" tab here, so stay tuned.</string>
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="NOTE" id="pvV-6Z-4mW">
+                                <string key="footerTitle">This app is in it's alpha stages. It has bugs and missing things, take that for granted. If I trust you and you have the app you shall NOT distribute it without letting me know.</string>
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Bt3-Jm-zrN" id="2Wx-ER-Nm6"/>
+                            <outlet property="delegate" destination="Bt3-Jm-zrN" id="iyG-ab-jxf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ChatGPT" id="FyM-4a-aJh">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="xUy-rp-T5c">
+                            <connections>
+                                <segue destination="BvN-Wo-m9k" kind="push" id="gJx-lW-w0w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I96-O6-93D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="-267"/>
+        </scene>
+        <!--Table View Controller - About (the contributors)-->
+        <scene sceneID="VHb-Vc-Mgk">
+            <objects>
+                <tableViewController id="rcm-Di-SLd" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="KsV-yU-kuc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Creator of this app" footerTitle="Mali" id="odZ-mW-8tz">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="CXH-mG-cJN">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="malicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-Ek-Tlx">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="VWL-4c-EUz"/>
+                                                        <constraint firstAttribute="height" constant="90" id="ygH-UL-UeL"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="n1L-Ek-Tlx" firstAttribute="centerY" secondItem="CXH-mG-cJN" secondAttribute="centerY" type="default" id="4La-sG-x0h"/>
+                                            <constraint firstItem="n1L-Ek-Tlx" firstAttribute="centerX" secondItem="CXH-mG-cJN" secondAttribute="centerX" type="default" id="qby-o8-gAR"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Credit to the API" footerTitle="OpenAI" id="Nss-2k-6ca">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="3FO-yh-uB4">
+                                        <rect key="frame" x="0.0" y="233" width="320" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="openaicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3zj-Fg-Tfy">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="MqP-vV-ZOy"/>
+                                                        <constraint firstAttribute="width" constant="213" id="QR4-4V-Ld5"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3zj-Fg-Tfy" firstAttribute="centerY" secondItem="3FO-yh-uB4" secondAttribute="centerY" type="default" id="6GI-Cy-Ud9"/>
+                                            <constraint firstItem="3zj-Fg-Tfy" firstAttribute="centerX" secondItem="3FO-yh-uB4" secondAttribute="centerX" type="default" id="RQ1-Qt-G0i"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Info" footerTitle="ChatGPT for Legacy iOS (Version 1.0 Alpha 3)" id="kTJ-67-qsn">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="rcm-Di-SLd" id="RpW-YQ-Zcp"/>
+                            <outlet property="delegate" destination="rcm-Di-SLd" id="tp4-7B-LF7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="About (the contributors)" id="AF1-gN-A7E"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p5X-v3-UNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-187" y="-1033"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="L1q-zP-Wzc">
+            <objects>
+                <tableViewController id="BvN-Wo-m9k" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="cPH-Fj-gyR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Settings" footerTitle="Here you can toggle preferences for ChatGPT and this app in general." id="icw-Zv-j2O">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="API key" id="XIV-7H-8PX">
+                                <string key="footerTitle">The API key is very important, In order for this application to even work, you need to create a ChatGPT API key. If you don't know how to create one, please research how on the internet. (this doesnt function as of rn and my key is instead supplied (expiry: november 2023)</string>
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YDd-2D-ODO">
+                                        <rect key="frame" x="0.0" y="142" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="API key goes into here..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-cK-fnu">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="OD8-sx-CVL"/>
+                                                        <constraint firstAttribute="width" constant="284" id="lhW-Gf-Knf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="7UB-cK-fnu" firstAttribute="leading" secondItem="YDd-2D-ODO" secondAttribute="leading" constant="22" id="GU3-x3-szj"/>
+                                            <constraint firstItem="7UB-cK-fnu" firstAttribute="centerY" secondItem="YDd-2D-ODO" secondAttribute="centerY" type="default" id="gAd-od-HyC"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Miscelanneous" footerTitle="Here is misc stuff that just won't fit in with the other toggles" id="f4v-hS-veO">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g7Z-BN-shX" detailTextLabel="SMD-Xa-Bme" style="IBUITableViewCellStyleSubtitle" id="1BQ-00-Rkr">
+                                        <rect key="frame" x="0.0" y="379" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="About" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7Z-BN-shX">
+                                                    <rect key="frame" x="10" y="2" width="52" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="or also &quot;contributors&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SMD-Xa-Bme">
+                                                    <rect key="frame" x="10" y="24" width="129" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="rcm-Di-SLd" kind="push" id="NrJ-sD-bXa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fZH-To-JjU" detailTextLabel="zib-8O-v5Q" style="IBUITableViewCellStyleSubtitle" id="eS2-JX-XS0">
+                                        <rect key="frame" x="0.0" y="424" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Welcome page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fZH-To-JjU">
+                                                    <rect key="frame" x="10" y="2" width="127" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="only way to re-access it after first launch." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zib-8O-v5Q">
+                                                    <rect key="frame" x="10" y="24" width="253" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="BvN-Wo-m9k" id="mNe-sx-FNk"/>
+                            <outlet property="delegate" destination="BvN-Wo-m9k" id="7Cc-gx-iHQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="EZQ-Ti-znG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Kd-mX-c6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="-1033"/>
+        </scene>
+        <!--Chat View Controller - Chat-->
+        <scene sceneID="quL-cf-FaW">
+            <objects>
+                <viewController id="7yE-KH-Hrv" customClass="ChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PF1-aV-dhQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8b-lh-skH">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2R-vu-zOb">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="lW0-yL-OLn"/>
+                                    <barButtonItem style="plain" id="YWd-wo-eca">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type something..." minimumFontSize="17" id="UtB-yS-odN">
+                                            <rect key="frame" x="13" y="7" width="235" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem title="Send" id="xjq-tq-fRP">
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="7yE-KH-Hrv" id="kzp-KZ-U7O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yMs-iZ-smx"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B8b-lh-skH" firstAttribute="trailing" secondItem="PF1-aV-dhQ" secondAttribute="trailing" type="default" id="07y-HZ-5jh"/>
+                            <constraint firstItem="P2R-vu-zOb" firstAttribute="bottom" secondItem="PF1-aV-dhQ" secondAttribute="bottom" type="default" id="5M0-bC-73Q"/>
+                            <constraint firstItem="P2R-vu-zOb" firstAttribute="trailing" secondItem="PF1-aV-dhQ" secondAttribute="trailing" type="default" id="Fev-og-8UG"/>
+                            <constraint firstItem="P2R-vu-zOb" firstAttribute="leading" secondItem="PF1-aV-dhQ" secondAttribute="leading" type="default" id="bym-5u-dY5"/>
+                            <constraint firstItem="P2R-vu-zOb" firstAttribute="top" secondItem="B8b-lh-skH" secondAttribute="bottom" type="default" id="u02-TN-UDU"/>
+                            <constraint firstItem="B8b-lh-skH" firstAttribute="top" secondItem="PF1-aV-dhQ" secondAttribute="top" type="default" id="vCg-Sj-eYj"/>
+                            <constraint firstItem="B8b-lh-skH" firstAttribute="leading" secondItem="PF1-aV-dhQ" secondAttribute="leading" type="default" id="ydo-mU-z8h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="9ad-ET-lrh">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="uIx-4v-YmH">
+                            <connections>
+                                <action selector="showAlertButtonPressed:" destination="7yE-KH-Hrv" id="8FK-0L-h5u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chatTextView" destination="B8b-lh-skH" id="e0k-nQ-JYY"/>
+                        <outlet property="inputTextField" destination="UtB-yS-odN" id="yqm-Be-Q0z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Yt-0aw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-187" y="-267"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="malicon.png" width="510" height="513"/>
+        <image name="openaicon.png" width="1322" height="544"/>
+    </resources>
+    <classes>
+        <class className="ChatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chatTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Mj5-kI-2dQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vzv-L4-j3i">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Mj5-kI-2dQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBs-g9-9hW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Afn-Ln-Z1M" kind="relationship" relationship="rootViewController" id="AV0-jW-zrL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBx-DW-noJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097" y="-295"/>
+        </scene>
+        <!--Chat View Controller - ChatGPT-->
+        <scene sceneID="75L-qd-Onr">
+            <objects>
+                <viewController id="Afn-Ln-Z1M" customClass="ChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DYJ-BZ-Ifg">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuB-ha-1ia">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="d8n-OE-sh5" kind="embed" id="w8d-Mg-piV"/>
+                                </connections>
+                            </containerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7T-gG-X5h">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qm3-C3-cPR"/>
+                                    <barButtonItem style="plain" id="6KD-8u-xtT">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="JKS-Xe-9ah">
+                                            <rect key="frame" x="25" y="7" width="381" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1BF-mN-mJK"/>
+                                    <barButtonItem title="Send" width="77" id="8fD-Qx-CGK"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dzc-Pi-SFa"/>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdY-vS-PPY">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="531" id="eeu-GP-nuh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xuB-ha-1ia" firstAttribute="leading" secondItem="DYJ-BZ-Ifg" secondAttribute="leading" type="default" id="2lg-kk-ngJ"/>
+                            <constraint firstItem="P7T-gG-X5h" firstAttribute="leading" secondItem="xuB-ha-1ia" secondAttribute="trailing" type="default" id="6h2-km-HNP"/>
+                            <constraint firstItem="IdY-vS-PPY" firstAttribute="trailing" secondItem="DYJ-BZ-Ifg" secondAttribute="trailing" type="default" id="7Hb-cc-RBU"/>
+                            <constraint firstItem="P7T-gG-X5h" firstAttribute="trailing" secondItem="DYJ-BZ-Ifg" secondAttribute="trailing" type="default" id="ADu-UB-ojG"/>
+                            <constraint firstItem="xuB-ha-1ia" firstAttribute="top" secondItem="DYJ-BZ-Ifg" secondAttribute="top" type="default" id="NUh-xy-eZW"/>
+                            <constraint firstItem="xuB-ha-1ia" firstAttribute="bottom" secondItem="DYJ-BZ-Ifg" secondAttribute="bottom" type="default" id="Rzk-g9-5TG"/>
+                            <constraint firstItem="P7T-gG-X5h" firstAttribute="bottom" secondItem="DYJ-BZ-Ifg" secondAttribute="bottom" type="default" id="ccv-fx-qvC"/>
+                            <constraint firstItem="IdY-vS-PPY" firstAttribute="leading" secondItem="P7T-gG-X5h" secondAttribute="leading" type="default" id="iKn-ye-2Fp"/>
+                            <constraint firstItem="P7T-gG-X5h" firstAttribute="top" secondItem="IdY-vS-PPY" secondAttribute="bottom" type="default" id="jrr-zN-eeT"/>
+                            <constraint firstItem="IdY-vS-PPY" firstAttribute="top" secondItem="DYJ-BZ-Ifg" secondAttribute="top" type="default" id="wJf-3I-87P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ChatGPT" id="YS3-ee-Lqm">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="15K-yg-1b2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save Conversation" id="R9d-7c-28n"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSA-nc-kAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128" y="-288"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="7Uf-5s-Tvr">
+            <objects>
+                <tableViewController id="d8n-OE-sh5" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="orI-fl-gk2">
+                        <rect key="frame" x="0.0" y="0.0" width="237" height="960"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Hello!" footerTitle="iPad mode will be done as the last thing. Please instead use FullForce to optimize this app." id="iFv-4r-JJ5">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="d8n-OE-sh5" id="oQQ-Td-zLB"/>
+                            <outlet property="delegate" destination="d8n-OE-sh5" id="OHw-Cf-V1F"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8Q-mb-uAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648" y="-256"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="ChatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="chatTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
