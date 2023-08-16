@@ -149,6 +149,9 @@
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 //todo: confirm if mail even works, also try to get more shit in there except "mail".
+- (IBAction)ClearConversation:(id)sender {
+    self.chatTextView.text = @"";
+}
 
 
 @end
