@@ -23,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    //self.view.backgroundColor = [UIColor whiteColor]; //unncecessary i think
     
-    self.isKeyboardVisible = NO;
+    self.isKeyboardVisible = NO;//this too
     
     //[self.view addSubview:self.chatTextView];
     
