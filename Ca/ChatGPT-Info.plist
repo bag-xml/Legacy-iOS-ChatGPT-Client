@@ -42,6 +42,8 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>apiKey</key>
+	<string></string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array/>
 </dict>

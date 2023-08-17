@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60FA08F2A8D868100991533 /* SettingsViewController.m */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
 		C62AEF622A898C8B00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF642A898C8B00DD8D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF632A898C8B00DD8D5A /* CoreGraphics.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C60FA08E2A8D868100991533 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C60FA08F2A8D868100991533 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C62AEF5C2A898C8B00DD8D5A /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C62AEF612A898C8B00DD8D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C60FA08D2A8D866900991533 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C60FA08E2A8D868100991533 /* SettingsViewController.h */,
+				C60FA08F2A8D868100991533 /* SettingsViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C62AEF532A898C8B00DD8D5A = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +206,7 @@
 		C67D42D32A89ADBC00D16A70 /* ViewControlers */ = {
 			isa = PBXGroup;
 			children = (
+				C60FA08D2A8D866900991533 /* Settings */,
 				C657290B2A8BB98E0093E1E0 /* misc */,
 				C6A4D4562A8BA552007E2DE1 /* Delegates */,
 				C6A4D4492A8BA459007E2DE1 /* ChatView */,
@@ -371,6 +384,7 @@
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
 				C6A4D4592A8BA60A007E2DE1 /* AppDelegate.m in Sources */,
 				C6B9283B2A8C26FE003F62E7 /* ChatViewController.m in Sources */,
+				C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */,
 				C657290E2A8BB98E0093E1E0 /* ExportMechanicController.m in Sources */,
 				C6E1CC872A8C2317004D41C8 /* iPadChatViewController.m in Sources */,
 			);
