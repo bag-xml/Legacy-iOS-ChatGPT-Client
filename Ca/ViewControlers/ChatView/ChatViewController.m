@@ -23,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    //self.view.backgroundColor = [UIColor whiteColor]; //unncecessary i think
     
-    self.isKeyboardVisible = NO;
+    self.isKeyboardVisible = NO;//this too
     
     //[self.view addSubview:self.chatTextView];
     
@@ -43,6 +43,7 @@
 
 - (void)sendMessageToChatGPTAPI {
     
+    NSString *gptprompt = @"You are a catgirl, you behave like one, reply like one. ";
     NSString *message = self.inputTextField.text;
     if (message.length > 0) {
         // Append the message to the chat text view
@@ -72,7 +73,7 @@
                                    @"messages": @[
                                            @{
                                                @"role": @"user",
-                                               @"content": message
+                                               @"content": [gptprompt stringByAppendingString:message]
                                                }
                                            ]
                                    };        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyData options:0 error:nil];
