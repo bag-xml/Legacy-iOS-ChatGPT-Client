@@ -11,6 +11,8 @@
 @interface ChatTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *userIconImageView;
+//image position still questionable for now. thats why i left it out in (void)layoutSubviews
+
 @property (nonatomic, strong) UILabel *usernameLabel;
 @property (nonatomic, strong) UITextView *contentsTextView;
 
