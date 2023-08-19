@@ -204,7 +204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="reall" footerTitle="meowww" id="OYF-Wp-Owi">
+                            <tableViewSection headerTitle="api key" footerTitle="MM KNBhjkhljäköü" id="OYF-Wp-Owi">
                                 <cells/>
                             </tableViewSection>
                         </sections>
