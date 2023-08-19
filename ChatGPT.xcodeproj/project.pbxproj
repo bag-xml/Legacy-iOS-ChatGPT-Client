@@ -219,8 +219,7 @@
 				C6A4D4562A8BA552007E2DE1 /* Delegates */,
 				C6A4D4492A8BA459007E2DE1 /* ChatView */,
 			);
-			name = ViewControllers;
-			path = ViewControlers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C6A4D4492A8BA459007E2DE1 /* ChatView */ = {
