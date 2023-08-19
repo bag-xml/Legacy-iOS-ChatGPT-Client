@@ -38,20 +38,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
-    
+    //aaaaaaaaaaaaaaaaaaaaaaaa
     NSString *message = self.chatMessages[indexPath.row];
+    // split me: and message
     NSArray *messageComponents = [message componentsSeparatedByString:@": "];
-    if (messageComponents.count == 2) {
-        NSString *username = messageComponents[0];
-        cell.usernameLabel.text = username;
+if (messageComponents.count == 2) {
+        cell.usernameLabel.text = messageComponents[0];
         cell.contentsTextView.text = messageComponents[1];
-        
-        if ([username isEqualToString:@"ChatGPT"]) {
-            cell.userIconImageView.image = [UIImage imageNamed:@"assistant"];
-        } else {
-            cell.userIconImageView.image = [UIImage imageNamed:@"user"];
-        }
     }
+ 
     return cell;
 }
 
@@ -63,7 +58,7 @@
 }
 
 - (void)sendMessageToChatGPTAPI {
-    NSString *gptprompt = @"You are a catgirl, you behave like one, reply like one. ";
+    NSString *gptprompt = @" ";
     NSString *message = self.inputTextField.text;
     
     if (message.length > 0) {

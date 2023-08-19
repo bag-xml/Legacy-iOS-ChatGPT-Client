@@ -13,11 +13,9 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.userIconImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
         self.usernameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         self.contentsTextView = [[UITextView alloc] initWithFrame:CGRectZero];
         
-        [self.contentView addSubview:self.userIconImageView];
         [self.contentView addSubview:self.usernameLabel];
         [self.contentView addSubview:self.contentsTextView];
     }
@@ -26,12 +24,10 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-
-    self.usernameLabel.frame = CGRectMake(10, 10, self.contentView.bounds.size.width - 20, 20);
     
-    self.contentsTextView.frame = CGRectMake(10, CGRectGetMaxY(self.usernameLabel.frame) + 5, self.contentView.bounds.size.width - 20,
-                                             
-    self.contentView.bounds.size.height - CGRectGetMaxY(self.usernameLabel.frame) - 15);
+//hardcode sobb
+    self.usernameLabel.frame = CGRectMake(10, 10, self.contentView.bounds.size.width - 20, 20);
+    self.contentsTextView.frame = CGRectMake(10, CGRectGetMaxY(self.usernameLabel.frame) + 5, self.contentView.bounds.size.width - 20, self.contentView.bounds.size.height - CGRectGetMaxY(self.usernameLabel.frame) - 15);
 }
 
 @end
