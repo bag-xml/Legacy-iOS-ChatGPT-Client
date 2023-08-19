@@ -26,7 +26,7 @@
     self.chatMessages = [NSMutableArray array];
     self.responseData = [[NSMutableData alloc] init];
     
-    [self.chatTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ChatCell"];
+    [self.chatTableView registerClass:[ChatTableViewCell class] forCellReuseIdentifier:@"ChatCell"];
     
     self.chatTableView.delegate = self;
     self.chatTableView.dataSource = self;
