@@ -153,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				C6A4D45A2A8BA663007E2DE1 /* Storyboards */,
-				C67D42D32A89ADBC00D16A70 /* ViewControlers */,
+				C67D42D32A89ADBC00D16A70 /* ViewControllers */,
 				C67D42C22A8995EC00D16A70 /* Assets */,
 				C62AEF662A898C8B00DD8D5A /* Supporting Files */,
 			);
@@ -211,7 +211,7 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		C67D42D32A89ADBC00D16A70 /* ViewControlers */ = {
+		C67D42D32A89ADBC00D16A70 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				C60FA08D2A8D866900991533 /* Settings */,
@@ -219,6 +219,7 @@
 				C6A4D4562A8BA552007E2DE1 /* Delegates */,
 				C6A4D4492A8BA459007E2DE1 /* ChatView */,
 			);
+			name = ViewControllers;
 			path = ViewControlers;
 			sourceTree = "<group>";
 		};

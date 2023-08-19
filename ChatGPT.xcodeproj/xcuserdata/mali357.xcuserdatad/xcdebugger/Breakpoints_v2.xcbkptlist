@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ca/ViewControlers/ChatView/ChatViewController.m"
-            timestampString = "714143890.489252"
+            timestampString = "714144270.702105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "-sendButtonTapped:"
             landmarkType = "5">
          </BreakpointContent>

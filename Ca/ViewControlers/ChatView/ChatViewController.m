@@ -53,6 +53,7 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    [self sendMessageToChatGPTAPI];
     return YES;
 }
 
