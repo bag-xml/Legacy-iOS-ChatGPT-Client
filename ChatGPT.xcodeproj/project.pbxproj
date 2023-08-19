@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60FA08F2A8D868100991533 /* SettingsViewController.m */; };
 		C616EC842A90E67E00A9686F /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C616EC832A90E67E00A9686F /* ChatTableViewCell.m */; };
+		C616EC862A90F1A500A9686F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C616EC852A90F1A500A9686F /* MainStoryboard.storyboard */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
 		C62AEF622A898C8B00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF642A898C8B00DD8D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF632A898C8B00DD8D5A /* CoreGraphics.framework */; };
 		C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C62AEF682A898C8B00DD8D5A /* InfoPlist.strings */; };
 		C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C62AEF6B2A898C8B00DD8D5A /* main.m */; };
-		C62AEF792A898C8B00DD8D5A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62AEF772A898C8B00DD8D5A /* MainStoryboard.storyboard */; };
 		C62AEF842A898C8C00DD8D5A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF832A898C8C00DD8D5A /* SenTestingKit.framework */; };
 		C62AEF852A898C8C00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
 		C62AEF862A898C8C00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
@@ -47,6 +47,7 @@
 		C60FA08F2A8D868100991533 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C616EC822A90E67E00A9686F /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		C616EC832A90E67E00A9686F /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
+		C616EC852A90F1A500A9686F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C62AEF5C2A898C8B00DD8D5A /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C62AEF612A898C8B00DD8D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,7 +56,6 @@
 		C62AEF692A898C8B00DD8D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C62AEF6B2A898C8B00DD8D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C62AEF6D2A898C8B00DD8D5A /* ChatGPT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatGPT-Prefix.pch"; sourceTree = "<group>"; };
-		C62AEF782A898C8B00DD8D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C62AEF822A898C8C00DD8D5A /* ChatGPTTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF832A898C8C00DD8D5A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C62AEF8B2A898C8C00DD8D5A /* ChatGPTTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatGPTTests-Info.plist"; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 		C6A4D45C2A8BA663007E2DE1 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				C62AEF772A898C8B00DD8D5A /* MainStoryboard.storyboard */,
+				C616EC852A90F1A500A9686F /* MainStoryboard.storyboard */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -348,11 +348,11 @@
 			files = (
 				C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
-				C62AEF792A898C8B00DD8D5A /* MainStoryboard.storyboard in Resources */,
 				C67D42C62A89A07200D16A70 /* banner.png in Resources */,
 				C67D42C82A89A4C600D16A70 /* malicon.png in Resources */,
 				C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */,
 				C67D42CD2A89AC3100D16A70 /* Group 30.png in Resources */,
+				C616EC862A90F1A500A9686F /* MainStoryboard.storyboard in Resources */,
 				C67D42CE2A89AC3100D16A70 /* Group 31.png in Resources */,
 				C6A4D45E2A8BA672007E2DE1 /* Storyboard.storyboard in Resources */,
 			);
@@ -423,15 +423,6 @@
 				C62AEF692A898C8B00DD8D5A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C62AEF772A898C8B00DD8D5A /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C62AEF782A898C8B00DD8D5A /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		C62AEF8C2A898C8C00DD8D5A /* InfoPlist.strings */ = {
