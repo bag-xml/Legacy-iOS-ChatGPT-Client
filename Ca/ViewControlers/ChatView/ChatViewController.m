@@ -42,18 +42,17 @@
     NSString *message = self.chatMessages[indexPath.row];
     // split me: and message
     NSArray *messageComponents = [message componentsSeparatedByString:@": "];
-if (messageComponents.count == 2) {
+    if (messageComponents.count == 2) {
         cell.usernameLabel.text = messageComponents[0];
         cell.contentsTextView.text = messageComponents[1];
     }
- 
+    
     return cell;
 }
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    [self sendMessageToChatGPTAPI];
     return YES;
 }
 
@@ -143,6 +142,6 @@ if (messageComponents.count == 2) {
 }
 
 // JOHN if you see this, i found my old tableview code. tableviews are superior. :100:
-//dw this will not impact us rlly
+//dw this will not impact us rlly.
 
 @end
