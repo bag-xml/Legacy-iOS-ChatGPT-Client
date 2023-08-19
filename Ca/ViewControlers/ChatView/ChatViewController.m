@@ -7,14 +7,12 @@
 //
 
 #import "ChatViewController.h"
+#import "ChatTableViewCell.h"
+@interface ChatViewController () <UITextFieldDelegate, NSURLConnectionDelegate>
 
-@interface ChatViewController () <UITextViewDelegate, UITextFieldDelegate, NSURLConnectionDelegate>
-
-@property (strong, nonatomic) IBOutlet UITextView *chatTextView;
-@property (strong, nonatomic) IBOutlet UITextField *inputTextField;
 
 @property (nonatomic, strong) NSMutableData *responseData;
-@property (nonatomic, assign) BOOL isKeyboardVisible;
+@property (nonatomic, strong) NSMutableArray *chatMessages;
 
 @end
 
@@ -23,38 +21,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.view.backgroundColor = [UIColor whiteColor]; //unncecessary i think
-    
-    self.isKeyboardVisible = NO;//this too
-    
-    //[self.view addSubview:self.chatTextView];
-    
     self.inputTextField.delegate = self;
     
+    self.chatMessages = [NSMutableArray array];
     self.responseData = [[NSMutableData alloc] init];
     
+    [self.chatTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ChatCell"];
+    
+    self.chatTableView.delegate = self;
+    self.chatTableView.dataSource = self;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.chatMessages.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
+    
+    NSString *message = self.chatMessages[indexPath.row];
+    NSArray *messageComponents = [message componentsSeparatedByString:@": "];
+    if (messageComponents.count == 2) {
+        NSString *username = messageComponents[0];
+        cell.usernameLabel.text = username;
+        cell.contentsTextView.text = messageComponents[1];
+        
+        if ([username isEqualToString:@"ChatGPT"]) {
+            cell.userIconImageView.image = [UIImage imageNamed:@"assistant"];
+        } else {
+            cell.userIconImageView.image = [UIImage imageNamed:@"user"];
+        }
+    }
+    return cell;
+}
+
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder]; // make th keyboard go down when pressed return
-    //[self sendMessageToChatGPTAPI]; // button does that now.
+    [textField resignFirstResponder];
+    [self sendMessageToChatGPTAPI];
     return YES;
 }
 
 - (void)sendMessageToChatGPTAPI {
-    
     NSString *gptprompt = @"You are a catgirl, you behave like one, reply like one. ";
     NSString *message = self.inputTextField.text;
+    
     if (message.length > 0) {
-        // Append the message to the chat text view
-        NSString *previousChat = self.chatTextView.text;
-        if (previousChat.length > 0) {
-            self.chatTextView.text = [NSString stringWithFormat:@"%@\nMe: %@", previousChat, message];
-        } else {
-            self.chatTextView.text = [NSString stringWithFormat:@"Me: %@", message];
-        }
+        NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
+        NSString *newMessage = [NSString stringWithFormat:@"Me: %@", message];
+        NSString *updatedChat = previousChat.length > 0 ? [NSString stringWithFormat:@"%@\n%@", previousChat, newMessage] : newMessage;
         
-        // clear the uitextfield aka make it so its empty
+        [self.chatMessages addObject:newMessage];
+        [self.chatTableView reloadData];
+        
         self.inputTextField.text = @"";
         
         // make nsurlrequest to openai's api
@@ -84,7 +103,28 @@
     }
 }
 
-#pragma mark - NSURLConnectionDelegate
+//Connection related stuff
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
+    
+    NSArray *choices = [responseDictionary objectForKey:@"choices"];
+    if ([choices count] > 0) {
+        NSDictionary *choice = [choices objectAtIndex:0];
+        NSDictionary *message = [choice objectForKey:@"message"];
+        NSString *assistantReply = [message objectForKey:@"content"];
+        
+        NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
+        NSString *newMessage = [NSString stringWithFormat:@"ChatGPT: %@", assistantReply];
+        NSString *updatedChat = previousChat.length > 0 ? [NSString stringWithFormat:@"%@\n%@", previousChat, newMessage] : newMessage;
+        
+        [self.chatMessages addObject:newMessage];
+        [self.chatTableView reloadData];
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.chatMessages.count - 1 inSection:0];
+        [self.chatTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
+}
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     self.responseData.length = 0;
@@ -94,33 +134,6 @@
     [self.responseData appendData:data];
 }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"Connection error: %@", error);
-}
-
-
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    // Parse the received response data from JSON
-    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
-    
-    // Extract the assistants reply
-    NSArray *choices = [responseDictionary objectForKey:@"choices"];
-    if ([choices count] > 0) {
-        NSDictionary *choice = [choices objectAtIndex:0];
-        NSDictionary *message = [choice objectForKey:@"message"];
-        NSString *assistantReply = [message objectForKey:@"content"];
-        
-        // give the replies a name (e.g. "ChatGPT:" n shit)
-        NSString *previousChat = self.chatTextView.text;
-        self.chatTextView.text = [NSString stringWithFormat:@"%@\nChatGPT: %@", previousChat, assistantReply];
-        
-        NSRange bottomRange = NSMakeRange(self.chatTextView.text.length, 1);
-        [self.chatTextView scrollRangeToVisible:bottomRange];
-    } else {
-        //nothing
-    }
-}
 
 //button actions
 
@@ -129,27 +142,12 @@
     [self sendMessageToChatGPTAPI];
 }
 
-
-//this was hard asf wtf i needed like 1+ day for this hsit
-- (IBAction)exportButtonTapped:(id)sender {
-    NSString *textContent = self.chatTextView.text;
-    
-    //hard asf
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"conversation.txt"];
-    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-    
-    // again: thanks stackoverflow
-    NSError *error = nil;
-    [textContent writeToURL:fileURL atomically:YES encoding:NSUTF8StringEncoding error:&error];
-    
-    
-    //open activityviewcontroller
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[fileURL] applicationActivities:nil];
-    [self presentViewController:activityViewController animated:YES completion:nil];
+//i fucked this up
+- (IBAction)saveButtonTapped:(id)sender {
+    //tbh this may be too hard for me
 }
-//todo: confirm if mail even works, also try to get more shit in there except "mail".
 
+// JOHN if you see this, i found my old tableview code. tableviews are superior. :100:
+//dw this will not impact us rlly
 
 @end

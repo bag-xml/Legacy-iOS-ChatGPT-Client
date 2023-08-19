@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60FA08F2A8D868100991533 /* SettingsViewController.m */; };
+		C616EC842A90E67E00A9686F /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C616EC832A90E67E00A9686F /* ChatTableViewCell.m */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
 		C62AEF622A898C8B00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF642A898C8B00DD8D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF632A898C8B00DD8D5A /* CoreGraphics.framework */; };
@@ -19,7 +20,6 @@
 		C62AEF862A898C8C00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF8E2A898C8C00DD8D5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C62AEF8C2A898C8C00DD8D5A /* InfoPlist.strings */; };
 		C62AEF912A898C8C00DD8D5A /* CaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C62AEF902A898C8C00DD8D5A /* CaTests.m */; };
-		C657290E2A8BB98E0093E1E0 /* ExportMechanicController.m in Sources */ = {isa = PBXBuildFile; fileRef = C657290D2A8BB98E0093E1E0 /* ExportMechanicController.m */; };
 		C67D42C62A89A07200D16A70 /* banner.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42C52A89A07200D16A70 /* banner.png */; };
 		C67D42C82A89A4C600D16A70 /* malicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42C72A89A4C600D16A70 /* malicon.png */; };
 		C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42C92A89A88100D16A70 /* openaicon.png */; };
@@ -45,6 +45,8 @@
 /* Begin PBXFileReference section */
 		C60FA08E2A8D868100991533 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		C60FA08F2A8D868100991533 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		C616EC822A90E67E00A9686F /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
+		C616EC832A90E67E00A9686F /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
 		C62AEF5C2A898C8B00DD8D5A /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C62AEF612A898C8B00DD8D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,8 +62,6 @@
 		C62AEF8D2A898C8C00DD8D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C62AEF8F2A898C8C00DD8D5A /* CaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaTests.h; sourceTree = "<group>"; };
 		C62AEF902A898C8C00DD8D5A /* CaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaTests.m; sourceTree = "<group>"; };
-		C657290C2A8BB98E0093E1E0 /* ExportMechanicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportMechanicController.h; sourceTree = "<group>"; };
-		C657290D2A8BB98E0093E1E0 /* ExportMechanicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportMechanicController.m; sourceTree = "<group>"; };
 		C67D42C52A89A07200D16A70 /* banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner.png; sourceTree = "<group>"; };
 		C67D42C72A89A4C600D16A70 /* malicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = malicon.png; sourceTree = "<group>"; };
 		C67D42C92A89A88100D16A70 /* openaicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openaicon.png; sourceTree = "<group>"; };
@@ -108,6 +108,15 @@
 				C60FA08F2A8D868100991533 /* SettingsViewController.m */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		C616EC812A90E54200A9686F /* tableviewcell */ = {
+			isa = PBXGroup;
+			children = (
+				C616EC822A90E67E00A9686F /* ChatTableViewCell.h */,
+				C616EC832A90E67E00A9686F /* ChatTableViewCell.m */,
+			);
+			path = tableviewcell;
 			sourceTree = "<group>";
 		};
 		C62AEF532A898C8B00DD8D5A = {
@@ -184,8 +193,7 @@
 		C657290B2A8BB98E0093E1E0 /* misc */ = {
 			isa = PBXGroup;
 			children = (
-				C657290C2A8BB98E0093E1E0 /* ExportMechanicController.h */,
-				C657290D2A8BB98E0093E1E0 /* ExportMechanicController.m */,
+				C616EC812A90E54200A9686F /* tableviewcell */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -385,8 +393,8 @@
 				C6A4D4592A8BA60A007E2DE1 /* AppDelegate.m in Sources */,
 				C6B9283B2A8C26FE003F62E7 /* ChatViewController.m in Sources */,
 				C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */,
-				C657290E2A8BB98E0093E1E0 /* ExportMechanicController.m in Sources */,
 				C6E1CC872A8C2317004D41C8 /* iPadChatViewController.m in Sources */,
+				C616EC842A90E67E00A9686F /* ChatTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
