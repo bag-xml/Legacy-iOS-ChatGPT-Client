@@ -29,6 +29,10 @@
 }
 
 
+- (IBAction)submit:(id)sender {
+    //ok button code here, glad that it worked, it was just the splitview of xcode being fucked
+}
+
 
 
 
