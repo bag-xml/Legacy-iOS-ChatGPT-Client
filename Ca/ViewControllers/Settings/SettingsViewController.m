@@ -17,8 +17,16 @@
 //this is prime example of me failing :pleading:
 @implementation SettingsViewController
 
+
+//todo
+//apikey im retarded why didnt i include it
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *savedApiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
+    if (savedApiKey) {
+        self.apiKeyInput.text = savedApiKey;
+    }
     
     NSString *savedPrompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     if (savedPrompt) {
@@ -41,7 +49,11 @@
     }
 }
 - (IBAction)submitApiKey:(id)sender {
+    NSString *apiKey = self.apiKeyInput.text;
+    if (apiKey.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:apiKey forKey:@"apiKey"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
-
 @end
 
