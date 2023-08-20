@@ -153,5 +153,7 @@
     self.chatTextView.text = @"";
 }
 
+//todo: find my ipad somewhere in my room then uhh... test this and remake it :thumbsup:
+
 
 @end

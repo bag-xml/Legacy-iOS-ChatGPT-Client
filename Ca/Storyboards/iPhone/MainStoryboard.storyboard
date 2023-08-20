@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="5056" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="pdZ-9K-PwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="5056" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="pdZ-9K-PwU">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
@@ -85,7 +85,7 @@
                                 <string key="footerTitle">This app is in it's alpha stages. It has bugs and missing things, take that for granted. If I trust you and you have the app you shall NOT distribute it without letting me know.</string>
                                 <cells/>
                             </tableViewSection>
-                            <tableViewSection headerTitle="" footerTitle="The Chat interface and GUI of this application are invalid" id="asZ-gW-mfy">
+                            <tableViewSection headerTitle="" footerTitle="The Chat interface and GUI of this application are unfinished." id="asZ-gW-mfy">
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -204,7 +204,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="reall" footerTitle="meowww" id="OYF-Wp-Owi">
+                            <tableViewSection headerTitle="Guide" footerTitle="This page has guides for the following things of this app:" id="OYF-Wp-Owi">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="How to make an API Key?" footerTitle="" id="fzg-Jk-944">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="How can I use custom prompts?" footerTitle="" id="d4A-m2-vyV">
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -217,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQv-QJ-Vo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="-1589"/>
+            <point key="canvasLocation" x="-17" y="-1696"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="L1q-zP-Wzc">
