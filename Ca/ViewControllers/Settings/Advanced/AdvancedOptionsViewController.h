@@ -12,4 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *endpointSubmitInput;
 @property (weak, nonatomic) IBOutlet UITextField *AIModelInput;
+@property (weak, nonatomic) IBOutlet UITextField *aiNickName;
+@property (weak, nonatomic) IBOutlet UITextField *userNickName;
 @end

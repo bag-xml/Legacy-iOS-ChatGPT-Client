@@ -120,7 +120,8 @@
         NSString *assistantNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
         
         NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
-        NSString *newMessage = [NSString stringWithFormat:@"ChatGPT: %@", assistantReply];
+        NSString *newMessage = [NSString stringWithFormat:@"%@: %@", assistantNickname, assistantReply];
+        //NSString *newMessage = [NSString stringWithFormat:@"ChatGPT: %@", assistantReply];
         NSString *updatedChat = previousChat.length > 0 ? [NSString stringWithFormat:@"%@\n%@", previousChat, newMessage] : newMessage;
         
         [self.chatMessages addObject:newMessage];

@@ -16,6 +16,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completion";
     NSString *defaultAIModel = @"gpt-3.5-turbo";
+    NSString *defaultNickname = @"TestnameToggleAssistant";
     
     
     if (![defaults objectForKey:@"apiEndpoint"]) {
@@ -23,6 +24,10 @@
     }
     if (![defaults objectForKey:@"AIModel"]) {
         [defaults setObject:defaultAIModel forKey:@"AIModel"];
+    }
+    if (![defaults objectForKey:@"assistantNick"]) {
+        [defaults setObject:defaultNickname forKey:@"assistantNick"];
+        [defaults synchronize];
     }
     [defaults synchronize];
     return YES;

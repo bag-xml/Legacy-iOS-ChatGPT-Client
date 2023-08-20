@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D58B42E2A9262B4000CBEA1 /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */; };
+		7DDB69022A928A4400D5DCD4 /* shiypc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7DDB69012A928A4400D5DCD4 /* shiypc.jpeg */; };
 		C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60FA08F2A8D868100991533 /* SettingsViewController.m */; };
 		C616EC842A90E67E00A9686F /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C616EC832A90E67E00A9686F /* ChatTableViewCell.m */; };
 		C616EC862A90F1A500A9686F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C616EC852A90F1A500A9686F /* MainStoryboard.storyboard */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		7D58B42C2A9262B4000CBEA1 /* AdvancedOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedOptionsViewController.h; sourceTree = "<group>"; };
 		7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedOptionsViewController.m; sourceTree = "<group>"; };
+		7DDB69012A928A4400D5DCD4 /* shiypc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shiypc.jpeg; sourceTree = "<group>"; };
 		C60FA08E2A8D868100991533 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		C60FA08F2A8D868100991533 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C616EC822A90E67E00A9686F /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		C67D42C22A8995EC00D16A70 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7DDB69012A928A4400D5DCD4 /* shiypc.jpeg */,
 				C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */,
 				C67D42CB2A89AC3100D16A70 /* Group 30.png */,
 				C67D42CC2A89AC3100D16A70 /* Group 31.png */,
@@ -383,6 +386,7 @@
 				C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */,
 				C67D42CD2A89AC3100D16A70 /* Group 30.png in Resources */,
 				C616EC862A90F1A500A9686F /* MainStoryboard.storyboard in Resources */,
+				7DDB69022A928A4400D5DCD4 /* shiypc.jpeg in Resources */,
 				C67D42CE2A89AC3100D16A70 /* Group 31.png in Resources */,
 				C6A4D45E2A8BA672007E2DE1 /* Storyboard.storyboard in Resources */,
 			);

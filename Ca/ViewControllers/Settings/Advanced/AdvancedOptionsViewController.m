@@ -38,6 +38,10 @@
     if (AIModel) {
         self.AIModelInput.text = AIModel;
     }
+    NSString *aiNickName = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
+    if (aiNickName) {
+        self.aiNickName.text = aiNickName;
+    }
 //reusing old code my beloved method
 }
 - (IBAction)confirmEndpoint:(id)sender {
@@ -51,6 +55,13 @@
     NSString *AIModel = self.AIModelInput.text;
     if (AIModel.length > 0) {
         [[NSUserDefaults standardUserDefaults] setObject:AIModel forKey:@"apiEndpoint"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+- (IBAction)submitAINickname:(id)sender {
+    NSString *aiNickName = self.aiNickName.text;
+    if (aiNickName.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:aiNickName forKey:@"assistantNick"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }

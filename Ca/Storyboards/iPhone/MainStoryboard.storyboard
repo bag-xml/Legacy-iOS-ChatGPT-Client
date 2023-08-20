@@ -133,14 +133,19 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Contributor" footerTitle="shiypc" id="zwZ-S7-tgs">
+                            <tableViewSection headerTitle="Contributor" footerTitle="shiypc" id="Qhz-bo-ITZ">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="kRM-3e-ef3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="fGc-4E-0cm">
                                         <rect key="frame" x="0.0" y="232" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="shiypc.jpeg" id="tcK-0g-slN">
+                                                    <rect key="frame" x="105" y="9" width="90" height="90"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
@@ -501,6 +506,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="submitAINickname:" destination="Tqn-6e-5tm" eventType="touchUpInside" id="VMF-IL-T56"/>
                                                         <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="5wm-7f-nOF"/>
                                                     </connections>
                                                 </button>
@@ -519,7 +525,9 @@
                     <navigationItem key="navigationItem" title="Advanced Settings" id="Q76-FM-UhD"/>
                     <connections>
                         <outlet property="AIModelInput" destination="Z6r-nQ-OAq" id="NQX-ts-0Sc"/>
+                        <outlet property="aiNickName" destination="P5c-EQ-tco" id="EtU-tL-0tm"/>
                         <outlet property="endpointSubmitInput" destination="MUg-F6-RC0" id="G5X-1s-uC0"/>
+                        <outlet property="userNickName" destination="ejC-xT-cQQ" id="tLm-3q-4s4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcq-y0-hbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -594,6 +602,7 @@
     <resources>
         <image name="malicon.png" width="510" height="513"/>
         <image name="openaicon.png" width="1322" height="544"/>
+        <image name="shiypc.jpeg" width="460" height="460"/>
     </resources>
     <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
