@@ -379,10 +379,10 @@
             </objects>
             <point key="canvasLocation" x="-700" y="-1033"/>
         </scene>
-        <!--Table View Controller - Advanced Settings-->
+        <!--Advanced Options View Controller - Advanced Settings-->
         <scene sceneID="Z7P-kj-Wzv">
             <objects>
-                <tableViewController id="Tqn-6e-5tm" sceneMemberID="viewController">
+                <tableViewController id="Tqn-6e-5tm" customClass="AdvancedOptionsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="XBJ-BZ-LDe">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,6 +412,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
+                                                        <action selector="confirmEndpoint:" destination="Tqn-6e-5tm" eventType="touchUpInside" id="osO-ah-S8s"/>
                                                         <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="ZLb-J8-Yer"/>
                                                     </connections>
                                                 </button>
@@ -515,6 +516,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Advanced Settings" id="Q76-FM-UhD"/>
+                    <connections>
+                        <outlet property="endpointSubmitInput" destination="MUg-F6-RC0" id="G5X-1s-uC0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcq-y0-hbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

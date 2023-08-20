@@ -6,6 +6,10 @@
 //  Copyright (c) 2023 Daphne. All rights reserved.
 //
 
+
+//this viewcontroller is literally an extension of settingsviewcontroller
+
+
 #import "AdvancedOptionsViewController.h"
 
 @interface AdvancedOptionsViewController ()
@@ -26,15 +30,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSString *savedApiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
-    if (savedApiKey) {
-        self.apiKeyInput.text = savedApiKey;
+    NSString *urlEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
+    if (urlEndpoint) {
+        self.endpointSubmitInput.text = urlEndpoint;
     }
-    
-    NSString *savedPrompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
-    if (savedPrompt) {
-        self.gptPromptInput.text = savedPrompt;
-    }//reusing old code my beloved method
+//reusing old code my beloved method
+}
+- (IBAction)confirmEndpoint:(id)sender {
+    NSString *urlEndpoint = self.endpointSubmitInput.text;
+    if (urlEndpoint.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:urlEndpoint forKey:@"apiEndpoint"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 - (void)didReceiveMemoryWarning

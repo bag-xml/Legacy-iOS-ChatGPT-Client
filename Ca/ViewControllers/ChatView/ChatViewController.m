@@ -61,22 +61,24 @@
 
 
 - (void)sendMessageToChatGPTAPI {
+    //strings
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *model = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"]; //im sceptical of this
     NSString *message = self.inputTextField.text;
+    NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
     
     if (message.length > 0) {
         NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
         NSString *newMessage = [NSString stringWithFormat:@"Me: %@", message];
         NSString *updatedChat = previousChat.length > 0 ? [NSString stringWithFormat:@"%@\n%@", previousChat, newMessage] : newMessage;
-        NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
         
         [self.chatMessages addObject:newMessage];
         [self.chatTableView reloadData];
+        self.inputTextField.text = @"";
         
-        self.inputTextField.text = @""; //empties the textview
         
-        // make nsurlrequest to openai's api
+        
+        // Actual request code
         NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         [request setHTTPMethod:@"POST"];
@@ -86,8 +88,8 @@
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
         NSDictionary *bodyData = @{
-                                   @"model": @"gpt-3.5-turbo",
-                                   //@"model": [model stringByAppendingString:message], thing
+                                   //@"model": @"gpt-3.5-turbo",
+                                   @"model": [model stringByAppendingString:message],
                                    @"messages": @[
                                            @{
                                                @"role": @"user",

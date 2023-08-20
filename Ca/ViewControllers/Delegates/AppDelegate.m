@@ -10,9 +10,15 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completion";
+    
+    if (![defaults objectForKey:@"apiEndpoint"]) {
+        [defaults setObject:defaultApiEndpoint forKey:@"apiEndpoint"];
+        [defaults synchronize];
+    }
     return YES;
 }
 							
