@@ -11,6 +11,7 @@
 @interface SettingsViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *gptPromptInput;
+@property (weak, nonatomic) IBOutlet UITextField *apiKeyInput;
 
 @end
 //this is prime example of me failing :pleading:
@@ -38,6 +39,8 @@
         [[NSUserDefaults standardUserDefaults] setObject:prompt forKey:@"gptPrompt"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+}
+- (IBAction)submitApiKey:(id)sender {
 }
 
 @end

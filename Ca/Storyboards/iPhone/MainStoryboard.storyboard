@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="5056" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="pdZ-9K-PwU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="5056" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="pdZ-9K-PwU">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
@@ -124,20 +124,12 @@
                                             <rect key="frame" x="10" y="1" width="300" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="malicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-Ek-Tlx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="malicon.png" id="n1L-Ek-Tlx">
                                                     <rect key="frame" x="105" y="9" width="90" height="90"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="VWL-4c-EUz"/>
-                                                        <constraint firstAttribute="height" constant="90" id="ygH-UL-UeL"/>
-                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="n1L-Ek-Tlx" firstAttribute="centerY" secondItem="CXH-mG-cJN" secondAttribute="centerY" type="default" id="4La-sG-x0h"/>
-                                            <constraint firstItem="n1L-Ek-Tlx" firstAttribute="centerX" secondItem="CXH-mG-cJN" secondAttribute="centerX" type="default" id="qby-o8-gAR"/>
-                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -163,20 +155,12 @@
                                             <rect key="frame" x="10" y="1" width="300" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="openaicon.png" translatesAutoresizingMaskIntoConstraints="NO" id="3zj-Fg-Tfy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="openaicon.png" id="3zj-Fg-Tfy">
                                                     <rect key="frame" x="44" y="9" width="213" height="90"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="90" id="MqP-vV-ZOy"/>
-                                                        <constraint firstAttribute="width" constant="213" id="QR4-4V-Ld5"/>
-                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="3zj-Fg-Tfy" firstAttribute="centerY" secondItem="3FO-yh-uB4" secondAttribute="centerY" type="default" id="6GI-Cy-Ud9"/>
-                                            <constraint firstItem="3zj-Fg-Tfy" firstAttribute="centerX" secondItem="3FO-yh-uB4" secondAttribute="centerX" type="default" id="RQ1-Qt-G0i"/>
-                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -248,35 +232,24 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="API key goes into here..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7UB-cK-fnu">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="API key goes into here..." minimumFontSize="17" clearButtonMode="whileEditing" id="7UB-cK-fnu">
                                                     <rect key="frame" x="8" y="7" width="252" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="252" id="83Y-Yo-2tZ"/>
-                                                        <constraint firstAttribute="height" constant="30" id="OD8-sx-CVL"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tN-qN-cyD">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="3tN-qN-cyD">
                                                     <rect key="frame" x="265" y="6" width="29" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="23" id="hxQ-ir-GvP"/>
-                                                    </constraints>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="Qyg-p4-Rf2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="3tN-qN-cyD" firstAttribute="leading" secondItem="7UB-cK-fnu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Bau-dd-wpa"/>
-                                            <constraint firstItem="3tN-qN-cyD" firstAttribute="centerY" secondItem="YDd-2D-ODO" secondAttribute="centerY" constant="-0.5" type="default" id="bqn-7J-3K8"/>
-                                            <constraint firstItem="7UB-cK-fnu" firstAttribute="centerY" secondItem="YDd-2D-ODO" secondAttribute="centerY" type="default" id="gAd-od-HyC"/>
-                                            <constraint firstItem="3tN-qN-cyD" firstAttribute="baseline" secondItem="7UB-cK-fnu" secondAttribute="baseline" type="default" id="un6-rf-wRJ"/>
-                                            <constraint firstItem="7UB-cK-fnu" firstAttribute="leading" secondItem="YDd-2D-ODO" secondAttribute="leading" constant="18" id="yfZ-Xv-rS2"/>
-                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -289,21 +262,14 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Insert prompt here..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fMC-es-2bZ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insert prompt here..." minimumFontSize="17" clearButtonMode="whileEditing" id="fMC-es-2bZ">
                                                     <rect key="frame" x="8" y="7" width="252" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="Ygk-vE-RDS"/>
-                                                        <constraint firstAttribute="width" constant="252" id="yQ6-5g-XLM"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg7-dB-5l1">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="eg7-dB-5l1">
                                                     <rect key="frame" x="265" y="6" width="29" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="23" id="ozk-P9-I6j"/>
-                                                    </constraints>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -314,13 +280,6 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="fMC-es-2bZ" firstAttribute="leading" secondItem="otu-Nu-Sy6" secondAttribute="leading" constant="18" id="5um-RN-0i6"/>
-                                            <constraint firstItem="eg7-dB-5l1" firstAttribute="centerY" secondItem="otu-Nu-Sy6" secondAttribute="centerY" constant="-0.5" type="default" id="HUg-7R-xl7"/>
-                                            <constraint firstItem="eg7-dB-5l1" firstAttribute="leading" secondItem="fMC-es-2bZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="VWt-jj-7xb"/>
-                                            <constraint firstItem="fMC-es-2bZ" firstAttribute="centerY" secondItem="otu-Nu-Sy6" secondAttribute="centerY" type="default" id="koo-4E-nOE"/>
-                                            <constraint firstItem="eg7-dB-5l1" firstAttribute="baseline" secondItem="fMC-es-2bZ" secondAttribute="baseline" type="default" id="mmy-MZ-fuv"/>
-                                        </constraints>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -388,6 +347,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="5mZ-GD-oW4"/>
                     <connections>
+                        <outlet property="apiKeyInput" destination="7UB-cK-fnu" id="QG0-4I-dFg"/>
                         <outlet property="gptPromptInput" destination="fMC-es-2bZ" id="88r-Eu-fig"/>
                     </connections>
                 </tableViewController>
@@ -403,23 +363,23 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="134" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3uW-Fz-vP3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="155" sectionHeaderHeight="22" sectionFooterHeight="22" id="3uW-Fz-vP3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatCell" rowHeight="134" id="UMW-DJ-2wf">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="134"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChatCell" rowHeight="155" id="UMW-DJ-2wf">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2R-vu-zOb">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="P2R-vu-zOb">
                                 <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lW0-yL-OLn"/>
@@ -441,15 +401,6 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="P2R-vu-zOb" secondAttribute="trailing" type="default" id="6GO-De-Il5"/>
-                            <constraint firstAttribute="bottom" secondItem="P2R-vu-zOb" secondAttribute="bottom" type="default" id="CoC-Dl-qf3"/>
-                            <constraint firstItem="3uW-Fz-vP3" firstAttribute="trailing" secondItem="P2R-vu-zOb" secondAttribute="trailing" type="default" id="Ihu-Nv-nSt"/>
-                            <constraint firstItem="P2R-vu-zOb" firstAttribute="top" secondItem="3uW-Fz-vP3" secondAttribute="bottom" type="default" id="LxX-ty-hVc"/>
-                            <constraint firstItem="3uW-Fz-vP3" firstAttribute="top" secondItem="PF1-aV-dhQ" secondAttribute="top" type="default" id="MNo-87-kOL"/>
-                            <constraint firstItem="3uW-Fz-vP3" firstAttribute="leading" secondItem="P2R-vu-zOb" secondAttribute="leading" type="default" id="bfd-R0-v2d"/>
-                            <constraint firstItem="3uW-Fz-vP3" firstAttribute="leading" secondItem="PF1-aV-dhQ" secondAttribute="leading" type="default" id="mbL-s9-XuT"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="9ad-ET-lrh">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="uIx-4v-YmH">
