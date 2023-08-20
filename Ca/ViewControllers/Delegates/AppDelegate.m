@@ -14,7 +14,7 @@
 
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completion";
+    NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completions";
     NSString *defaultAIModel = @"gpt-3.5-turbo";
     NSString *defaultNickname = @"ChatGPT";
     NSString *defaultUserNickname = @"Me";
