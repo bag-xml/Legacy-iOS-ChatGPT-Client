@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="Mj5-kI-2dQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Mj5-kI-2dQ">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -20,31 +20,16 @@
             </objects>
             <point key="canvasLocation" x="-1097" y="-295"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="aLb-sB-rYZ">
-            <objects>
-                <viewController id="LHN-Pw-ZtU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Mqb-w2-4zQ">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Chi-jF-7PS"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dD6-j4-wi8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-102" y="-1723"/>
-        </scene>
         <!--I Pad Chat View Controller - ChatGPT-->
         <scene sceneID="75L-qd-Onr">
             <objects>
                 <viewController id="Afn-Ln-Z1M" customClass="iPadChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DYJ-BZ-Ifg">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="P7T-gG-X5h">
-                                <rect key="frame" x="204" y="916" width="564" height="44"/>
+                                <rect key="frame" x="204" y="980" width="564" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qm3-C3-cPR"/>
                                     <barButtonItem title="Clear" id="HSj-DJ-nus">
@@ -55,7 +40,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="sBP-X3-t7G"/>
                                     <barButtonItem style="plain" id="6KD-8u-xtT">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="JKS-Xe-9ah">
-                                            <rect key="frame" x="65" y="7" width="407" height="30"/>
+                                            <rect key="frame" x="55" y="7" width="407" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -95,11 +80,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSA-nc-kAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-128" y="-288"/>
+            <point key="canvasLocation" x="-288" y="-295"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
