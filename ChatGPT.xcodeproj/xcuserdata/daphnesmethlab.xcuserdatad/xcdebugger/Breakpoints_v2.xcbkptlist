@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ca/ViewControllers/Settings/Advanced/AdvancedOptionsViewController.m"
-            timestampString = "714241004.159763"
+            timestampString = "714242529.4938461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "@implementation AdvancedOptionsViewController"
             landmarkType = "3">
          </BreakpointContent>

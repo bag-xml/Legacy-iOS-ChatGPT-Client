@@ -117,6 +117,7 @@
         NSDictionary *choice = [choices objectAtIndex:0];
         NSDictionary *message = [choice objectForKey:@"message"];
         NSString *assistantReply = [message objectForKey:@"content"];
+        NSString *assistantNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
         
         NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
         NSString *newMessage = [NSString stringWithFormat:@"ChatGPT: %@", assistantReply];
