@@ -16,7 +16,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completion";
     NSString *defaultAIModel = @"gpt-3.5-turbo";
-    NSString *defaultNickname = @"TestnameToggleAssistant";
+    NSString *defaultNickname = @"ChatGPT";
+    NSString *defaultUserNickname = @"Me";
     
     
     if (![defaults objectForKey:@"apiEndpoint"]) {
@@ -27,7 +28,9 @@
     }
     if (![defaults objectForKey:@"assistantNick"]) {
         [defaults setObject:defaultNickname forKey:@"assistantNick"];
-        [defaults synchronize];
+    }
+    if (![defaults objectForKey:@"userNick"]) {
+        [defaults setObject:defaultUserNickname forKey:@"userNick"];
     }
     [defaults synchronize];
     return YES;

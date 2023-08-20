@@ -481,6 +481,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="h05-Pu-bar"/>
+                                                        <action selector="submituserNick:" destination="Tqn-6e-5tm" eventType="touchUpInside" id="ohb-sM-KTw"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

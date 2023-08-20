@@ -42,6 +42,10 @@
     if (aiNickName) {
         self.aiNickName.text = aiNickName;
     }
+    NSString *userNickName = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
+    if (userNickName) {
+        self.userNickName.text = userNickName;
+    }
 //reusing old code my beloved method
 }
 - (IBAction)confirmEndpoint:(id)sender {
@@ -62,6 +66,13 @@
     NSString *aiNickName = self.aiNickName.text;
     if (aiNickName.length > 0) {
         [[NSUserDefaults standardUserDefaults] setObject:aiNickName forKey:@"assistantNick"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+- (IBAction)submituserNick:(id)sender {
+    NSString *userNickName = self.userNickName.text;
+    if (userNickName.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:userNickName forKey:@"userNick"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }

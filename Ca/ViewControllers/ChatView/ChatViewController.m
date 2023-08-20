@@ -66,10 +66,11 @@
     NSString *model = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"]; //im sceptical of this
     NSString *message = self.inputTextField.text;
     NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
+    NSString *userNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
     
     if (message.length > 0) {
         NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
-        NSString *newMessage = [NSString stringWithFormat:@"Me: %@", message];
+        NSString *newMessage = [NSString stringWithFormat:@"%@: %@", userNickname, message];
         NSString *updatedChat = previousChat.length > 0 ? [NSString stringWithFormat:@"%@\n%@", previousChat, newMessage] : newMessage;
         
         [self.chatMessages addObject:newMessage];
