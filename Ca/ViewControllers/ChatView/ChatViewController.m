@@ -58,7 +58,8 @@
 }
 
 - (void)sendMessageToChatGPTAPI {
-    NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"]; //aaaaasdsaofndsgiuvwfegdwaihosndksm grjiefwjoscklajkwghfjo
+    NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
+    NSString *model = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"]; //im sceptical of this
     NSString *message = self.inputTextField.text;
     
     if (message.length > 0) {
@@ -77,13 +78,12 @@
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
-        //ok i swear soon nsuserdefaults
-        //NSString *apiKey = @"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"; //todo: make api key changeable in settings
         NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
         NSDictionary *bodyData = @{
                                    @"model": @"gpt-3.5-turbo",
+                                   //@"model": [gptprompt stringByAppendingString:message], thing
                                    @"messages": @[
                                            @{
                                                @"role": @"user",
@@ -135,7 +135,7 @@
 
 //button actions
 
-//this sends the inputted contents of inputTextView (just check void(sendMessageTChatGPTAPI) to see what it exactly does.
+//crashes the fucking app ! ! ! 
 - (IBAction)sendButtonTapped:(id)sender {
     [self sendMessageToChatGPTAPI];
 }
