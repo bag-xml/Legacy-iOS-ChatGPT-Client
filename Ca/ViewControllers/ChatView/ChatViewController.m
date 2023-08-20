@@ -83,7 +83,7 @@
         
         NSDictionary *bodyData = @{
                                    @"model": @"gpt-3.5-turbo",
-                                   //@"model": [gptprompt stringByAppendingString:message], thing
+                                   //@"model": [model stringByAppendingString:message], thing
                                    @"messages": @[
                                            @{
                                                @"role": @"user",
