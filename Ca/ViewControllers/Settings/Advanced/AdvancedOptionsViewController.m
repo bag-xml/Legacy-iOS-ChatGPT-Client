@@ -23,15 +23,18 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    NSString *savedApiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
+    if (savedApiKey) {
+        self.apiKeyInput.text = savedApiKey;
+    }
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSString *savedPrompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
+    if (savedPrompt) {
+        self.gptPromptInput.text = savedPrompt;
+    }//reusing old code my beloved method
 }
 
 - (void)didReceiveMemoryWarning

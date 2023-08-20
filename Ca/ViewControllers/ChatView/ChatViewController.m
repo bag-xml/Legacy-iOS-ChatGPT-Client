@@ -69,6 +69,7 @@
         NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
         NSString *newMessage = [NSString stringWithFormat:@"Me: %@", message];
         NSString *updatedChat = previousChat.length > 0 ? [NSString stringWithFormat:@"%@\n%@", previousChat, newMessage] : newMessage;
+        NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
         
         [self.chatMessages addObject:newMessage];
         [self.chatTableView reloadData];
@@ -76,7 +77,7 @@
         self.inputTextField.text = @""; //empties the textview
         
         // make nsurlrequest to openai's api
-        NSURL *url = [NSURL URLWithString:@"https://api.openai.com/v1/chat/completions"];//api endpoint (i wanna make this changeable)
+        NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -146,5 +147,5 @@
     //todo: make this
     
 }
-
+// ttps://api.openai.com/v1/chat/completions
 @end
