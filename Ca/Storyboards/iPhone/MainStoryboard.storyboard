@@ -280,31 +280,46 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Prompt" id="6TQ-NF-vsg">
-                                <string key="footerTitle">Great feature: You can have custom prompts, be it a Jailbreak prompt, 4chan user prompt anything goes (except if openai nuked it)</string>
+                            <tableViewSection headerTitle="Prompt" footerTitle="huren" id="gvD-aU-yrS">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mQS-xo-j6t">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="otu-Nu-Sy6">
                                         <rect key="frame" x="0.0" y="370" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Paste prompt into here..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ts6-JD-gya">
-                                                    <rect key="frame" x="12" y="7" width="284" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Insert prompt here..." minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fMC-es-2bZ">
+                                                    <rect key="frame" x="8" y="7" width="252" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="P93-Ht-Ihl"/>
-                                                        <constraint firstAttribute="width" constant="284" id="xFY-m2-AdO"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Ygk-vE-RDS"/>
+                                                        <constraint firstAttribute="width" constant="252" id="yQ6-5g-XLM"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg7-dB-5l1">
+                                                    <rect key="frame" x="265" y="6" width="29" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="23" id="ozk-P9-I6j"/>
+                                                    </constraints>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="submitPrompt:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="iL6-u5-Qtu"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="ts6-JD-gya" firstAttribute="centerY" secondItem="mQS-xo-j6t" secondAttribute="centerY" type="default" id="Cwn-6b-8RG"/>
-                                            <constraint firstItem="ts6-JD-gya" firstAttribute="leading" secondItem="mQS-xo-j6t" secondAttribute="leading" constant="22" id="EbI-Eh-QFB"/>
+                                            <constraint firstItem="fMC-es-2bZ" firstAttribute="leading" secondItem="otu-Nu-Sy6" secondAttribute="leading" constant="18" id="5um-RN-0i6"/>
+                                            <constraint firstItem="eg7-dB-5l1" firstAttribute="centerY" secondItem="otu-Nu-Sy6" secondAttribute="centerY" constant="-0.5" type="default" id="HUg-7R-xl7"/>
+                                            <constraint firstItem="eg7-dB-5l1" firstAttribute="leading" secondItem="fMC-es-2bZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="VWt-jj-7xb"/>
+                                            <constraint firstItem="fMC-es-2bZ" firstAttribute="centerY" secondItem="otu-Nu-Sy6" secondAttribute="centerY" type="default" id="koo-4E-nOE"/>
+                                            <constraint firstItem="eg7-dB-5l1" firstAttribute="baseline" secondItem="fMC-es-2bZ" secondAttribute="baseline" type="default" id="mmy-MZ-fuv"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -312,7 +327,7 @@
                             <tableViewSection headerTitle="Miscelanneous" footerTitle="Here is misc stuff that just won't fit in with the other toggles" id="f4v-hS-veO">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g7Z-BN-shX" detailTextLabel="SMD-Xa-Bme" style="IBUITableViewCellStyleSubtitle" id="1BQ-00-Rkr">
-                                        <rect key="frame" x="0.0" y="546" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="492" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -338,7 +353,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fZH-To-JjU" detailTextLabel="zib-8O-v5Q" style="IBUITableViewCellStyleSubtitle" id="eS2-JX-XS0">
-                                        <rect key="frame" x="0.0" y="591" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="537" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -373,8 +388,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="5mZ-GD-oW4"/>
                     <connections>
-                        <outlet property="degenprompt" destination="ts6-JD-gya" id="IXZ-i6-U0H"/>
-                        <outlet property="inputText" destination="7UB-cK-fnu" id="qSd-i7-XPY"/>
+                        <outlet property="gptPromptInput" destination="fMC-es-2bZ" id="88r-Eu-fig"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Kd-mX-c6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
