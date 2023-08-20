@@ -58,7 +58,7 @@
 - (IBAction)setAIModel:(id)sender {
     NSString *AIModel = self.AIModelInput.text;
     if (AIModel.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:AIModel forKey:@"apiEndpoint"];
+        [[NSUserDefaults standardUserDefaults] setObject:AIModel forKey:@"AIModel"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
