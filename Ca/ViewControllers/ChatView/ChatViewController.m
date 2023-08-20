@@ -78,7 +78,8 @@
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
         //ok i swear soon nsuserdefaults
-        NSString *apiKey = @"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"; //todo: make api key changeable in settings
+        //NSString *apiKey = @"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"; //todo: make api key changeable in settings
+        NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
         NSDictionary *bodyData = @{
