@@ -204,13 +204,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Guide" footerTitle="This page has guides for the following things of this app:" id="OYF-Wp-Owi">
+                            <tableViewSection headerTitle="Guide" footerTitle="This page has instructions on how to generate an API key and on how to use and handle custom prompts." id="OYF-Wp-Owi">
                                 <cells/>
                             </tableViewSection>
-                            <tableViewSection headerTitle="How to make an API Key?" footerTitle="" id="fzg-Jk-944">
-                                <cells/>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="How can I use custom prompts?" footerTitle="" id="d4A-m2-vyV">
+                            <tableViewSection headerTitle="API Key" footerTitle="mrrrrp" id="fAg-fe-3Gm">
                                 <cells/>
                             </tableViewSection>
                         </sections>
