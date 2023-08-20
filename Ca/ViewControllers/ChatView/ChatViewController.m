@@ -58,7 +58,7 @@
 }
 
 - (void)sendMessageToChatGPTAPI {
-    NSString *gptprompt = @" ";
+    NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"]; //aaaaasdsaofndsgiuvwfegdwaihosndksm grjiefwjoscklajkwghfjo
     NSString *message = self.inputTextField.text;
     
     if (message.length > 0) {
@@ -77,11 +77,10 @@
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
-        // i didnt know how this worked so i asked gpt
+        //ok i swear soon nsuserdefaults
         NSString *apiKey = @"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"; //todo: make api key changeable in settings
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
-        // credits to some guy on stackoverflow for this
         NSDictionary *bodyData = @{
                                    @"model": @"gpt-3.5-turbo",
                                    @"messages": @[
@@ -90,13 +89,16 @@
                                                @"content": [gptprompt stringByAppendingString:message]
                                                }
                                            ]
-                                   };        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyData options:0 error:nil];
+                                   };
+        
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyData options:0 error:nil];
         [request setHTTPBody:jsonData];
         
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
         [connection start];
     }
 }
+
 
 //Connection related stuff
 

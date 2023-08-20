@@ -193,7 +193,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5X-v3-UNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="-1033"/>
+            <point key="canvasLocation" x="-187" y="-1030"/>
         </scene>
         <!--Table View Controller - Guide-->
         <scene sceneID="WDx-pJ-7I9">
@@ -207,7 +207,11 @@
                             <tableViewSection headerTitle="Guide" footerTitle="This page has instructions on how to generate an API key and on how to use and handle custom prompts." id="OYF-Wp-Owi">
                                 <cells/>
                             </tableViewSection>
-                            <tableViewSection headerTitle="API Key" footerTitle="mrrrrp" id="fAg-fe-3Gm">
+                            <tableViewSection headerTitle="API Key" id="fAg-fe-3Gm">
+                                <string key="footerTitle">You require an API key from OpenAI to use this application. In order to proceed you MUST go to https://platforms.openai.com/apikey</string>
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="e29u3z28t4girkbwsqjgUZR&amp;%(/Tä" footerTitle="O(/%&amp;$%§%&quot;QXD~∫©¨√Ωç€][|®√†∫ª©ƒ√ç∂≈®Ω†‚∑[€ç]|√{≠∫}V" id="REv-7T-ImM">
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -220,7 +224,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQv-QJ-Vo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="-1696"/>
+            <point key="canvasLocation" x="-187" y="-1764"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="L1q-zP-Wzc">
