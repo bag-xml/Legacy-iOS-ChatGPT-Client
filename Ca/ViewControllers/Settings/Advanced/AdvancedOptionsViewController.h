@@ -11,4 +11,5 @@
 @interface AdvancedOptionsViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *endpointSubmitInput;
+@property (weak, nonatomic) IBOutlet UITextField *AIModelInput;
 @end

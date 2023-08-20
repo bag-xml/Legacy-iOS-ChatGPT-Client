@@ -11,16 +11,34 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completion";
+    NSString *defaultAIModel = @"gpt-3.5-turbo";
+    
+    
+    if (![defaults objectForKey:@"apiEndpoint"]) {
+        [defaults setObject:defaultApiEndpoint forKey:@"apiEndpoint"];
+    }
+    if (![defaults objectForKey:@"AIModel"]) {
+        [defaults setObject:defaultAIModel forKey:@"AIModel"];
+    }
+    [defaults synchronize];
+    return YES;
+}
+
+/*- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *defaultApiEndpoint = @"https:/api.openai.com/v1/chat/completion";
     
     if (![defaults objectForKey:@"apiEndpoint"]) {
         [defaults setObject:defaultApiEndpoint forKey:@"apiEndpoint"];
         [defaults synchronize];
     }
     return YES;
-}
+}*/
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

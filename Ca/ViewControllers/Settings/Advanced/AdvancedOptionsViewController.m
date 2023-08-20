@@ -34,6 +34,10 @@
     if (urlEndpoint) {
         self.endpointSubmitInput.text = urlEndpoint;
     }
+    NSString *AIModel = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
+    if (AIModel) {
+        self.AIModelInput.text = AIModel;
+    }
 //reusing old code my beloved method
 }
 - (IBAction)confirmEndpoint:(id)sender {
@@ -43,12 +47,12 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)setAIModel:(id)sender {
+    NSString *AIModel = self.AIModelInput.text;
+    if (AIModel.length > 0) {
+        [[NSUserDefaults standardUserDefaults] setObject:AIModel forKey:@"apiEndpoint"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
-
 
 @end

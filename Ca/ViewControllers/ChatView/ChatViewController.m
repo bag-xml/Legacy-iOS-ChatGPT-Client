@@ -88,8 +88,8 @@
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
         NSDictionary *bodyData = @{
-                                   //@"model": @"gpt-3.5-turbo",
-                                   @"model": [model stringByAppendingString:message],
+                                   @"model": @"gpt-3.5-turbo",
+                                   //@"model": [model stringByAppendingString:message], john i cant do this
                                    @"messages": @[
                                            @{
                                                @"role": @"user",
