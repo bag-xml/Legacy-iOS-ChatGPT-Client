@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D58B42E2A9262B4000CBEA1 /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */; };
 		C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60FA08F2A8D868100991533 /* SettingsViewController.m */; };
 		C616EC842A90E67E00A9686F /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C616EC832A90E67E00A9686F /* ChatTableViewCell.m */; };
 		C616EC862A90F1A500A9686F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C616EC852A90F1A500A9686F /* MainStoryboard.storyboard */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D58B42C2A9262B4000CBEA1 /* AdvancedOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedOptionsViewController.h; sourceTree = "<group>"; };
+		7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedOptionsViewController.m; sourceTree = "<group>"; };
 		C60FA08E2A8D868100991533 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		C60FA08F2A8D868100991533 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C616EC822A90E67E00A9686F /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
@@ -101,9 +104,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D58B4292A926293000CBEA1 /* Advanced */ = {
+			isa = PBXGroup;
+			children = (
+				7D58B42C2A9262B4000CBEA1 /* AdvancedOptionsViewController.h */,
+				7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */,
+			);
+			path = Advanced;
+			sourceTree = "<group>";
+		};
+		7D58B42A2A926293000CBEA1 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				7D58B42B2A926293000CBEA1 /* Advanced */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		7D58B42B2A926293000CBEA1 /* Advanced */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Advanced;
+			sourceTree = "<group>";
+		};
 		C60FA08D2A8D866900991533 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				7D58B4292A926293000CBEA1 /* Advanced */,
+				7D58B42A2A926293000CBEA1 /* iPad */,
 				C60FA08E2A8D868100991533 /* SettingsViewController.h */,
 				C60FA08F2A8D868100991533 /* SettingsViewController.m */,
 			);
@@ -383,10 +412,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
 		};
-/* End PBXShellScriptBuildPhase section */
-
-
-/* Begin PBXShellScriptBuildPhase section */
 		C62AEF802A898C8C00DD8D5A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,6 +437,7 @@
 				C6B9283B2A8C26FE003F62E7 /* ChatViewController.m in Sources */,
 				C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */,
 				C6E1CC872A8C2317004D41C8 /* iPadChatViewController.m in Sources */,
+				7D58B42E2A9262B4000CBEA1 /* AdvancedOptionsViewController.m in Sources */,
 				C616EC842A90E67E00A9686F /* ChatTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

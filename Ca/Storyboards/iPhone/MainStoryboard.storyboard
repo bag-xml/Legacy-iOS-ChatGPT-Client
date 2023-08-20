@@ -452,7 +452,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Display Names" id="lD8-Vi-Pgc">
-                                <string key="footerTitle">You can set Display names of the AI Chatbot and of you, this gives you more customization and combined with custom prompts can generally give a better experience to the user. (The default name for the user is "Me" and for the AI "ChatGPT")</string>
+                                <string key="footerTitle">You can set Display names of the AI Chatbot and of you, this gives you more customization and combined with custom prompts can generally give a better experience to the user. (The default name for the user is "Me" and for the AI "ChatGPT") devnote: ill do this as last thing</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YUR-ig-0Cs">
                                         <rect key="frame" x="0.0" y="438" width="320" height="45"/>
