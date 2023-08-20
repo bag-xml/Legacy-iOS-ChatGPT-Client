@@ -63,7 +63,7 @@
 - (void)sendMessageToChatGPTAPI {
     //strings
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
-    NSString *model = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"]; //im sceptical of this
+    NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
     NSString *message = self.inputTextField.text;
     NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
     NSString *userNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
@@ -89,8 +89,8 @@
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
         NSDictionary *bodyData = @{
-                                   @"model": @"gpt-3.5-turbo",
-                                   //@"model": [model stringByAppendingString:message], john i cant do this
+                                   //@"model": @"gpt-3.5-turbo",
+                                   @"model": [NSString stringWithFormat:@"%@", modelType],
                                    @"messages": @[
                                            @{
                                                @"role": @"user",
