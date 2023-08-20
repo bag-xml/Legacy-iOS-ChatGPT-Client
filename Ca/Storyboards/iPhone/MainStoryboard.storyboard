@@ -392,7 +392,7 @@
                                     </barButtonItem>
                                     <barButtonItem title="Send" id="xjq-tq-fRP">
                                         <connections>
-                                            <action selector="sendButtonTapped:" destination="7yE-KH-Hrv" id="kzp-KZ-U7O"/>
+                                            <action selector="shotsWereFiredAtMyFriends:" destination="7yE-KH-Hrv" id="6wh-rU-mQD"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yMs-iZ-smx"/>

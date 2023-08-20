@@ -51,11 +51,14 @@
 }
 
 
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-    [self sendMessageToChatGPTAPI];
+    //[self sendMessageToChatGPTAPI];
     return YES;
 }
+
+
 
 - (void)sendMessageToChatGPTAPI {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
@@ -135,17 +138,12 @@
 
 //button actions
 
-//crashes the fucking app ! ! ! 
-- (IBAction)sendButtonTapped:(id)sender {
+- (IBAction)shotsWereFiredAtMyFriends:(id)sender {
     [self sendMessageToChatGPTAPI];
 }
 
-//i fucked this up
 - (IBAction)saveButtonTapped:(id)sender {
-    //tbh this may be too hard for me
+    //todo: make this
 }
-
-// JOHN if you see this, i found my old tableview code. tableviews are superior. :100:
-//dw this will not impact us rlly.
 
 @end
