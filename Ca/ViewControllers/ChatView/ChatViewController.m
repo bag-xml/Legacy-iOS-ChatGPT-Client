@@ -73,10 +73,10 @@
         [self.chatMessages addObject:newMessage];
         [self.chatTableView reloadData];
         
-        self.inputTextField.text = @"";
+        self.inputTextField.text = @""; //empties the textview
         
         // make nsurlrequest to openai's api
-        NSURL *url = [NSURL URLWithString:@"https://api.openai.com/v1/chat/completions"];
+        NSURL *url = [NSURL URLWithString:@"https://api.openai.com/v1/chat/completions"];//api endpoint (i wanna make this changeable)
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
