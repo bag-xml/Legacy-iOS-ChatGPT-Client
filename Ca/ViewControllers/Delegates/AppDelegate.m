@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 
+
 @implementation AppDelegate
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
@@ -19,6 +22,8 @@
     NSString *defaultNickname = @"ChatGPT";
     NSString *defaultUserNickname = @"Me";
     NSString *appVersion = @"1.0a5";
+    NSString *aiPrompt = @" ";
+    NSString *requestAmount = @"0";
     
     
     if (![defaults objectForKey:@"apiEndpoint"]) {
@@ -35,6 +40,12 @@
     }
     if (![defaults objectForKey:@"version"]) {
         [defaults setObject:appVersion forKey:@"version"];
+    }
+    if (![defaults objectForKey:@"gptPrompt"]) {
+        [defaults setObject:aiPrompt forKey:@"gptPrompt"];
+    }
+    if (![defaults objectForKey:@"requestAmount"]) {
+        [defaults setObject:requestAmount forKey:@"requestAmount"];
     }
     [defaults synchronize];
     return YES;

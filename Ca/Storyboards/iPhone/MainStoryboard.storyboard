@@ -629,7 +629,7 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cost" minimumFontSize="17" clearButtonMode="whileEditing" id="HOx-gk-agl">
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cost" minimumFontSize="17" clearButtonMode="whileEditing" id="HOx-gk-agl">
                                                     <rect key="frame" x="9" y="7" width="280" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -643,36 +643,16 @@
                             <tableViewSection headerTitle="App Statistics" footerTitle="" id="EjS-hg-Bra">
                                 <cells/>
                             </tableViewSection>
-                            <tableViewSection headerTitle="App Uptime" footerTitle="" id="9uO-zG-R8m">
+                            <tableViewSection headerTitle="iOS Version" footerTitle="" id="QHP-iq-Uqi">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="x74-I7-jyZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RrV-Pp-7eP">
                                         <rect key="frame" x="0.0" y="812" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="total time" minimumFontSize="17" clearButtonMode="whileEditing" id="ezm-pu-WBq">
-                                                    <rect key="frame" x="10" y="7" width="280" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                                                </textField>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="iOS Version" footerTitle="" id="QHP-iq-Uqi">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RrV-Pp-7eP">
-                                        <rect key="frame" x="0.0" y="904" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="System version string." minimumFontSize="17" clearButtonMode="whileEditing" id="2Bi-ar-57T">
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="System version string." minimumFontSize="17" clearButtonMode="whileEditing" id="2Bi-ar-57T">
                                                     <rect key="frame" x="9" y="7" width="280" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -686,7 +666,7 @@
                             <tableViewSection headerTitle="App Version" footerTitle="" id="D12-3A-1hw">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ary-46-cXj">
-                                        <rect key="frame" x="0.0" y="996" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="904" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -711,6 +691,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Statistics" id="nSI-ll-xB6"/>
                     <connections>
+                        <outlet property="apiRequestField" destination="TjV-AA-6S0" id="Vy5-QP-awz"/>
                         <outlet property="versionOutput" destination="Ifc-Rs-4Kh" id="tKR-Y3-zLp"/>
                     </connections>
                 </tableViewController>
