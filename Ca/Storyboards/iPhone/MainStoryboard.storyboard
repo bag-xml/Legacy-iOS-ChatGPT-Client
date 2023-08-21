@@ -560,10 +560,10 @@
             </objects>
             <point key="canvasLocation" x="949" y="-2378"/>
         </scene>
-        <!--Table View Controller - Statistics-->
+        <!--Statistic View Controller - Statistics-->
         <scene sceneID="9yA-fp-y0g">
             <objects>
-                <tableViewController id="TWo-hw-87Q" sceneMemberID="viewController">
+                <tableViewController id="TWo-hw-87Q" customClass="StatisticViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qep-Vv-wsR">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -590,7 +590,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Requests" minimumFontSize="17" clearButtonMode="whileEditing" id="TjV-AA-6S0">
-                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <rect key="frame" x="10" y="7" width="280" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
@@ -653,7 +653,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="total time" minimumFontSize="17" clearButtonMode="whileEditing" id="ezm-pu-WBq">
-                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <rect key="frame" x="10" y="7" width="280" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
@@ -692,8 +692,8 @@
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Appver" minimumFontSize="17" clearButtonMode="whileEditing" id="Ifc-Rs-4Kh">
-                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Appver" minimumFontSize="17" clearButtonMode="whileEditing" id="Ifc-Rs-4Kh">
+                                                    <rect key="frame" x="10" y="7" width="280" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
@@ -710,6 +710,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Statistics" id="nSI-ll-xB6"/>
+                    <connections>
+                        <outlet property="versionOutput" destination="Ifc-Rs-4Kh" id="tKR-Y3-zLp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywg-hw-uTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

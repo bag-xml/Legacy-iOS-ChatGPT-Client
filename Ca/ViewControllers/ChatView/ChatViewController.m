@@ -117,11 +117,13 @@
     return self.chatMessages.count;
 }
 
+//FOR PEOPLE WHO'D LIKE TO CONTRIBUTE:
+//i suck at tableviewcells :100:
+//please try to improve them
+//thanks
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
-    //aaaaaaaaaaaaaaaaaaaaaaaa
     NSString *message = self.chatMessages[indexPath.row];
-    // split me: and message
     NSArray *messageComponents = [message componentsSeparatedByString:@": "];
     if (messageComponents.count == 2) {
         cell.usernameLabel.text = messageComponents[0];

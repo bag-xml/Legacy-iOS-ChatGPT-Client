@@ -18,6 +18,7 @@
     NSString *defaultAIModel = @"gpt-3.5-turbo";
     NSString *defaultNickname = @"ChatGPT";
     NSString *defaultUserNickname = @"Me";
+    NSString *appVersion = @"1.0a5";
     
     
     if (![defaults objectForKey:@"apiEndpoint"]) {
@@ -31,6 +32,9 @@
     }
     if (![defaults objectForKey:@"userNick"]) {
         [defaults setObject:defaultUserNickname forKey:@"userNick"];
+    }
+    if (![defaults objectForKey:@"version"]) {
+        [defaults setObject:appVersion forKey:@"version"];
     }
     [defaults synchronize];
     return YES;
