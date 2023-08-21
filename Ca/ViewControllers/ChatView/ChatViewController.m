@@ -32,36 +32,8 @@
     self.chatTableView.dataSource = self;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.chatMessages.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
-    //aaaaaaaaaaaaaaaaaaaaaaaa
-    NSString *message = self.chatMessages[indexPath.row];
-    // split me: and message
-    NSArray *messageComponents = [message componentsSeparatedByString:@": "];
-    if (messageComponents.count == 2) {
-        cell.usernameLabel.text = messageComponents[0];
-        cell.contentsTextView.text = messageComponents[1];
-    }
-    
-    return cell;
-}
-
-
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    //[self sendMessageToChatGPTAPI];
-    return YES;
-}
-
-
-
+//Connection
 - (void)sendMessageToChatGPTAPI {
-    //strings
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
     NSString *message = self.inputTextField.text;
@@ -89,7 +61,6 @@
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
         NSDictionary *bodyData = @{
-                                   //@"model": @"gpt-3.5-turbo",
                                    @"model": [NSString stringWithFormat:@"%@", modelType],
                                    @"messages": @[
                                            @{
@@ -107,9 +78,6 @@
     }
 }
 
-
-//Connection related stuff
-
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
     
@@ -122,7 +90,6 @@
         
         NSString *previousChat = [self.chatMessages componentsJoinedByString:@"\n"];
         NSString *newMessage = [NSString stringWithFormat:@"%@: %@", assistantNickname, assistantReply];
-        //NSString *newMessage = [NSString stringWithFormat:@"ChatGPT: %@", assistantReply];
         NSString *updatedChat = previousChat.length > 0 ? [NSString stringWithFormat:@"%@\n%@", previousChat, newMessage] : newMessage;
         
         [self.chatMessages addObject:newMessage];
@@ -133,6 +100,7 @@
     }
 }
 
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     self.responseData.length = 0;
 }
@@ -142,7 +110,35 @@
 }
 
 
-//button actions
+
+
+//tableview stuff
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.chatMessages.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell" forIndexPath:indexPath];
+    //aaaaaaaaaaaaaaaaaaaaaaaa
+    NSString *message = self.chatMessages[indexPath.row];
+    // split me: and message
+    NSArray *messageComponents = [message componentsSeparatedByString:@": "];
+    if (messageComponents.count == 2) {
+        cell.usernameLabel.text = messageComponents[0];
+        cell.contentsTextView.text = messageComponents[1];
+    }
+    
+    return cell;
+}
+
+
+
+//misc
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 
 - (IBAction)shotsWereFiredAtMyFriends:(id)sender {
     [self sendMessageToChatGPTAPI];
@@ -152,5 +148,4 @@
     //todo: make this
     
 }
-// ttps://api.openai.com/v1/chat/completions
 @end
