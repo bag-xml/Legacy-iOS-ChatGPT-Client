@@ -182,7 +182,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5X-v3-UNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="309" y="-414"/>
+            <point key="canvasLocation" x="949" y="-134"/>
         </scene>
         <!--Table View Controller - Guide-->
         <scene sceneID="WDx-pJ-7I9">
@@ -517,6 +517,31 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Statistics" footerTitle="App Statistics, from the moment you opened it." id="4cd-sG-Sbj">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="jov-Lw-74c" style="IBUITableViewCellStyleDefault" id="scT-2V-k48">
+                                        <rect key="frame" x="0.0" y="730" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Show" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jov-Lw-74c">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="TWo-hw-87Q" kind="push" id="Ygr-rC-WXu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="Tqn-6e-5tm" id="8ej-Nx-3qh"/>
@@ -533,7 +558,31 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcq-y0-hbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="-1722"/>
+            <point key="canvasLocation" x="949" y="-2378"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="9yA-fp-y0g">
+            <objects>
+                <tableViewController id="TWo-hw-87Q" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qep-Vv-wsR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="a" footerTitle="a" id="Yjt-Co-bR2">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="TWo-hw-87Q" id="abp-HI-wVb"/>
+                            <outlet property="delegate" destination="TWo-hw-87Q" id="aIG-nW-fEb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="4Db-hU-bxl"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ywg-hw-uTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="-2378"/>
         </scene>
         <!--Chat View Controller - Chat-->
         <scene sceneID="quL-cf-FaW">

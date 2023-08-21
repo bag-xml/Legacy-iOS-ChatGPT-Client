@@ -25,7 +25,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-//hardcode sobb
+//todo change :3
     self.usernameLabel.frame = CGRectMake(10, 10, self.contentView.bounds.size.width - 20, 20);
     self.contentsTextView.frame = CGRectMake(10, CGRectGetMaxY(self.usernameLabel.frame) + 5, self.contentView.bounds.size.width - 20, self.contentView.bounds.size.height - CGRectGetMaxY(self.usernameLabel.frame) - 15);
 }
