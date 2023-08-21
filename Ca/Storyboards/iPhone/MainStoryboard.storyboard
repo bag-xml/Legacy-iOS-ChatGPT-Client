@@ -19,7 +19,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTp-tM-JEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3798" y="-406"/>
+            <point key="canvasLocation" x="-3468" y="-398"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5YH-Ui-ZLd">
@@ -560,7 +560,7 @@
             </objects>
             <point key="canvasLocation" x="949" y="-2378"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Statistics-->
         <scene sceneID="9yA-fp-y0g">
             <objects>
                 <tableViewController id="TWo-hw-87Q" sceneMemberID="viewController">
@@ -569,8 +569,139 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="a" footerTitle="a" id="Yjt-Co-bR2">
+                            <tableViewSection headerTitle="Stastictics" id="Yjt-Co-bR2">
+                                <string key="footerTitle">In-app Statistics are displayed on this page. Information on how many requests have been sent to the API, how many responses have been gotten back, how long the app in total has been used, all are stored here.</string>
                                 <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Privacy note" id="ZRC-jA-KnI">
+                                <string key="footerTitle">These statistics are locally stored under (App path)/LIbrary/Preferences/com.daphneC.ChatGPT.plist. They are NOT sent to the AI or me, everything is stored on-device. If you have doubts then head to GitHub and look through the source code of this app.</string>
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="API related Statistics" footerTitle="" id="YFp-Lg-hbq">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Requests to the API" footerTitle="" id="Mhr-Dk-Nl9">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0xx-6i-j9D">
+                                        <rect key="frame" x="0.0" y="442" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Requests" minimumFontSize="17" clearButtonMode="whileEditing" id="TjV-AA-6S0">
+                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Responses from the API" footerTitle="" id="Kax-41-7jX">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mHN-iz-gia">
+                                        <rect key="frame" x="0.0" y="534" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Response" minimumFontSize="17" clearButtonMode="whileEditing" id="qtm-Zz-mHL">
+                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Approximate cost" footerTitle="doesnt apply if the api key is generated via free trial" id="knR-xo-36M">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Zer-5H-vcX">
+                                        <rect key="frame" x="0.0" y="626" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cost" minimumFontSize="17" clearButtonMode="whileEditing" id="HOx-gk-agl">
+                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="App Statistics" footerTitle="" id="EjS-hg-Bra">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="App Uptime" footerTitle="" id="9uO-zG-R8m">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="x74-I7-jyZ">
+                                        <rect key="frame" x="0.0" y="812" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="total time" minimumFontSize="17" clearButtonMode="whileEditing" id="ezm-pu-WBq">
+                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="iOS Version" footerTitle="" id="QHP-iq-Uqi">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RrV-Pp-7eP">
+                                        <rect key="frame" x="0.0" y="904" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="System version string." minimumFontSize="17" clearButtonMode="whileEditing" id="2Bi-ar-57T">
+                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="App Version" footerTitle="" id="D12-3A-1hw">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ary-46-cXj">
+                                        <rect key="frame" x="0.0" y="996" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Appver" minimumFontSize="17" clearButtonMode="whileEditing" id="Ifc-Rs-4Kh">
+                                                    <rect key="frame" x="9" y="7" width="280" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -578,11 +709,11 @@
                             <outlet property="delegate" destination="TWo-hw-87Q" id="aIG-nW-fEb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="4Db-hU-bxl"/>
+                    <navigationItem key="navigationItem" title="Statistics" id="nSI-ll-xB6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywg-hw-uTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-2378"/>
+            <point key="canvasLocation" x="2145" y="-2378"/>
         </scene>
         <!--Chat View Controller - Chat-->
         <scene sceneID="quL-cf-FaW">
