@@ -10,7 +10,6 @@
 		7D58B42E2A9262B4000CBEA1 /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */; };
 		7DDB69022A928A4400D5DCD4 /* shiypc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7DDB69012A928A4400D5DCD4 /* shiypc.jpeg */; };
 		7DDB69092A92A0C400D5DCD4 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69082A92A0C400D5DCD4 /* ChatTableViewCell.m */; };
-		7DF857EB2A93CB9E00699B9F /* StatisticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF857EA2A93CB9E00699B9F /* StatisticViewController.m */; };
 		C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60FA08F2A8D868100991533 /* SettingsViewController.m */; };
 		C616EC862A90F1A500A9686F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C616EC852A90F1A500A9686F /* MainStoryboard.storyboard */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
@@ -51,8 +50,6 @@
 		7DDB69012A928A4400D5DCD4 /* shiypc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shiypc.jpeg; sourceTree = "<group>"; };
 		7DDB69072A92A0C400D5DCD4 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		7DDB69082A92A0C400D5DCD4 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
-		7DF857E92A93CB9E00699B9F /* StatisticViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticViewController.h; sourceTree = "<group>"; };
-		7DF857EA2A93CB9E00699B9F /* StatisticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticViewController.m; sourceTree = "<group>"; };
 		C60FA08E2A8D868100991533 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		C60FA08F2A8D868100991533 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		C616EC852A90F1A500A9686F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -165,27 +162,9 @@
 			path = iPad;
 			sourceTree = "<group>";
 		};
-		7DF857E72A93CB5D00699B9F /* Statistics */ = {
-			isa = PBXGroup;
-			children = (
-				7DF857E82A93CB5D00699B9F /* iPad */,
-				7DF857E92A93CB9E00699B9F /* StatisticViewController.h */,
-				7DF857EA2A93CB9E00699B9F /* StatisticViewController.m */,
-			);
-			path = Statistics;
-			sourceTree = "<group>";
-		};
-		7DF857E82A93CB5D00699B9F /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = iPad;
-			sourceTree = "<group>";
-		};
 		C60FA08D2A8D866900991533 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				7DF857E72A93CB5D00699B9F /* Statistics */,
 				7D58B4292A926293000CBEA1 /* Advanced */,
 				7D58B42A2A926293000CBEA1 /* iPad */,
 				C60FA08E2A8D868100991533 /* SettingsViewController.h */,
@@ -476,7 +455,6 @@
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
 				C6A4D4592A8BA60A007E2DE1 /* AppDelegate.m in Sources */,
 				C6B9283B2A8C26FE003F62E7 /* ChatViewController.m in Sources */,
-				7DF857EB2A93CB9E00699B9F /* StatisticViewController.m in Sources */,
 				7DDB69092A92A0C400D5DCD4 /* ChatTableViewCell.m in Sources */,
 				C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */,
 				C6E1CC872A8C2317004D41C8 /* iPadChatViewController.m in Sources */,

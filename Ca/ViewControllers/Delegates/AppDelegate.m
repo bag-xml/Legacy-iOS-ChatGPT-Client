@@ -45,7 +45,7 @@
         [defaults setObject:aiPrompt forKey:@"gptPrompt"];
     }
     if (![defaults objectForKey:@"requestAmount"]) {
-        [defaults setObject:requestAmount forKey:@"totalRequests"];
+        [defaults setObject:requestAmount forKey:@"requestAmount"];
     }
     [defaults synchronize];
     return YES;
