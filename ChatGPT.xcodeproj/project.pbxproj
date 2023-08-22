@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7D58B42E2A9262B4000CBEA1 /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */; };
+		7D5920182A9573DE00D9E3E4 /* JohnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5920172A9573DE00D9E3E4 /* JohnViewController.m */; };
+		7D59201B2A9573EB00D9E3E4 /* APIHolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D59201A2A9573EB00D9E3E4 /* APIHolderViewController.m */; };
+		7D6CED922A9569B50028EAC3 /* DaphneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6CED912A9569B50028EAC3 /* DaphneViewController.m */; };
 		7DDB69022A928A4400D5DCD4 /* shiypc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7DDB69012A928A4400D5DCD4 /* shiypc.jpeg */; };
 		7DDB69092A92A0C400D5DCD4 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB69082A92A0C400D5DCD4 /* ChatTableViewCell.m */; };
 		C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C60FA08F2A8D868100991533 /* SettingsViewController.m */; };
@@ -47,6 +50,12 @@
 /* Begin PBXFileReference section */
 		7D58B42C2A9262B4000CBEA1 /* AdvancedOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedOptionsViewController.h; sourceTree = "<group>"; };
 		7D58B42D2A9262B4000CBEA1 /* AdvancedOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedOptionsViewController.m; sourceTree = "<group>"; };
+		7D5920162A9573DE00D9E3E4 /* JohnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JohnViewController.h; sourceTree = "<group>"; };
+		7D5920172A9573DE00D9E3E4 /* JohnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JohnViewController.m; sourceTree = "<group>"; };
+		7D5920192A9573EB00D9E3E4 /* APIHolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHolderViewController.h; sourceTree = "<group>"; };
+		7D59201A2A9573EB00D9E3E4 /* APIHolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHolderViewController.m; sourceTree = "<group>"; };
+		7D6CED902A9569B50028EAC3 /* DaphneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaphneViewController.h; sourceTree = "<group>"; };
+		7D6CED912A9569B50028EAC3 /* DaphneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaphneViewController.m; sourceTree = "<group>"; };
 		7DDB69012A928A4400D5DCD4 /* shiypc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shiypc.jpeg; sourceTree = "<group>"; };
 		7DDB69072A92A0C400D5DCD4 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		7DDB69082A92A0C400D5DCD4 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
@@ -130,6 +139,64 @@
 			path = Advanced;
 			sourceTree = "<group>";
 		};
+		7D6CED892A95651E0028EAC3 /* daphne */ = {
+			isa = PBXGroup;
+			children = (
+				7D6CED902A9569B50028EAC3 /* DaphneViewController.h */,
+				7D6CED912A9569B50028EAC3 /* DaphneViewController.m */,
+			);
+			path = daphne;
+			sourceTree = "<group>";
+		};
+		7D6CED8A2A95651E0028EAC3 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				7D6CED8B2A95651E0028EAC3 /* daphne */,
+				7D6CED8C2A95651E0028EAC3 /* openai */,
+				7D6CED8D2A95651E0028EAC3 /* shiypc */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		7D6CED8B2A95651E0028EAC3 /* daphne */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = daphne;
+			sourceTree = "<group>";
+		};
+		7D6CED8C2A95651E0028EAC3 /* openai */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = openai;
+			sourceTree = "<group>";
+		};
+		7D6CED8D2A95651E0028EAC3 /* shiypc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = shiypc;
+			sourceTree = "<group>";
+		};
+		7D6CED8E2A95651E0028EAC3 /* openai */ = {
+			isa = PBXGroup;
+			children = (
+				7D5920192A9573EB00D9E3E4 /* APIHolderViewController.h */,
+				7D59201A2A9573EB00D9E3E4 /* APIHolderViewController.m */,
+			);
+			path = openai;
+			sourceTree = "<group>";
+		};
+		7D6CED8F2A95651E0028EAC3 /* shiypc */ = {
+			isa = PBXGroup;
+			children = (
+				7D5920162A9573DE00D9E3E4 /* JohnViewController.h */,
+				7D5920172A9573DE00D9E3E4 /* JohnViewController.m */,
+			);
+			path = shiypc;
+			sourceTree = "<group>";
+		};
 		7DDB69052A92A0C400D5DCD4 /* misc */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,16 +217,12 @@
 		7DF857E52A93CB4C00699B9F /* About */ = {
 			isa = PBXGroup;
 			children = (
-				7DF857E62A93CB4C00699B9F /* iPad */,
+				7D6CED892A95651E0028EAC3 /* daphne */,
+				7D6CED8A2A95651E0028EAC3 /* iPad */,
+				7D6CED8E2A95651E0028EAC3 /* openai */,
+				7D6CED8F2A95651E0028EAC3 /* shiypc */,
 			);
 			path = About;
-			sourceTree = "<group>";
-		};
-		7DF857E62A93CB4C00699B9F /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = iPad;
 			sourceTree = "<group>";
 		};
 		C60FA08D2A8D866900991533 /* Settings */ = {
@@ -452,7 +515,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6CED922A9569B50028EAC3 /* DaphneViewController.m in Sources */,
+				7D59201B2A9573EB00D9E3E4 /* APIHolderViewController.m in Sources */,
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
+				7D5920182A9573DE00D9E3E4 /* JohnViewController.m in Sources */,
 				C6A4D4592A8BA60A007E2DE1 /* AppDelegate.m in Sources */,
 				C6B9283B2A8C26FE003F62E7 /* ChatViewController.m in Sources */,
 				7DDB69092A92A0C400D5DCD4 /* ChatTableViewCell.m in Sources */,
