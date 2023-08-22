@@ -31,6 +31,10 @@
     if (appVersion) {
         self.versionOutput.text = appVersion;
     }
+    NSString *apiRequests = [[NSUserDefaults standardUserDefaults] objectForKey:@"totalRequests"];
+    if (apiRequests) {
+        self.apiRequestField.text = apiRequests;
+    }
     
 }
 
