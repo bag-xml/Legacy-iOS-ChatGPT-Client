@@ -204,7 +204,7 @@
                         <sections>
                             <tableViewSection id="tx8-7n-aId">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="JiI-cW-jW7">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="JiI-cW-jW7">
                                         <rect key="frame" x="0.0" y="10" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -286,7 +286,7 @@
                         <sections>
                             <tableViewSection id="dpr-M4-euS">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="bPX-hI-MCE">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="bPX-hI-MCE">
                                         <rect key="frame" x="0.0" y="10" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -454,7 +454,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="API key" footerTitle="Please look for more detailed information on how to obtain an OpenAI API Key in the guide." id="XIV-7H-8PX">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YDd-2D-ODO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YDd-2D-ODO">
                                         <rect key="frame" x="0.0" y="140" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -484,7 +484,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Prompt" footerTitle="Prompts can define the character of your AI, to see how you use them correctly please refer to the guide." id="gvD-aU-yrS">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="otu-Nu-Sy6">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="otu-Nu-Sy6">
                                         <rect key="frame" x="0.0" y="298" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -623,7 +623,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="API Endpoint" footerTitle="Very handy option once the current endpoint becomes inaccesible after years." id="6It-5s-sf7">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9rK-Jn-SZ1">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9rK-Jn-SZ1">
                                         <rect key="frame" x="0.0" y="140" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -654,7 +654,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="AI Model" footerTitle="Depending on what your API Key is, you can potentially get more out of ChatGPT" id="f8q-Qg-G3a">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="j81-Xe-0sD">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="j81-Xe-0sD">
                                         <rect key="frame" x="0.0" y="298" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -686,7 +686,7 @@
                             <tableViewSection headerTitle="Display Names" id="lD8-Vi-Pgc">
                                 <string key="footerTitle">You can set Display names of the AI Chatbot and of you, this gives you more customization and combined with custom prompts can generally give a better experience to the user. (The default name for the user is "Me" and for the AI "ChatGPT") devnote: ill do this as last thing</string>
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YUR-ig-0Cs">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YUR-ig-0Cs">
                                         <rect key="frame" x="0.0" y="438" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -713,7 +713,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ft2-iv-Uit">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ft2-iv-Uit">
                                         <rect key="frame" x="0.0" y="483" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
