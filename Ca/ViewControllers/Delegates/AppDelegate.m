@@ -24,6 +24,7 @@
     NSString *appVersion = @"1.0a5";
     NSString *aiPrompt = @" ";
     NSString *requestAmount = @"0";
+    NSString *responseAmount = @"0";
     
     
     if (![defaults objectForKey:@"apiEndpoint"]) {
@@ -46,6 +47,9 @@
     }
     if (![defaults objectForKey:@"requestAmount"]) {
         [defaults setObject:requestAmount forKey:@"requestAmount"];
+    }
+    if (![defaults objectForKey:@"responseAmount"]) {
+        [defaults setObject:responseAmount forKey:@"responseAmount"];
     }
     [defaults synchronize];
     return YES;
