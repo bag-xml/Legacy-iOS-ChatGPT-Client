@@ -181,6 +181,22 @@
                             <tableViewSection headerTitle="Info" footerTitle="ChatGPT for Legacy iOS (Version 1.0 Alpha 5)" id="kTJ-67-qsn">
                                 <cells/>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Other" footerTitle="This application's code can be found here:" id="yZF-xa-Pzj">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" footerTitle="" id="s2Q-cd-gvV">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cfZ-xD-Wuu">
+                                        <rect key="frame" x="0.0" y="766" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="rcm-Di-SLd" id="RpW-YQ-Zcp"/>
@@ -275,7 +291,7 @@
             </objects>
             <point key="canvasLocation" x="2196" y="-482"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - About shiypc-->
         <scene sceneID="Hnc-2M-JoU">
             <objects>
                 <tableViewController id="e9i-gC-4vT" sceneMemberID="viewController">
@@ -351,13 +367,13 @@
                             <outlet property="delegate" destination="e9i-gC-4vT" id="H6j-OA-uqN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Rdh-pq-t4y"/>
+                    <navigationItem key="navigationItem" title="About shiypc" id="3lz-Ju-dew"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sF-dr-OVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2356" y="162"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - About OpenAI & API-->
         <scene sceneID="Sb9-Sb-uEC">
             <objects>
                 <tableViewController id="fmp-xl-7Fs" sceneMemberID="viewController">
@@ -403,7 +419,7 @@
                             <outlet property="delegate" destination="fmp-xl-7Fs" id="jnd-ZG-feX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="J5F-rz-m5V"/>
+                    <navigationItem key="navigationItem" title="About OpenAI &amp; API" id="SiX-Gh-QvB"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKl-4n-FN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
