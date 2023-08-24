@@ -30,6 +30,11 @@
     
     self.chatTableView.delegate = self;
     self.chatTableView.dataSource = self;
+    
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+	
+	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
 }
 
 //Connection
@@ -134,6 +139,34 @@
 }
 
 
+
+//todo: make this work
+// http://web.archive.org/web/20170628060416/http://pyl.io/2015/08/17/animating-in-sync-with-ios-keyboard/
+- (void)keyboardWillShow:(NSNotification *)notification {
+
+	int keyboardHeight = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height;
+	float keyboardAnimationDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+	int keyboardAnimationCurve = [[notification.userInfo objectForKey: UIKeyboardAnimationCurveUserInfoKey] integerValue];
+	
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:keyboardAnimationDuration];
+	[UIView setAnimationCurve:keyboardAnimationCurve];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	[UIView commitAnimations];
+
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+	
+	float keyboardAnimationDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+	int keyboardAnimationCurve = [[notification.userInfo objectForKey: UIKeyboardAnimationCurveUserInfoKey] integerValue];
+	
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:keyboardAnimationDuration];
+	[UIView setAnimationCurve:keyboardAnimationCurve];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	[UIView commitAnimations];
+}
 
 //misc
 

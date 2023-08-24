@@ -19,7 +19,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTp-tM-JEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3468" y="-398"/>
+            <point key="canvasLocation" x="-2906" y="-942"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5YH-Ui-ZLd">
@@ -34,7 +34,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACh-Xn-3ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3058" y="-398"/>
+            <point key="canvasLocation" x="-2906" y="-227"/>
         </scene>
         <!--Table View Controller - ChatGPT-->
         <scene sceneID="mcu-eo-6af">
@@ -77,7 +77,8 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Conversations" footerTitle="Click on the &quot;Save&quot; button in the titlebar save your conversations for later. Your conversations can not be edited later on." id="ym0-iN-juh">
+                            <tableViewSection headerTitle="Conversations" id="ym0-iN-juh">
+                                <string key="footerTitle">Click on the "Save" button in the titlebar save your conversations for later. Your conversations can not be edited later on. Feature is unfinished and will probably be done as the last thing.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8cB-qy-God" style="IBUITableViewCellStyleDefault" id="ZpS-Qa-iwR">
                                         <rect key="frame" x="0.0" y="186" width="320" height="46"/>
@@ -121,7 +122,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I96-O6-93D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2044" y="-398"/>
+            <point key="canvasLocation" x="-2036" y="-227"/>
         </scene>
         <!--Table View Controller - About-->
         <scene sceneID="VHb-Vc-Mgk">
@@ -253,13 +254,13 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Description" footerTitle="er324tz39z8ewdm9finoxrgvireo he9gfzuinbivzt¨⁄ªø~⁄ªπ}≠∫ƒ√∂[" id="ele-Zj-wgJ">
+                            <tableViewSection headerTitle="Description" footerTitle="allah" id="ele-Zj-wgJ">
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection headerTitle="Social Media" footerTitle="All my socials." id="Sf8-DN-1oT">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="hdH-yP-31B" detailTextLabel="gu7-Oi-tA9" style="IBUITableViewCellStyleSubtitle" id="J0M-Tx-lxP">
-                                        <rect key="frame" x="0.0" y="260" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="242" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -284,7 +285,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="tt3-Is-bPe" detailTextLabel="dSK-ZM-2Dc" style="IBUITableViewCellStyleSubtitle" id="QSK-3M-q6h">
-                                        <rect key="frame" x="0.0" y="305" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="287" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -309,7 +310,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="v4v-zr-JSq" detailTextLabel="umB-hT-pit" style="IBUITableViewCellStyleSubtitle" id="gms-ME-KI1">
-                                        <rect key="frame" x="0.0" y="349" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="331" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -334,7 +335,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="9Ya-pI-VXF" detailTextLabel="OTc-5U-qmJ" style="IBUITableViewCellStyleSubtitle" id="s0b-fW-ezx">
-                                        <rect key="frame" x="0.0" y="393" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="375" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -377,7 +378,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4J-Bm-nBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="-482"/>
+            <point key="canvasLocation" x="2196" y="-412"/>
         </scene>
         <!--Table View Controller - About shiypc-->
         <scene sceneID="Hnc-2M-JoU">
@@ -406,13 +407,13 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Description" footerTitle="MMKOBIHOklnbcwuqv9e f70ntf8ioehwkjlefmnrefewgiufofhe wiovenrbrbireovnro briewbr" id="4Xc-nM-q9U">
+                            <tableViewSection headerTitle="Description" footerTitle="kys news holder" id="4Xc-nM-q9U">
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection headerTitle="Social Media" footerTitle="john" id="ZWR-lL-SSE">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dPS-F1-THh">
-                                        <rect key="frame" x="0.0" y="278" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="242" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -421,7 +422,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qNx-Fh-ORD">
-                                        <rect key="frame" x="0.0" y="323" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="287" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -430,7 +431,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BTX-yb-PZi">
-                                        <rect key="frame" x="0.0" y="367" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="331" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -439,7 +440,7 @@
                                         </view>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Gr1-yX-qhP">
-                                        <rect key="frame" x="0.0" y="411" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="375" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -459,7 +460,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sF-dr-OVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356" y="162"/>
+            <point key="canvasLocation" x="2432" y="162"/>
         </scene>
         <!--Table View Controller - About OpenAI & API-->
         <scene sceneID="Sb9-Sb-uEC">
@@ -470,36 +471,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="fdw-jA-fKg">
+                            <tableViewSection id="Gjj-Mq-Wjs">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6eM-N6-6OV">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="45"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="108" id="zbm-Lf-GGI">
+                                        <rect key="frame" x="0.0" y="10" width="320" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bAq-IQ-ut5">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                    <tableViewCell appearanceType="aqua" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GNT-Ty-Ps8">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="45"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" image="openaicon.png" id="oyt-MB-8lE">
+                                                    <rect key="frame" x="44" y="9" width="213" height="90"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
                                 </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Description" footerTitle="MMKOBIHOklnbcwuqv9e f70ntf8ioehwkjlefmnrefewgiufofhe wiovenrbrbireovnro briewbr" id="FX8-li-36S">
+                                <cells/>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -511,7 +502,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKl-4n-FN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2122" y="835"/>
+            <point key="canvasLocation" x="2196" y="736"/>
         </scene>
         <!--Table View Controller - Guide-->
         <scene sceneID="WDx-pJ-7I9">
