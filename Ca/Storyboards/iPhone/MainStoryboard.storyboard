@@ -836,7 +836,7 @@
                                     </barButtonItem>
                                     <barButtonItem title="Send" id="xjq-tq-fRP">
                                         <connections>
-                                            <action selector="shotsWereFiredAtMyFriends:" destination="7yE-KH-Hrv" id="6wh-rU-mQD"/>
+                                            <action selector="sendButtonTapped:" destination="7yE-KH-Hrv" id="VHd-sM-9GG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yMs-iZ-smx"/>
@@ -862,7 +862,7 @@
                     <navigationItem key="navigationItem" title="Chat" id="9ad-ET-lrh">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="uIx-4v-YmH">
                             <connections>
-                                <action selector="saveButtonTapped:" destination="7yE-KH-Hrv" id="2hZ-vX-pyk"/>
+                                <action selector="exportButtonTapped:" destination="7yE-KH-Hrv" id="xt9-kZ-hcf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
