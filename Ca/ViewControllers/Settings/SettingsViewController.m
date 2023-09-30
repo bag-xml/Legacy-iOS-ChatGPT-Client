@@ -14,12 +14,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *apiKeyInput;
 
 @end
-//this is prime example of me failing :pleading:
+//tbh this is alright
 @implementation SettingsViewController
 
 
 //todo
-//apikey im retarded why didnt i include it
+//nothing
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -11,7 +11,9 @@
 @interface ChatViewController : UIViewController <NSURLConnectionDelegate>
 
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
-@property (strong, nonatomic) IBOutlet UITableView *chatTableView;
+
+@property (strong, nonatomic) IBOutlet UITextView *chatTextView;
+
 @property (strong, nonatomic) IBOutlet UITextField *inputTextField;
 
 @end
