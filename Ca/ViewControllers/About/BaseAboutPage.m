@@ -6,7 +6,7 @@
 //  Copyright (c) 2023 Daphne. All rights reserved.
 //
 
-#import "BaseAboutPage.h"
+/*#import "BaseAboutPage.h"
 
 @interface BaseAboutPage ()
 
@@ -29,4 +29,6 @@
 	[tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
-@end
+@end*/
+
+//do this later
