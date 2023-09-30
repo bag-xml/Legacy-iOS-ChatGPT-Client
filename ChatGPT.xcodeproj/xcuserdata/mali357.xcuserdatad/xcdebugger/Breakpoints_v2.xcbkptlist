@@ -35,5 +35,49 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ca/ViewControllers/About/BaseAboutPage.m"
+            timestampString = "717771443.977562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BaseAboutPage creditLinks]"
+                  moduleName = "ChatGPT"
+                  urlString = "file:///Users/mali357/Developer/GitHub/iOS-5-ChatGPT-Client/Ca/ViewControllers/About/BaseAboutPage.m"
+                  timestampString = "717771553.72296"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BaseAboutPage setCreditLinks:]"
+                  moduleName = "ChatGPT"
+                  urlString = "file:///Users/mali357/Developer/GitHub/iOS-5-ChatGPT-Client/Ca/ViewControllers/About/BaseAboutPage.m"
+                  timestampString = "717771553.7232749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

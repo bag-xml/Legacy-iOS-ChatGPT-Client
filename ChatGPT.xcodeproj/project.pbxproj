@@ -30,6 +30,7 @@
 		C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42C92A89A88100D16A70 /* openaicon.png */; };
 		C67D42CD2A89AC3100D16A70 /* Group 30.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42CB2A89AC3100D16A70 /* Group 30.png */; };
 		C67D42CE2A89AC3100D16A70 /* Group 31.png in Resources */ = {isa = PBXBuildFile; fileRef = C67D42CC2A89AC3100D16A70 /* Group 31.png */; };
+		C682BCA52AC8512F007097E1 /* BaseAboutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C682BCA42AC8512F007097E1 /* BaseAboutPage.m */; };
 		C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */; };
 		C6A4D4592A8BA60A007E2DE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A4D4582A8BA60A007E2DE1 /* AppDelegate.m */; };
 		C6A4D45E2A8BA672007E2DE1 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A4D45D2A8BA672007E2DE1 /* Storyboard.storyboard */; };
@@ -81,6 +82,8 @@
 		C67D42C92A89A88100D16A70 /* openaicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openaicon.png; sourceTree = "<group>"; };
 		C67D42CB2A89AC3100D16A70 /* Group 30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 30.png"; sourceTree = "<group>"; };
 		C67D42CC2A89AC3100D16A70 /* Group 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 31.png"; sourceTree = "<group>"; };
+		C682BCA32AC8512F007097E1 /* BaseAboutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAboutPage.h; sourceTree = "<group>"; };
+		C682BCA42AC8512F007097E1 /* BaseAboutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAboutPage.m; sourceTree = "<group>"; };
 		C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../ChatGPT/Images.xcassets; sourceTree = "<group>"; };
 		C6A4D4572A8BA60A007E2DE1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6A4D4582A8BA60A007E2DE1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				7D6CED8A2A95651E0028EAC3 /* iPad */,
 				7D6CED8E2A95651E0028EAC3 /* openai */,
 				7D6CED8F2A95651E0028EAC3 /* shiypc */,
+				C682BCA32AC8512F007097E1 /* BaseAboutPage.h */,
+				C682BCA42AC8512F007097E1 /* BaseAboutPage.m */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -524,6 +529,7 @@
 				7DDB69092A92A0C400D5DCD4 /* ChatTableViewCell.m in Sources */,
 				C60FA0902A8D868100991533 /* SettingsViewController.m in Sources */,
 				C6E1CC872A8C2317004D41C8 /* iPadChatViewController.m in Sources */,
+				C682BCA52AC8512F007097E1 /* BaseAboutPage.m in Sources */,
 				7D58B42E2A9262B4000CBEA1 /* AdvancedOptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
