@@ -40,7 +40,7 @@
     if (message.length > 0) {
         NSString *previousChat = self.chatTextView.text;
         if (previousChat.length > 0) {
-            self.chatTextView.text = [NSString stringWithFormat:@"%@\nMe: %@", previousChat, message];
+            self.chatTextView.text = [NSString stringWithFormat:@"%@\n%@: %@", previousChat,userNickname, message];
         } else {
             self.chatTextView.text = [NSString stringWithFormat:@"%@: %@", userNickname, message];
         }
