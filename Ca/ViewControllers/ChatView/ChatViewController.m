@@ -34,11 +34,11 @@
     [self.inputField setDelegate:self];
     self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
     
-    self.inputFieldPlaceholder.hidden = NO;
+    self.inputFieldPlaceholder.hidden = YES;
     
     [[self.insetShadow layer] setMasksToBounds:YES];
     [[self.insetShadow layer] setCornerRadius:16.0f];
-    [[self.insetShadow layer] setBorderColor:[UIColor darkGrayColor].CGColor];
+    [[self.insetShadow layer] setBorderColor:[UIColor whiteColor].CGColor];
     [[self.insetShadow layer] setBorderWidth:1.0f];
     [[self.insetShadow layer] setShadowColor:[UIColor blackColor].CGColor];
     [[self.insetShadow layer] setShadowOffset:CGSizeMake(0, 0)];

@@ -740,7 +740,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FXf-BY-e7p"/>
                                     <barButtonItem id="SbF-rd-aeP">
                                         <view key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="EF6-Zs-4rt">
-                                            <rect key="frame" x="22" y="6" width="213" height="32"/>
+                                            <rect key="frame" x="11" y="6" width="246" height="32"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Swp-Ve-jU8">
@@ -751,14 +751,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" id="U8E-bu-EIv">
-                                                    <rect key="frame" x="4" y="0.0" width="205" height="32"/>
+                                                    <rect key="frame" x="4" y="0.0" width="238" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="mnU-XX-EFw">
-                                                    <rect key="frame" x="-1" y="-2" width="215" height="34"/>
+                                                    <rect key="frame" x="-1" y="-2" width="248" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
