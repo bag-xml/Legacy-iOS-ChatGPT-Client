@@ -26,6 +26,10 @@
     
     self.responseData = [[NSMutableData alloc] init];
     
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+	
+	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
 }
 
 - (void)sendMessageToChatGPTAPI {
@@ -158,7 +162,7 @@
 	
 	
 	if(self.viewingPresentTime)
-		[self.chatTableView setContentOffset:CGPointMake(0, self.chatTableView.contentSize.height - self.chatTextView.frame.size.height) animated:NO];
+		[self.chatTextView setContentOffset:CGPointMake(0, self.chatTextView.contentSize.height - self.chatTextView.frame.size.height) animated:NO];
 }
 
 
