@@ -13,7 +13,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+//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
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completions";
@@ -24,6 +24,11 @@
     NSString *aiPrompt = @" ";
     NSString *requestAmount = @"0";
     NSString *responseAmount = @"0";
+    
+    NSString *apiKey = @"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";
+    if (![defaults objectForKey:@"apiKey"]) {
+        [defaults setObject:apiKey forKey:@"apiKey"];
+    }
     
     if (![defaults objectForKey:@"apiEndpoint"]) {
         [defaults setObject:defaultApiEndpoint forKey:@"apiEndpoint"];

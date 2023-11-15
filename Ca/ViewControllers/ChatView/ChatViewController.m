@@ -7,6 +7,7 @@
 //
 
 #import "ChatViewController.h"
+#import "TRMalleableFrameView.h"
 
 @interface ChatViewController () <UITextViewDelegate, UITextFieldDelegate, NSURLConnectionDelegate>
 
@@ -22,7 +23,7 @@
     
     self.isKeyboardVisible = NO;
     
-    self.inputTextField.delegate = self;
+    self.inputField.delegate = self;
     
     self.responseData = [[NSMutableData alloc] init];
     
@@ -30,13 +31,26 @@
 	
 	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
+    [self.inputField setDelegate:self];
+    self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
+    
+    self.inputFieldPlaceholder.hidden = NO;
+    
+    [[self.insetShadow layer] setMasksToBounds:YES];
+    [[self.insetShadow layer] setCornerRadius:16.0f];
+    [[self.insetShadow layer] setBorderColor:[UIColor darkGrayColor].CGColor];
+    [[self.insetShadow layer] setBorderWidth:1.0f];
+    [[self.insetShadow layer] setShadowColor:[UIColor blackColor].CGColor];
+    [[self.insetShadow layer] setShadowOffset:CGSizeMake(0, 0)];
+    [[self.insetShadow layer] setShadowOpacity:1];
+    [[self.insetShadow layer] setShadowRadius:4.0];
 }
 
 - (void)sendMessageToChatGPTAPI {
     
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
-    NSString *message = self.inputTextField.text;
+    NSString *message = self.inputField.text;
     NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
     NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     NSString *userNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
@@ -49,7 +63,7 @@
             self.chatTextView.text = [NSString stringWithFormat:@"%@: %@", userNickname, message];
         }
         
-        self.inputTextField.text = @"";
+        self.inputField.text = @"";
         NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         
@@ -117,6 +131,16 @@
 //this sends the inputted contents of inputTextView (just check void(sendMessageTChatGPTAPI) to see what it exactly does.
 - (IBAction)sendButtonTapped:(id)sender {
     [self sendMessageToChatGPTAPI];
+    
+    if(![self.inputField.text isEqual: @""]){
+        
+		[self.inputField setText:@""];
+        self.inputFieldPlaceholder.hidden = NO;
+	}else
+		[self.inputField resignFirstResponder];
+	
+	if(self.viewingPresentTime)
+		[self.chatTextView setContentOffset:CGPointMake(0, self.chatTextView.contentSize.height - self.chatTextView.frame.size.height) animated:YES];
 }
 
 
@@ -138,10 +162,6 @@
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 //mail
-
-
-//keybOard
-
 
 - (void)keyboardWillShow:(NSNotification *)notification {
 	

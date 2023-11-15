@@ -10,12 +10,14 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface ChatViewController : UIViewController <NSURLConnectionDelegate>
+@interface ChatViewController : UIViewController <NSURLConnectionDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
-@property (strong, nonatomic) IBOutlet UITextView *chatTextView;
+@property (weak, nonatomic) IBOutlet UITextView *chatTextView;
 
-@property (strong, nonatomic) IBOutlet UITextField *inputTextField;
-
+@property (weak, nonatomic) IBOutlet UITextView *inputField;
+@property (weak, nonatomic) IBOutlet UILabel *inputFieldPlaceholder;
+@property (weak, nonatomic) IBOutlet UIImageView *insetShadow;
+@property bool viewingPresentTime;
 @end
