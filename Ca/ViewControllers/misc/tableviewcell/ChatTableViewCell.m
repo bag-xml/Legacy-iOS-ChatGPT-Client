@@ -6,7 +6,7 @@
 //  Copyright (c) 2023 Daphne. All rights reserved.
 //
 
-#import "ChatTableViewCell.h"
+/*#import "ChatTableViewCell.h"
 
 @implementation ChatTableViewCell
 
@@ -31,3 +31,5 @@
 }
 
 @end
+*/
+//obsolete

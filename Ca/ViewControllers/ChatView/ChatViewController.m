@@ -6,6 +6,11 @@
 //  Copyright (c) 2023 Mali357. All rights reserved.
 //
 
+
+//UITextView code is from https://github.com/ToruTheRedFox/iOS-Discord-Classic
+//^^^^^^^pill shaped thing on toolbar for the not so smart people ^^^^^^^^^^^^
+//not the actual content aka mainview
+
 #import "ChatViewController.h"
 #import "TRMalleableFrameView.h"
 

@@ -20,7 +20,7 @@
     NSString *defaultAIModel = @"gpt-3.5-turbo";
     NSString *defaultNickname = @"ChatGPT";
     NSString *defaultUserNickname = @"Me";
-    NSString *appVersion = @"1.0 Alpha";
+    NSString *appVersion = @"v1.0";
     NSString *aiPrompt = @" ";
     NSString *requestAmount = @"0";
     NSString *responseAmount = @"0";
