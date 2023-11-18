@@ -14,7 +14,7 @@
 #import "ChatViewController.h"
 #import "TRMalleableFrameView.h"
 
-@interface ChatViewController () <UITextViewDelegate, UITextViewDelegate, NSURLConnectionDelegate>
+@interface ChatViewController () <UITextViewDelegate, NSURLConnectionDelegate>
 
 @property (nonatomic, strong) NSMutableData *responseData;
 @property (nonatomic, assign) BOOL isKeyboardVisible;
@@ -79,6 +79,7 @@
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
         // very original to me
+        
         NSDictionary *bodyData = @{
                                    @"model": [NSString stringWithFormat:@"%@", modelType],
                                    @"messages": @[
