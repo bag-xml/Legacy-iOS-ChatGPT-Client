@@ -51,6 +51,8 @@
     [[self.insetShadow layer] setShadowRadius:4.0];
 }
 
+
+//somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
 - (void)sendMessageToChatGPTAPI {
     
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
@@ -203,6 +205,10 @@
 	[self.chatTextView setHeight:self.view.height - self.toolbar.height];
 	[self.toolbar setY:self.view.height - self.toolbar.height];
 	[UIView commitAnimations];
+}
+
+-(IBAction)killYourSelf:(id)sender {
+    
 }
 
 

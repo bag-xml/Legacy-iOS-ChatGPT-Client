@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface ChatViewController : UIViewController <NSURLConnectionDelegate, UINavigationControllerDelegate, UITextViewDelegate, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate>
+@interface ChatViewController : UIViewController <NSURLConnectionDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
