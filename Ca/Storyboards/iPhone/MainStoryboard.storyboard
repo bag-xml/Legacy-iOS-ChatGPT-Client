@@ -302,8 +302,7 @@
                             <tableViewSection headerTitle="Guide" footerTitle="This page has instructions on how to generate an API key and on how to use and handle custom prompts." id="OYF-Wp-Owi">
                                 <cells/>
                             </tableViewSection>
-                            <tableViewSection headerTitle="API Key" id="fAg-fe-3Gm">
-                                <string key="footerTitle">In order to actually get a functioning API key, you either need the free credit by OpenAI, a paid API key or anything. Depending on your level of API Key you could also change the model of ChatGPT to GPT-4 maybe...</string>
+                            <tableViewSection headerTitle="API Key" footerTitle="Obtain an API key from https://platform.openai.com/account/api-keys" id="fAg-fe-3Gm">
                                 <cells/>
                             </tableViewSection>
                         </sections>
