@@ -14,7 +14,7 @@
 #import "ChatViewController.h"
 #import "TRMalleableFrameView.h"
 
-@interface ChatViewController () <UITextViewDelegate, UITextFieldDelegate, NSURLConnectionDelegate>
+@interface ChatViewController () <UITextViewDelegate, UITextViewDelegate, NSURLConnectionDelegate>
 
 @property (nonatomic, strong) NSMutableData *responseData;
 @property (nonatomic, assign) BOOL isKeyboardVisible;
@@ -128,8 +128,8 @@
 
 //button actions
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder]; // make th keyboard go down when pressed return
+- (BOOL)textViewShouldReturn:(UITextView *)textView {
+    [textView resignFirstResponder]; // make th keyboard go down when pressed return
     return YES;
 }
 
