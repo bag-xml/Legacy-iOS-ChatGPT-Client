@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B077DF62B1A000000F8D4E9 /* CAiPadIsolatedChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B077DF52B1A000000F8D4E9 /* CAiPadIsolatedChatView.m */; };
+		5B077DF82B1A036200F8D4E9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B077DF72B1A036200F8D4E9 /* iPhone.storyboard */; };
+		5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B077DF92B1A037D00F8D4E9 /* iPad.storyboard */; };
+		5B077DFD2B1A03FE00F8D4E9 /* CASidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */; };
 		5B3A1F702B19E5C4004909DE /* BaseAboutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */; };
 		5B3A1F712B19E5C4004909DE /* APIHolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F582B19E5C4004909DE /* APIHolderViewController.m */; };
 		5B3A1F722B19E5C4004909DE /* JohnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F5B2B19E5C4004909DE /* JohnViewController.m */; };
@@ -46,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B077DF42B1A000000F8D4E9 /* CAiPadIsolatedChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAiPadIsolatedChatView.h; sourceTree = "<group>"; };
+		5B077DF52B1A000000F8D4E9 /* CAiPadIsolatedChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAiPadIsolatedChatView.m; sourceTree = "<group>"; };
+		5B077DF72B1A036200F8D4E9 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		5B077DF92B1A037D00F8D4E9 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		5B077DFB2B1A03FE00F8D4E9 /* CASidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASidebarTableViewController.h; sourceTree = "<group>"; };
+		5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASidebarTableViewController.m; sourceTree = "<group>"; };
 		5B3A1F532B19E5C4004909DE /* BaseAboutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAboutPage.h; sourceTree = "<group>"; };
 		5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAboutPage.m; sourceTree = "<group>"; };
 		5B3A1F572B19E5C4004909DE /* APIHolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHolderViewController.h; sourceTree = "<group>"; };
@@ -132,6 +142,8 @@
 		5B3A1F4E2B19E5C4004909DE /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				5B077DF42B1A000000F8D4E9 /* CAiPadIsolatedChatView.h */,
+				5B077DF52B1A000000F8D4E9 /* CAiPadIsolatedChatView.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -139,6 +151,8 @@
 		5B3A1F4F2B19E5C4004909DE /* Sidebar */ = {
 			isa = PBXGroup;
 			children = (
+				5B077DFB2B1A03FE00F8D4E9 /* CASidebarTableViewController.h */,
+				5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */,
 			);
 			path = Sidebar;
 			sourceTree = "<group>";
@@ -369,6 +383,7 @@
 		C6A4D45B2A8BA663007E2DE1 /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				5B077DF92B1A037D00F8D4E9 /* iPad.storyboard */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -376,6 +391,7 @@
 		C6A4D45C2A8BA663007E2DE1 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				5B077DF72B1A036200F8D4E9 /* iPhone.storyboard */,
 			);
 			path = iPhone;
 			sourceTree = "<group>";
@@ -426,8 +442,9 @@
 		C62AEF542A898C8B00DD8D5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CA;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "China DOS Union";
+				ORGANIZATIONNAME = electron;
 			};
 			buildConfigurationList = C62AEF572A898C8B00DD8D5A /* Build configuration list for PBXProject "ChatGPT" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -453,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */,
+				5B077DF82B1A036200F8D4E9 /* iPhone.storyboard in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
 				C67D42C62A89A07200D16A70 /* banner.png in Resources */,
 				C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */,
@@ -460,6 +478,7 @@
 				7D08C2E72B05871D003E1524 /* Send@2x.png in Resources */,
 				C67D42CD2A89AC3100D16A70 /* Group 30.png in Resources */,
 				C67D42CE2A89AC3100D16A70 /* Group 31.png in Resources */,
+				5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,8 +532,10 @@
 				5B3A1F742B19E5C4004909DE /* AppDelegate.m in Sources */,
 				5B3A1F752B19E5C4004909DE /* ChatTableViewCell.m in Sources */,
 				5B3A1F762B19E5C4004909DE /* TRMalleableFrameView.m in Sources */,
+				5B077DFD2B1A03FE00F8D4E9 /* CASidebarTableViewController.m in Sources */,
 				5B3A1F732B19E5C4004909DE /* ChatViewController.m in Sources */,
 				5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */,
+				5B077DF62B1A000000F8D4E9 /* CAiPadIsolatedChatView.m in Sources */,
 				5B3A1F702B19E5C4004909DE /* BaseAboutPage.m in Sources */,
 				5B3A1F712B19E5C4004909DE /* APIHolderViewController.m in Sources */,
 			);

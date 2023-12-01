@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="etD-O8-Nuf">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="moA-jR-MLC">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="etD-O8-Nuf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GpO-vN-1U0">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zQY-11-nJO" kind="relationship" relationship="rootViewController" id="DJi-5b-cy3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuI-3H-H3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="344" y="1075"/>
+        </scene>
+        <!--Ai Pad Isolated Chat View - Chat Title-->
+        <scene sceneID="6ka-Jj-DN5">
+            <objects>
+                <viewController id="mkC-EO-KDI" customClass="CAiPadIsolatedChatView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dJT-ea-XZe">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="CtS-6C-ody">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <toolbar appearanceType="aqua" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HxW-1X-0z2">
+                                        <rect key="frame" x="0.0" y="916" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Mu8-OT-xHM"/>
+                                            <barButtonItem systemItem="action" id="nhb-ZH-0Xp"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="FUY-fs-aQG"/>
+                                            <barButtonItem title="Clear" id="hxC-jm-Qbn"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="fCU-jC-0mU"/>
+                                            <barButtonItem id="msW-5i-j97">
+                                                <view key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" id="1Tn-h3-4pL">
+                                                    <rect key="frame" x="142" y="6" width="552" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kBG-DH-MCa">
+                                                            <rect key="frame" x="15" y="5" width="185" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" id="XEG-tR-qgQ">
+                                                            <rect key="frame" x="4" y="0.0" width="544" height="32"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                                                        </textView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="DZ3-ID-T5j">
+                                                            <rect key="frame" x="-1" y="-2" width="554" height="34"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="mWg-Zd-sxu"/>
+                                            <barButtonItem image="Send.png" id="XRd-QS-fnE"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="NEL-s5-JzQ"/>
+                                        </items>
+                                    </toolbar>
+                                    <view contentMode="scaleToFill" id="Xwh-2x-j0o">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="DUC-84-8GZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Chat Title" id="Okr-9S-BaN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGf-ia-na5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2395" y="1561"/>
+        </scene>
+        <!--Sidebar Table View Controller - ChatGPT-->
+        <scene sceneID="Wlk-Kn-dnh">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="9RD-sw-OSW" customClass="CASidebarTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="61A-GE-Pee">
+                        <rect key="frame" x="0.0" y="64" width="320" height="788"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Welcome to ChatGPT!" footerTitle="Hi!" id="jnW-oy-3WJ">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9RD-sw-OSW" id="4eZ-SP-C9X"/>
+                            <outlet property="delegate" destination="9RD-sw-OSW" id="hkb-M6-R2t"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ChatGPT" id="oat-O7-0da"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glo-iL-8D0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2929" y="607"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QeU-ad-M7x">
+            <objects>
+                <navigationController id="7MN-hq-LTt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="J2X-so-xDm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9RD-sw-OSW" kind="relationship" relationship="rootViewController" id="fUL-u4-Z3C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xA-rF-w1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2395" y="606"/>
+        </scene>
+        <!--Split View Controller - hello-->
+        <scene sceneID="TBE-Sj-LVv">
+            <objects>
+                <splitViewController id="zQY-11-nJO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="hello" id="NeA-QM-1rv"/>
+                    <connections>
+                        <segue destination="7MN-hq-LTt" kind="relationship" relationship="masterViewController" id="M4m-3d-FXv"/>
+                        <segue destination="mkC-EO-KDI" kind="relationship" relationship="detailViewController" id="Fs9-yr-Hgz"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="An6-Dr-IZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="1073"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Send.png" width="23" height="20"/>
+    </resources>
+    <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
