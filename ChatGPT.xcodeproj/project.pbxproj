@@ -22,6 +22,7 @@
 		5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */; };
 		5BF1EB5C2B1A7FBD00749543 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF1EB5A2B1A7FBD00749543 /* preferences.png */; };
 		5BF1EB5D2B1A7FBD00749543 /* preferences@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF1EB5B2B1A7FBD00749543 /* preferences@2x.png */; };
+		5BF1EB5F2B1A87C000749543 /* Group 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF1EB5E2B1A87C000749543 /* Group 13.png */; };
 		7D08C2E62B05871D003E1524 /* Send.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D08C2E42B05871D003E1524 /* Send.png */; };
 		7D08C2E72B05871D003E1524 /* Send@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D08C2E52B05871D003E1524 /* Send@2x.png */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
@@ -78,6 +79,7 @@
 		5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		5BF1EB5A2B1A7FBD00749543 /* preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences.png; sourceTree = "<group>"; };
 		5BF1EB5B2B1A7FBD00749543 /* preferences@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences@2x.png"; sourceTree = "<group>"; };
+		5BF1EB5E2B1A87C000749543 /* Group 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 13.png"; sourceTree = "<group>"; };
 		7D08C2E42B05871D003E1524 /* Send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Send.png; sourceTree = "<group>"; };
 		7D08C2E52B05871D003E1524 /* Send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Send@2x.png"; sourceTree = "<group>"; };
 		C62AEF5C2A898C8B00DD8D5A /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,6 +366,7 @@
 		C67D42C22A8995EC00D16A70 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5BF1EB5E2B1A87C000749543 /* Group 13.png */,
 				5BF1EB5A2B1A7FBD00749543 /* preferences.png */,
 				5BF1EB5B2B1A7FBD00749543 /* preferences@2x.png */,
 				7D08C2E42B05871D003E1524 /* Send.png */,
@@ -481,6 +484,7 @@
 				C67D42C62A89A07200D16A70 /* banner.png in Resources */,
 				5BF1EB5C2B1A7FBD00749543 /* preferences.png in Resources */,
 				C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */,
+				5BF1EB5F2B1A87C000749543 /* Group 13.png in Resources */,
 				7D08C2E62B05871D003E1524 /* Send.png in Resources */,
 				7D08C2E72B05871D003E1524 /* Send@2x.png in Resources */,
 				C67D42CD2A89AC3100D16A70 /* Group 30.png in Resources */,
