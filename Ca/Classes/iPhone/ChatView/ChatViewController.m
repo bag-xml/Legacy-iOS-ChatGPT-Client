@@ -125,7 +125,7 @@
         NSRange bottomRange = NSMakeRange(self.chatTextView.text.length, 1);
         [self.chatTextView scrollRangeToVisible:bottomRange];
     } else {
-        exit(0); //trolled
+        //exit(0); //trolled
     }
 }
 
