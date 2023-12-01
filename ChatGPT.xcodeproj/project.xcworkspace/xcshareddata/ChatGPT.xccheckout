@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2868E82A-8C89-40DC-8069-C070D44BDAB3</string>
+	<string>FF55BBB4-8E7D-4B0C-BD67-EFE7C3E559E8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>ChatGPT</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>70813BE2-7117-459D-9E33-914500DFE1F9</key>
-		<string>https://github.com/Daph357/iOS-5-ChatGPT-Client.git</string>
+		<key>97974F95-070E-49D4-85A8-65742FE19674</key>
+		<string>https://github.com/bag-xml/iOS-5-ChatGPT-Client.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ChatGPT.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>70813BE2-7117-459D-9E33-914500DFE1F9</key>
+		<key>97974F95-070E-49D4-85A8-65742FE19674</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Daph357/iOS-5-ChatGPT-Client.git</string>
+	<string>https://github.com/bag-xml/iOS-5-ChatGPT-Client.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>70813BE2-7117-459D-9E33-914500DFE1F9</string>
+	<string>97974F95-070E-49D4-85A8-65742FE19674</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>70813BE2-7117-459D-9E33-914500DFE1F9</string>
+			<string>97974F95-070E-49D4-85A8-65742FE19674</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS-5-ChatGPT-Client</string>
 		</dict>
