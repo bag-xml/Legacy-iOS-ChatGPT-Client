@@ -73,7 +73,7 @@
         self.inputField.text = @"";
         NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        
+        NSLOG:@"Sent Request to %@", apiEndpoint;
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
@@ -112,6 +112,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
     
+    //add something here later when i finish charging my mac, i forgot what ;_;
     NSArray *choices = [responseDictionary objectForKey:@"choices"];
     NSString *assistantNick = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
     if ([choices count] > 0) {
@@ -124,8 +125,6 @@
         
         NSRange bottomRange = NSMakeRange(self.chatTextView.text.length, 1);
         [self.chatTextView scrollRangeToVisible:bottomRange];
-    } else {
-        //exit(0); //trolled
     }
 }
 

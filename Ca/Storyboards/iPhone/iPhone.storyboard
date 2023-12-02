@@ -86,6 +86,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="test" id="lcN-dw-eDY">
+                                <string key="footerTitle">You can ask AI about almost anything, as long as it doesn't violate it's rules. Try asking it about food, school related stuff or just have fun.</string>
+                                <cells/>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="OYt-0Q-KQP" id="Af9-De-g4X"/>
@@ -102,6 +106,7 @@
         <scene sceneID="SCN-KM-XRJ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="BZg-56-v7o" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GCY-hh-Nyb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eD8-pK-sBr">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -111,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIB-Xy-9sC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2906" y="-1051"/>
+            <point key="canvasLocation" x="-2906" y="-1046"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5YH-Ui-ZLd">
@@ -120,6 +125,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aWA-Wf-d9u">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8xZ-Zc-bbe">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Bt3-Jm-zrN" kind="relationship" relationship="rootViewController" id="Big-aI-4dg"/>
                     </connections>
@@ -223,7 +233,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="OYt-0Q-KQP" kind="push" id="CcW-rj-tch"/>
+                                            <segue destination="OYt-0Q-KQP" kind="push" id="dhM-pF-AFU"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -270,7 +280,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I96-O6-93D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2036" y="-227"/>
+            <point key="canvasLocation" x="-2148" y="-233"/>
         </scene>
         <!--Base About Page - About-->
         <scene sceneID="VHb-Vc-Mgk">
@@ -675,13 +685,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Settings" footerTitle="Here you can toggle preferences for ChatGPT and this app in general." id="icw-Zv-j2O">
+                            <tableViewSection headerTitle="Settings" id="icw-Zv-j2O">
+                                <string key="footerTitle">Here you can toggle preferences for ChatGPT and this app in general. After inputting something, press the button next to it to save your changes.</string>
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection headerTitle="API key" footerTitle="Please look for more detailed information on how to obtain an OpenAI API Key in the guide." id="XIV-7H-8PX">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YDd-2D-ODO">
-                                        <rect key="frame" x="0.0" y="140" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="176" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -711,7 +722,7 @@
                             <tableViewSection headerTitle="Prompt" footerTitle="Prompts can define the character of your AI, to see how you use them correctly please refer to the guide." id="gvD-aU-yrS">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="otu-Nu-Sy6">
-                                        <rect key="frame" x="0.0" y="298" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="334" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -741,7 +752,7 @@
                             <tableViewSection headerTitle="Advanced" footerTitle="More advanced settings" id="OLj-Mg-iwl">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bx9-H0-EfZ" style="IBUITableViewCellStyleDefault" id="ltx-GH-pxf">
-                                        <rect key="frame" x="0.0" y="456" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="492" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -766,7 +777,7 @@
                             <tableViewSection headerTitle="Miscelanneous" footerTitle="Here is misc stuff that just won't fit in with the other toggles" id="f4v-hS-veO">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g7Z-BN-shX" detailTextLabel="SMD-Xa-Bme" imageView="96j-CI-agb" style="IBUITableViewCellStyleSubtitle" id="1BQ-00-Rkr">
-                                        <rect key="frame" x="0.0" y="578" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="614" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -796,7 +807,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fZH-To-JjU" detailTextLabel="zib-8O-v5Q" imageView="JHA-OL-o6i" style="IBUITableViewCellStyleSubtitle" id="eS2-JX-XS0">
-                                        <rect key="frame" x="0.0" y="623" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="659" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="43"/>
@@ -1165,6 +1176,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="CcW-rj-tch"/>
+        <segue reference="dhM-pF-AFU"/>
     </inferredMetricsTieBreakers>
 </document>

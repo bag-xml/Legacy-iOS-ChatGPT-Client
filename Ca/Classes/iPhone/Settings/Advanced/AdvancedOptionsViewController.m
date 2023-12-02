@@ -2,8 +2,8 @@
 //  AdvancedOptionsViewController.m
 //  ChatGPT
 //
-//  Created by Daphne on 20/08/23.
-//  Copyright (c) 2023 Daphne. All rights reserved.
+//  Created by bag.xml on 20/08/23.
+//  Copyright (c) 2023 bag.xml. All rights reserved.
 //
 
 

@@ -3,7 +3,7 @@
 //  ChatGPT
 //
 //  Created by Mali 357 on 30/09/23.
-//  Copyright (c) 2023 Daphne. All rights reserved.
+//  Copyright (c) 2023 bag.xml. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
