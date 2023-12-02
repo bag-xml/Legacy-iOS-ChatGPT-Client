@@ -54,7 +54,6 @@
 
 //somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
 - (void)performRequest {
-    
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
     NSString *message = self.inputField.text;
@@ -62,10 +61,12 @@
     NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     NSString *userNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
     NSString *userAgent = [[NSUserDefaults standardUserDefaults] objectForKey:@"User-Agent"];
+    NSString *conversationHistory = [[NSUserDefaults standardUserDefaults] objectForKey:@"conversationHistory"];
+    
     if (message.length > 0) {
         NSString *previousChat = self.chatTextView.text;
         if (previousChat.length > 0) {
-            self.chatTextView.text = [NSString stringWithFormat:@"%@\n%@: %@", previousChat,userNickname, message];
+            self.chatTextView.text = [NSString stringWithFormat:@"%@\n%@: %@", previousChat, userNickname, message];
         } else {
             self.chatTextView.text = [NSString stringWithFormat:@"%@: %@", userNickname, message];
         }
@@ -79,29 +80,36 @@
         NSLog(@"Request was sent. Endpoint specified is %@", apiEndpoint);
         [request setHTTPMethod:@"POST"];
         
-        //HTTP Requestheaders
-        //eh not rn [request setValue:[NSString stringWithFormat:userAgent] forHTTPHeaderField:@"User-Agent"];
+        // HTTP Request headers
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
+        // HELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELL
+        NSMutableDictionary *bodyData = [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                        @"model": [NSString stringWithFormat:@"%@", modelType],
+                                                                                        @"messages": [NSMutableArray arrayWithArray:@[
+                                                                                                                                      @{
+                                                                                                                                          @"role": @"user",
+                                                                                                                                          @"content": [gptprompt stringByAppendingString:message]
+                                                                                                                                          }
+                                                                                                                                      ]]
+                                                                                        }];
         
-        // very original to me
+        if (conversationHistory && ![conversationHistory isKindOfClass:[NSNull class]]) {
+            [bodyData[@"messages"] addObject:@{
+                                               @"role": @"assistant",
+                                               @"content": conversationHistory
+                                               }];
+        }
         
-        NSDictionary *bodyData = @{
-                                   @"model": [NSString stringWithFormat:@"%@", modelType],
-                                   @"messages": @[
-                                           @{
-                                               @"role": @"user",
-                                               @"content": [gptprompt stringByAppendingString:message]
-                                               }
-                                           ]
-                                   };        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyData options:0 error:nil];
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyData options:0 error:nil];
         [request setHTTPBody:jsonData];
         
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
         [connection start];
-        NSLog(@"Connection started, as an overview, the specified model is %@, and the prompt is %@ aswell as the Bearer Authheader being %@.",modelType, gptprompt, apiKey);
+        NSLog(@"Connection started, as an overview, the specified model is %@, and the prompt is %@ as well as the Bearer Auth header being %@.", modelType, gptprompt, apiKey);
     }
 }
+
 
 #pragma mark - NSURLConnectionDelegate
 
@@ -119,23 +127,28 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
     
-    //add something here later when i finish charging my mac, i forgot what ;_;
     NSArray *choices = [responseDictionary objectForKey:@"choices"];
     NSString *assistantNick = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
+    
     if ([choices count] > 0) {
         NSDictionary *choice = [choices objectAtIndex:0];
         NSDictionary *message = [choice objectForKey:@"message"];
-        NSString *assistantReply = [message objectForKey:@"content"];
-        
-        NSString *previousChat = self.chatTextView.text;
-        self.chatTextView.text = [NSString stringWithFormat:@"%@\n%@: %@", previousChat, assistantNick, assistantReply];
-        
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        
-        NSRange bottomRange = NSMakeRange(self.chatTextView.text.length, 1);
-        [self.chatTextView scrollRangeToVisible:bottomRange];
+        id contentObject = [message objectForKey:@"content"];
+        if (contentObject && ![contentObject isKindOfClass:[NSNull class]]) {
+            NSString *assistantReply = [NSString stringWithFormat:@"%@", contentObject];
+            NSString *updatedConversation = [NSString stringWithFormat:@"%@\n%@: %@", self.chatTextView.text, assistantNick, assistantReply];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:updatedConversation forKey:@"conversationHistory"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            self.chatTextView.text = updatedConversation;
+            NSRange bottomRange = NSMakeRange(self.chatTextView.text.length, 1);
+            [self.chatTextView scrollRangeToVisible:bottomRange];
+        }
     }
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
+
 
 //button actions
 
