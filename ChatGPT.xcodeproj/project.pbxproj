@@ -21,6 +21,7 @@
 		5B3A1F762B19E5C4004909DE /* TRMalleableFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F672B19E5C4004909DE /* TRMalleableFrameView.m */; };
 		5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */; };
 		5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */; };
+		5B69E4372B1BE06F00D7A1EB /* CASourceControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B69E4362B1BE06F00D7A1EB /* CASourceControlViewController.m */; };
 		5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558EE2B1BD7F700CB40D2 /* bag-xml.png */; };
 		5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558EF2B1BD7F700CB40D2 /* openai.png */; };
 		5BB558FC2B1BD7F700CB40D2 /* shiypc.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558F02B1BD7F700CB40D2 /* shiypc.png */; };
@@ -81,6 +82,8 @@
 		5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedOptionsViewController.m; sourceTree = "<group>"; };
 		5B3A1F6D2B19E5C4004909DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5B69E4352B1BE06F00D7A1EB /* CASourceControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASourceControlViewController.h; sourceTree = "<group>"; };
+		5B69E4362B1BE06F00D7A1EB /* CASourceControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASourceControlViewController.m; sourceTree = "<group>"; };
 		5BB558EE2B1BD7F700CB40D2 /* bag-xml.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-xml.png"; sourceTree = "<group>"; };
 		5BB558EF2B1BD7F700CB40D2 /* openai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openai.png; sourceTree = "<group>"; };
 		5BB558F02B1BD7F700CB40D2 /* shiypc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shiypc.png; sourceTree = "<group>"; };
@@ -135,6 +138,7 @@
 		5B0862AD2B1BDC80008308DE /* WebViews */ = {
 			isa = PBXGroup;
 			children = (
+				5B69E4342B1BE05800D7A1EB /* GitHub */,
 				5B0862AE2B1BDC80008308DE /* Newsletter */,
 			);
 			path = WebViews;
@@ -313,6 +317,15 @@
 			children = (
 			);
 			path = Statistics;
+			sourceTree = "<group>";
+		};
+		5B69E4342B1BE05800D7A1EB /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				5B69E4352B1BE06F00D7A1EB /* CASourceControlViewController.h */,
+				5B69E4362B1BE06F00D7A1EB /* CASourceControlViewController.m */,
+			);
+			path = GitHub;
 			sourceTree = "<group>";
 		};
 		5BB558EC2B1BD7F700CB40D2 /* Assets */ = {
@@ -600,6 +613,7 @@
 				5B077DF62B1A000000F8D4E9 /* CAiPadIsolatedChatView.m in Sources */,
 				5B3A1F702B19E5C4004909DE /* BaseAboutPage.m in Sources */,
 				5B3A1F712B19E5C4004909DE /* APIHolderViewController.m in Sources */,
+				5B69E4372B1BE06F00D7A1EB /* CASourceControlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,8 +24,11 @@
     NSString *requestAmount = @"0";
     NSString *responseAmount = @"0";
     NSString *newsletterEndpoint = @"https://help.mali357.gay/ios/quickinst/install/";
+    NSString *sourcecodepageendpoint = @"https://github.com/bag-xml/iOS-5-ChatGPT-Client";
     
-    
+    if (![defaults objectForKey:@"sourcecodepageendpoint"]) {
+        [defaults setObject:sourcecodepageendpoint forKey:@"sourcecodepageendpoint"];
+    }
     if (![defaults objectForKey:@"mali357gptendpoint"]) {
         [defaults setObject:newsletterEndpoint forKey:@"mali357gptendpoint"];
     }

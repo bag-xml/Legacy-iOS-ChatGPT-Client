@@ -493,10 +493,10 @@
             </objects>
             <point key="canvasLocation" x="1600" y="-1051"/>
         </scene>
-        <!--View Controller - Title-->
+        <!--Source Control View Controller - iOS-5-ChatGPT-Client-->
         <scene sceneID="WHk-3T-BUX">
             <objects>
-                <viewController id="Opx-es-My5" sceneMemberID="viewController">
+                <viewController id="Opx-es-My5" customClass="CASourceControlViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cng-3r-sbR">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -516,7 +516,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="3P3-6q-Rco"/>
+                    <navigationItem key="navigationItem" title="iOS-5-ChatGPT-Client" id="3P3-6q-Rco"/>
+                    <connections>
+                        <outlet property="webView" destination="gkW-Dp-DkR" id="mU3-sl-vbg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrw-Xo-Lzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
