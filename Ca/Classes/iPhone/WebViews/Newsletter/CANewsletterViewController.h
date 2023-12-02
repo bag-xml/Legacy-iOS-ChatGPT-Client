@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CANewsletterViewController : UIViewController
+@interface CANewsletterViewController : UIViewController <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @end

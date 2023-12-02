@@ -24,7 +24,12 @@
     NSString *aiPrompt = @" ";
     NSString *requestAmount = @"0";
     NSString *responseAmount = @"0";
+    NSString *newsletterEndpoint = @"https://help.mali357.gay/ios/quickinst/install/";
     
+    
+    if (![defaults objectForKey:@"mali357gptendpoint"]) {
+        [defaults setObject:newsletterEndpoint forKey:@"mali357gptendpoint"];
+    }
     if (![defaults objectForKey:@"apiEndpoint"]) {
         [defaults setObject:defaultApiEndpoint forKey:@"apiEndpoint"];
     }
