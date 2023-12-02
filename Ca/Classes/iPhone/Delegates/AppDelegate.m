@@ -15,6 +15,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    //all default presets.
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completions";
     NSString *defaultAIModel = @"gpt-3.5-turbo";
     NSString *defaultNickname = @"ChatGPT";
@@ -26,6 +28,7 @@
     NSString *newsletterEndpoint = @"https://help.mali357.gay/ios/quickinst/install/";
     NSString *sourcecodepageendpoint = @"https://github.com/bag-xml/iOS-5-ChatGPT-Client";
     
+    //sets nsuserdefault to default objects, if none are specified, aka. default keys before user modifies them.
     if (![defaults objectForKey:@"sourcecodepageendpoint"]) {
         [defaults setObject:sourcecodepageendpoint forKey:@"sourcecodepageendpoint"];
     }
@@ -68,7 +71,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    //exit(0); maybe make it toggleable?!
+    //exit(0); maybe make it toggleable?! (edit, why do i have an exit(0) fetish wtf!!!!!!!!)
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
