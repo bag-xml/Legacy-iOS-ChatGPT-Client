@@ -96,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkV-Sc-dzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2036" y="-1051"/>
+            <point key="canvasLocation" x="-2436" y="-1051"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SCN-KM-XRJ">
@@ -1123,7 +1123,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="9ad-ET-lrh">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="uIx-4v-YmH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="uIx-4v-YmH">
                             <connections>
                                 <action selector="exportButtonTapped:" destination="7yE-KH-Hrv" id="xt9-kZ-hcf"/>
                             </connections>
