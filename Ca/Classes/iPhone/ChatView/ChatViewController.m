@@ -53,7 +53,7 @@
 
 
 //somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
-- (void)sendMessageToChatGPTAPI {
+- (void)performRequest {
     
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
@@ -73,7 +73,7 @@
         self.inputField.text = @"";
         NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        NSLOG:@"Sent Request to %@", apiEndpoint;
+        NSLog(@"Request was sent. Endpoint specified is %@", apiEndpoint);
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
@@ -93,6 +93,7 @@
         
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
         [connection start];
+        NSLog(@"Connection started, as an overview, the specified model is %@, and the prompt is %@ aswell as the Bearer Authheader being %@.",modelType, gptprompt, apiKey);
     }
 }
 
@@ -137,7 +138,7 @@
 
 //this sends the inputted contents of inputTextView (just check void(sendMessageTChatGPTAPI) to see what it exactly does.
 - (IBAction)sendButtonTapped:(id)sender {
-    [self sendMessageToChatGPTAPI];
+    [self performRequest];
     
     if(![self.inputField.text isEqual: @""]){
         

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ca/Classes/iPad/Chat/CAiPadIsolatedChatView.m"
-            timestampString = "723162337.535175"
+            timestampString = "723249848.439326"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-brotherWeNeedToHelpYou:"
             landmarkType = "5">
          </BreakpointContent>

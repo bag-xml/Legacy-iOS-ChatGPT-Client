@@ -37,6 +37,7 @@
     
     self.inputFieldPlaceholder.hidden = YES;
     
+    //thanks toru
     [[self.insetShadow layer] setMasksToBounds:YES];
     [[self.insetShadow layer] setCornerRadius:16.0f];
     [[self.insetShadow layer] setBorderColor:[UIColor whiteColor].CGColor];
