@@ -61,7 +61,7 @@
     NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
     NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     NSString *userNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
-    
+    NSString *userAgent = [[NSUserDefaults standardUserDefaults] objectForKey:@"User-Agent"];
     if (message.length > 0) {
         NSString *previousChat = self.chatTextView.text;
         if (previousChat.length > 0) {
@@ -71,10 +71,16 @@
         }
         
         self.inputField.text = @"";
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        
         NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
         NSLog(@"Request was sent. Endpoint specified is %@", apiEndpoint);
         [request setHTTPMethod:@"POST"];
+        
+        //HTTP Requestheaders
+        //eh not rn [request setValue:[NSString stringWithFormat:userAgent] forHTTPHeaderField:@"User-Agent"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
@@ -123,6 +129,8 @@
         
         NSString *previousChat = self.chatTextView.text;
         self.chatTextView.text = [NSString stringWithFormat:@"%@\n%@: %@", previousChat, assistantNick, assistantReply];
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
         NSRange bottomRange = NSMakeRange(self.chatTextView.text.length, 1);
         [self.chatTextView scrollRangeToVisible:bottomRange];
