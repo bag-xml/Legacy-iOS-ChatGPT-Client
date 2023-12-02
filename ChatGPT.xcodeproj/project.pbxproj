@@ -11,6 +11,7 @@
 		5B077DF82B1A036200F8D4E9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B077DF72B1A036200F8D4E9 /* iPhone.storyboard */; };
 		5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B077DF92B1A037D00F8D4E9 /* iPad.storyboard */; };
 		5B077DFD2B1A03FE00F8D4E9 /* CASidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */; };
+		5B0862B12B1BDCA1008308DE /* CANewsletterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0862B02B1BDCA1008308DE /* CANewsletterViewController.m */; };
 		5B3A1F702B19E5C4004909DE /* BaseAboutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */; };
 		5B3A1F712B19E5C4004909DE /* APIHolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F582B19E5C4004909DE /* APIHolderViewController.m */; };
 		5B3A1F722B19E5C4004909DE /* JohnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F5B2B19E5C4004909DE /* JohnViewController.m */; };
@@ -60,6 +61,8 @@
 		5B077DF92B1A037D00F8D4E9 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		5B077DFB2B1A03FE00F8D4E9 /* CASidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASidebarTableViewController.h; sourceTree = "<group>"; };
 		5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASidebarTableViewController.m; sourceTree = "<group>"; };
+		5B0862AF2B1BDCA1008308DE /* CANewsletterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CANewsletterViewController.h; sourceTree = "<group>"; };
+		5B0862B02B1BDCA1008308DE /* CANewsletterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CANewsletterViewController.m; sourceTree = "<group>"; };
 		5B3A1F532B19E5C4004909DE /* BaseAboutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAboutPage.h; sourceTree = "<group>"; };
 		5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAboutPage.m; sourceTree = "<group>"; };
 		5B3A1F572B19E5C4004909DE /* APIHolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHolderViewController.h; sourceTree = "<group>"; };
@@ -129,6 +132,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0862AD2B1BDC80008308DE /* WebViews */ = {
+			isa = PBXGroup;
+			children = (
+				5B0862AE2B1BDC80008308DE /* Newsletter */,
+			);
+			path = WebViews;
+			sourceTree = "<group>";
+		};
+		5B0862AE2B1BDC80008308DE /* Newsletter */ = {
+			isa = PBXGroup;
+			children = (
+				5B0862AF2B1BDCA1008308DE /* CANewsletterViewController.h */,
+				5B0862B02B1BDCA1008308DE /* CANewsletterViewController.m */,
+			);
+			path = Newsletter;
+			sourceTree = "<group>";
+		};
 		5B3A1F4C2B19E5C4004909DE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +188,7 @@
 		5B3A1F502B19E5C4004909DE /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				5B0862AD2B1BDC80008308DE /* WebViews */,
 				5B3A1F512B19E5C4004909DE /* About */,
 				5B3A1F5C2B19E5C4004909DE /* ChatView */,
 				5B3A1F5F2B19E5C4004909DE /* Delegates */,
@@ -569,6 +590,7 @@
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
 				5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */,
 				5B3A1F722B19E5C4004909DE /* JohnViewController.m in Sources */,
+				5B0862B12B1BDCA1008308DE /* CANewsletterViewController.m in Sources */,
 				5B3A1F742B19E5C4004909DE /* AppDelegate.m in Sources */,
 				5B3A1F752B19E5C4004909DE /* ChatTableViewCell.m in Sources */,
 				5B3A1F762B19E5C4004909DE /* TRMalleableFrameView.m in Sources */,
