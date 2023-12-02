@@ -52,6 +52,10 @@
 }
 
 
+
+// FUNCTIONS
+
+
 //somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
@@ -122,8 +126,6 @@
 }
 
 
-
-
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
     
@@ -134,6 +136,7 @@
         NSDictionary *choice = [choices objectAtIndex:0];
         NSDictionary *message = [choice objectForKey:@"message"];
         id contentObject = [message objectForKey:@"content"];
+        [self brotherWhatAreYouDoing:contentObject];
         if (contentObject && ![contentObject isKindOfClass:[NSNull class]]) {
             NSString *assistantReply = [NSString stringWithFormat:@"%@", contentObject];
             NSString *updatedConversation = [NSString stringWithFormat:@"%@\n%@: %@", self.chatTextView.text, assistantNick, assistantReply];
@@ -147,6 +150,50 @@
         }
     }
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+
+- (void)brotherWhatAreYouDoing:(NSString *)message {
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = message;
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+	
+	//thx to Pierre Legrain
+	//http://pyl.io/2015/08/17/animating-in-sync-with-ios-keyboard/
+	
+	int keyboardHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+	float keyboardAnimationDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+	int keyboardAnimationCurve = [[notification.userInfo objectForKey: UIKeyboardAnimationCurveUserInfoKey] integerValue];
+	
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:keyboardAnimationDuration];
+	[UIView setAnimationCurve:keyboardAnimationCurve];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	[self.chatTextView setHeight:self.view.height - keyboardHeight - self.toolbar.height];
+	[self.toolbar setY:self.view.height - keyboardHeight - self.toolbar.height];
+	[UIView commitAnimations];
+	
+	
+	if(self.viewingPresentTime)
+		[self.chatTextView setContentOffset:CGPointMake(0, self.chatTextView.contentSize.height - self.chatTextView.frame.size.height) animated:NO];
+}
+
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+	
+	float keyboardAnimationDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+	int keyboardAnimationCurve = [[notification.userInfo objectForKey: UIKeyboardAnimationCurveUserInfoKey] integerValue];
+	
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:keyboardAnimationDuration];
+	[UIView setAnimationCurve:keyboardAnimationCurve];
+	[UIView setAnimationBeginsFromCurrentState:YES];
+	[self.chatTextView setHeight:self.view.height - self.toolbar.height];
+	[self.toolbar setY:self.view.height - self.toolbar.height];
+	[UIView commitAnimations];
 }
 
 
@@ -191,43 +238,6 @@
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 //mail
-
-- (void)keyboardWillShow:(NSNotification *)notification {
-	
-	//thx to Pierre Legrain
-	//http://pyl.io/2015/08/17/animating-in-sync-with-ios-keyboard/
-	
-	int keyboardHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-	float keyboardAnimationDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
-	int keyboardAnimationCurve = [[notification.userInfo objectForKey: UIKeyboardAnimationCurveUserInfoKey] integerValue];
-	
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:keyboardAnimationDuration];
-	[UIView setAnimationCurve:keyboardAnimationCurve];
-	[UIView setAnimationBeginsFromCurrentState:YES];
-	[self.chatTextView setHeight:self.view.height - keyboardHeight - self.toolbar.height];
-	[self.toolbar setY:self.view.height - keyboardHeight - self.toolbar.height];
-	[UIView commitAnimations];
-	
-	
-	if(self.viewingPresentTime)
-		[self.chatTextView setContentOffset:CGPointMake(0, self.chatTextView.contentSize.height - self.chatTextView.frame.size.height) animated:NO];
-}
-
-
-- (void)keyboardWillHide:(NSNotification *)notification {
-	
-	float keyboardAnimationDuration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
-	int keyboardAnimationCurve = [[notification.userInfo objectForKey: UIKeyboardAnimationCurveUserInfoKey] integerValue];
-	
-	[UIView beginAnimations:nil context:NULL];
-	[UIView setAnimationDuration:keyboardAnimationDuration];
-	[UIView setAnimationCurve:keyboardAnimationCurve];
-	[UIView setAnimationBeginsFromCurrentState:YES];
-	[self.chatTextView setHeight:self.view.height - self.toolbar.height];
-	[self.toolbar setY:self.view.height - self.toolbar.height];
-	[UIView commitAnimations];
-}
 
 -(IBAction)killYourSelf:(id)sender {
     
