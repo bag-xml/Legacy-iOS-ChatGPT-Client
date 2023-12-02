@@ -13,7 +13,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//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
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completions";
