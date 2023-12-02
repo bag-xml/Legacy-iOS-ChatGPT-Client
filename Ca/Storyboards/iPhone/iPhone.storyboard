@@ -304,7 +304,7 @@
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Group 13.png" id="YS8-xw-KxD">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="bag-xml.png" id="YS8-xw-KxD">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -336,7 +336,7 @@
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="shiypc.jpeg" id="9P0-v4-nOd">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="shiypc.png" id="9P0-v4-nOd">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -372,7 +372,7 @@
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Group 31.png" id="snd-F2-KDi">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="openai.png" id="snd-F2-KDi">
                                                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -454,21 +454,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="bag dot xml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cd9-1i-5tZ">
-                                                    <rect key="frame" x="116" y="34" width="100" height="22"/>
+                                                    <rect key="frame" x="117" y="34" width="100" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="hates objc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="efr-w1-9IA">
-                                                    <rect key="frame" x="116" y="56" width="64" height="17"/>
+                                                    <rect key="frame" x="117" y="56" width="64" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Group 13.png" id="E7P-mh-4HS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="107"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="bag-xml.png" id="E7P-mh-4HS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -541,21 +541,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="OpenAI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Xb-xa-paQ">
-                                                    <rect key="frame" x="204" y="21" width="63" height="22"/>
+                                                    <rect key="frame" x="90" y="21" width="63" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="gpt owners" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xTX-NW-Ry2">
-                                                    <rect key="frame" x="204" y="43" width="69" height="17"/>
+                                                    <rect key="frame" x="90" y="43" width="69" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="openaicon.png" id="MuH-Eq-wU5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="80"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="openai.png" id="MuH-Eq-wU5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -611,7 +611,7 @@
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="shiypc.jpeg" id="He8-gO-0Kr">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="shiypc.png" id="He8-gO-0Kr">
                                                     <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -1144,14 +1144,13 @@
     </scenes>
     <resources>
         <image name="CellImage.png" width="228" height="333"/>
-        <image name="Group 13.png" width="510" height="513"/>
-        <image name="Group 31.png" width="114" height="114"/>
         <image name="Send.png" width="23" height="20"/>
         <image name="Steve_Jobs.png" width="242" height="333"/>
+        <image name="bag-xml.png" width="286" height="286"/>
         <image name="banner.png" width="640" height="270"/>
-        <image name="openaicon.png" width="1322" height="544"/>
+        <image name="openai.png" width="160" height="160"/>
         <image name="preferences.png" width="23" height="23"/>
-        <image name="shiypc.jpeg" width="460" height="460"/>
+        <image name="shiypc.png" width="286" height="286"/>
     </resources>
     <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
