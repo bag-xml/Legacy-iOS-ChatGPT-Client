@@ -15,35 +15,69 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner.png" id="3wz-ri-asw">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <sections>
-                            <tableViewSection headerTitle="a" footerTitle="ƒ©Ω¶ªº}∆π@•√®" id="let-tr-NGR">
+                            <tableViewSection headerTitle="Now also available on iOS!" footerTitle="You can now use ChatGPT's full power on the go, everywhere you are!" id="let-tr-NGR">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Z3D-Wo-nh9" detailTextLabel="rpI-8G-tXW" imageView="Kn9-VG-vMQ" rowHeight="229" style="IBUITableViewCellStyleSubtitle" id="Eft-5Q-Oxp">
-                                        <rect key="frame" x="0.0" y="156" width="320" height="231"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Z3D-Wo-nh9" detailTextLabel="rpI-8G-tXW" imageView="Kn9-VG-vMQ" rowHeight="187" style="IBUITableViewCellStyleSubtitle" id="Eft-5Q-Oxp">
+                                        <rect key="frame" x="0.0" y="171" width="320" height="189"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="228"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="186"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="good title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z3D-Wo-nh9">
-                                                    <rect key="frame" x="134" y="95" width="79" height="22"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Say Hi!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z3D-Wo-nh9">
+                                                    <rect key="frame" x="137" y="74" width="59" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="good subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rpI-8G-tXW">
-                                                    <rect key="frame" x="134" y="117" width="80" height="17"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="to AI on iOS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rpI-8G-tXW">
+                                                    <rect key="frame" x="137" y="96" width="75" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Group 31.png" id="Kn9-VG-vMQ">
-                                                    <rect key="frame" x="10" y="57" width="114" height="114"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="CellImage.png" id="Kn9-VG-vMQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="127" height="186"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Capabilities" id="gUG-mS-3tc">
+                                <string key="footerTitle">You can ask AI about almost anything, as long as it doesn't violate it's rules. Try asking it about food, school related stuff or just have fun.</string>
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="iv1-Bn-qOE" detailTextLabel="jD0-Ys-oM0" imageView="dqv-dh-qWa" rowHeight="187" style="IBUITableViewCellStyleSubtitle" id="Tqa-Aj-uPx">
+                                        <rect key="frame" x="0.0" y="454" width="320" height="189"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="186"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Ask it anything!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iv1-Bn-qOE">
+                                                    <rect key="frame" x="145" y="74" width="128" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="it'll answer it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jD0-Ys-oM0">
+                                                    <rect key="frame" x="145" y="96" width="76" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Steve_Jobs.png" id="dqv-dh-qWa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="186"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1109,10 +1143,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CellImage.png" width="228" height="333"/>
         <image name="Group 13.png" width="510" height="513"/>
         <image name="Group 31.png" width="114" height="114"/>
         <image name="Send.png" width="23" height="20"/>
-        <image name="banner.png" width="640" height="241"/>
+        <image name="Steve_Jobs.png" width="242" height="333"/>
+        <image name="banner.png" width="640" height="270"/>
         <image name="openaicon.png" width="1322" height="544"/>
         <image name="preferences.png" width="23" height="23"/>
         <image name="shiypc.jpeg" width="460" height="460"/>

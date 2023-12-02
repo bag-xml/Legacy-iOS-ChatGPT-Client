@@ -20,6 +20,8 @@
 		5B3A1F762B19E5C4004909DE /* TRMalleableFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F672B19E5C4004909DE /* TRMalleableFrameView.m */; };
 		5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */; };
 		5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */; };
+		5BB558E92B1BA52D00CB40D2 /* CellImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558E82B1BA52D00CB40D2 /* CellImage.png */; };
+		5BB558EB2B1BCC0700CB40D2 /* Steve_Jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558EA2B1BCC0700CB40D2 /* Steve_Jobs.png */; };
 		5BF1EB5C2B1A7FBD00749543 /* preferences.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF1EB5A2B1A7FBD00749543 /* preferences.png */; };
 		5BF1EB5D2B1A7FBD00749543 /* preferences@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF1EB5B2B1A7FBD00749543 /* preferences@2x.png */; };
 		5BF1EB5F2B1A87C000749543 /* Group 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF1EB5E2B1A87C000749543 /* Group 13.png */; };
@@ -78,6 +80,8 @@
 		5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedOptionsViewController.m; sourceTree = "<group>"; };
 		5B3A1F6D2B19E5C4004909DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5BB558E82B1BA52D00CB40D2 /* CellImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellImage.png; sourceTree = "<group>"; };
+		5BB558EA2B1BCC0700CB40D2 /* Steve_Jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Steve_Jobs.png; sourceTree = "<group>"; };
 		5BF1EB5A2B1A7FBD00749543 /* preferences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preferences.png; sourceTree = "<group>"; };
 		5BF1EB5B2B1A7FBD00749543 /* preferences@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences@2x.png"; sourceTree = "<group>"; };
 		5BF1EB5E2B1A87C000749543 /* Group 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 13.png"; sourceTree = "<group>"; };
@@ -368,6 +372,8 @@
 		C67D42C22A8995EC00D16A70 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5BB558EA2B1BCC0700CB40D2 /* Steve_Jobs.png */,
+				5BB558E82B1BA52D00CB40D2 /* CellImage.png */,
 				5BF1EB602B1A88AB00749543 /* shiypc.jpeg */,
 				5BF1EB5E2B1A87C000749543 /* Group 13.png */,
 				5BF1EB5A2B1A7FBD00749543 /* preferences.png */,
@@ -481,10 +487,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB558E92B1BA52D00CB40D2 /* CellImage.png in Resources */,
 				C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */,
 				5B077DF82B1A036200F8D4E9 /* iPhone.storyboard in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
 				C67D42C62A89A07200D16A70 /* banner.png in Resources */,
+				5BB558EB2B1BCC0700CB40D2 /* Steve_Jobs.png in Resources */,
 				5BF1EB5C2B1A7FBD00749543 /* preferences.png in Resources */,
 				C67D42CA2A89A88100D16A70 /* openaicon.png in Resources */,
 				5BF1EB5F2B1A87C000749543 /* Group 13.png in Resources */,
@@ -661,7 +669,7 @@
 				INFOPLIST_FILE = "Ca/ChatGPT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = ChatGPT;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -676,7 +684,7 @@
 				INFOPLIST_FILE = "Ca/ChatGPT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = ChatGPT;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
