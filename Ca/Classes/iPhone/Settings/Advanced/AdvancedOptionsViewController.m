@@ -46,35 +46,13 @@
     if (userNickName) {
         self.userNickName.text = userNickName;
     }
-//reusing old code my beloved method
-}
-- (IBAction)confirmEndpoint:(id)sender {
-    NSString *urlEndpoint = self.endpointSubmitInput.text;
-    if (urlEndpoint.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:urlEndpoint forKey:@"apiEndpoint"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-- (IBAction)setAIModel:(id)sender {
-    NSString *AIModel = self.AIModelInput.text;
-    if (AIModel.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:AIModel forKey:@"AIModel"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-- (IBAction)submitAINickname:(id)sender {
-    NSString *aiNickName = self.aiNickName.text;
-    if (aiNickName.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:aiNickName forKey:@"assistantNick"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-- (IBAction)submituserNick:(id)sender {
-    NSString *userNickName = self.userNickName.text;
-    if (userNickName.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:userNickName forKey:@"userNick"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSUserDefaults.standardUserDefaults setObject:self.userNickName.text forKey:@"userNick"];
+    [NSUserDefaults.standardUserDefaults setObject:self.aiNickName.text forKey:@"assistantNick"];
+    [NSUserDefaults.standardUserDefaults setObject:self.AIModelInput.text forKey:@"AIModel"];
+    [NSUserDefaults.standardUserDefaults setObject:self.endpointSubmitInput.text forKey:@"apiEndpoint"];
+}
 @end

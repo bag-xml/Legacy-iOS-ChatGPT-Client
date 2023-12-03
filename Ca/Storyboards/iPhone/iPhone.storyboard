@@ -97,21 +97,21 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Prompt support" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CuV-37-jqr">
-                                                    <rect key="frame" x="145" y="74" width="132" height="22"/>
+                                                    <rect key="frame" x="124" y="74" width="132" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="pirates, ahoy!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8nl-lg-WTd">
-                                                    <rect key="frame" x="145" y="96" width="85" height="17"/>
+                                                    <rect key="frame" x="124" y="96" width="85" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Steve_Jobs.png" id="nqd-wP-mm2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="186"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="piracy.png" id="nqd-wP-mm2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="114" height="186"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -652,34 +652,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Settings" id="icw-Zv-j2O">
-                                <string key="footerTitle">Here you can toggle preferences for ChatGPT and this app in general. After inputting something, press the button next to it to save your changes.</string>
+                            <tableViewSection headerTitle="Settings" footerTitle="Here you can toggle preferences for ChatGPT and this app in general." id="icw-Zv-j2O">
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection headerTitle="API key" footerTitle="Please look for more detailed information on how to obtain an OpenAI API Key in the guide." id="XIV-7H-8PX">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YDd-2D-ODO">
-                                        <rect key="frame" x="0.0" y="176" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="140" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="API key goes into here..." minimumFontSize="17" clearButtonMode="whileEditing" id="7UB-cK-fnu">
-                                                    <rect key="frame" x="8" y="7" width="252" height="30"/>
+                                                    <rect key="frame" x="8" y="7" width="285" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="3tN-qN-cyD">
-                                                    <rect key="frame" x="265" y="6" width="29" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="Qyg-p4-Rf2"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -690,27 +679,17 @@
                                 <string key="footerTitle">Prompts can define the character of your AI, to see how you use them correctly please refer to the guide. (LEAVING THIS EMPTY WITHOUT A SPACE WILL CRASH THE APP)</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="otu-Nu-Sy6">
-                                        <rect key="frame" x="0.0" y="334" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="298" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insert prompt here..." minimumFontSize="17" clearButtonMode="whileEditing" id="fMC-es-2bZ">
-                                                    <rect key="frame" x="8" y="7" width="252" height="30"/>
+                                                    <rect key="frame" x="8" y="7" width="285" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="eg7-dB-5l1">
-                                                    <rect key="frame" x="265" y="6" width="29" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="submitPrompt:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="iL6-u5-Qtu"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -720,7 +699,7 @@
                             <tableViewSection headerTitle="Advanced" footerTitle="More advanced settings" id="OLj-Mg-iwl">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bx9-H0-EfZ" style="IBUITableViewCellStyleDefault" id="ltx-GH-pxf">
-                                        <rect key="frame" x="0.0" y="528" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="492" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -745,7 +724,7 @@
                             <tableViewSection headerTitle="Miscelanneous" footerTitle="Here is misc stuff that just won't fit in with the other toggles" id="f4v-hS-veO">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g7Z-BN-shX" detailTextLabel="SMD-Xa-Bme" imageView="96j-CI-agb" rowHeight="46" style="IBUITableViewCellStyleSubtitle" id="1BQ-00-Rkr">
-                                        <rect key="frame" x="0.0" y="650" width="320" height="47"/>
+                                        <rect key="frame" x="0.0" y="614" width="320" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="280" height="45"/>
@@ -775,7 +754,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fZH-To-JjU" detailTextLabel="zib-8O-v5Q" imageView="JHA-OL-o6i" rowHeight="46" style="IBUITableViewCellStyleSubtitle" id="eS2-JX-XS0">
-                                        <rect key="frame" x="0.0" y="697" width="320" height="47"/>
+                                        <rect key="frame" x="0.0" y="661" width="320" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="280" height="45"/>
@@ -844,21 +823,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="URL Endpoint..." minimumFontSize="17" clearButtonMode="whileEditing" id="MUg-F6-RC0">
-                                                    <rect key="frame" x="9" y="7" width="252" height="30"/>
+                                                    <rect key="frame" x="9" y="7" width="282" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="J1L-jF-lAU">
-                                                    <rect key="frame" x="266" y="6" width="29" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="confirmEndpoint:" destination="Tqn-6e-5tm" eventType="touchUpInside" id="osO-ah-S8s"/>
-                                                        <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="ZLb-J8-Yer"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -875,21 +843,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ex: gpt4" minimumFontSize="17" clearButtonMode="whileEditing" id="Z6r-nQ-OAq">
-                                                    <rect key="frame" x="9" y="7" width="252" height="30"/>
+                                                    <rect key="frame" x="9" y="7" width="282" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="mqk-8K-zWx">
-                                                    <rect key="frame" x="266" y="6" width="29" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="setAIModel:" destination="Tqn-6e-5tm" eventType="touchUpInside" id="zLL-6M-sKb"/>
-                                                        <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="WPl-RE-Fc6"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -907,21 +864,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Display, e.g. &quot;Daphne&quot;" minimumFontSize="17" clearButtonMode="whileEditing" id="ejC-xT-cQQ">
-                                                    <rect key="frame" x="9" y="7" width="252" height="30"/>
+                                                    <rect key="frame" x="9" y="7" width="282" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="Jwb-ro-J22">
-                                                    <rect key="frame" x="266" y="6" width="29" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="h05-Pu-bar"/>
-                                                        <action selector="submituserNick:" destination="Tqn-6e-5tm" eventType="touchUpInside" id="ohb-sM-KTw"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -934,21 +880,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="AI Name, e.g. &quot;Kevin&quot;" minimumFontSize="17" clearButtonMode="whileEditing" id="P5c-EQ-tco">
-                                                    <rect key="frame" x="9" y="7" width="252" height="30"/>
+                                                    <rect key="frame" x="9" y="7" width="283" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
-                                                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="y3V-Sr-qbn">
-                                                    <rect key="frame" x="266" y="6" width="29" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="submitAINickname:" destination="Tqn-6e-5tm" eventType="touchUpInside" id="VMF-IL-T56"/>
-                                                        <action selector="submitApiKey:" destination="BvN-Wo-m9k" eventType="touchUpInside" id="5wm-7f-nOF"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -1139,6 +1074,7 @@
         <image name="bag-xml.png" width="286" height="286"/>
         <image name="banner.png" width="640" height="270"/>
         <image name="openai.png" width="160" height="160"/>
+        <image name="piracy.png" width="228" height="372"/>
         <image name="preferences.png" width="23" height="23"/>
     </resources>
     <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>

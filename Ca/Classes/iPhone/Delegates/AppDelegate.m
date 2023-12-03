@@ -91,7 +91,7 @@
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"conversationHistory"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-
+    NSLog(@"App terminating");
 }
 
 

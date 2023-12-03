@@ -41,19 +41,9 @@
     return YES;
 }
 
-- (IBAction)submitPrompt:(id)sender {
-    NSString *prompt = self.gptPromptInput.text;
-    if (prompt.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:prompt forKey:@"gptPrompt"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-- (IBAction)submitApiKey:(id)sender {
-    NSString *apiKey = self.apiKeyInput.text;
-    if (apiKey.length > 0) {
-        [[NSUserDefaults standardUserDefaults] setObject:apiKey forKey:@"apiKey"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
+- (void)viewWillDisappear:(BOOL)animated {
+    [NSUserDefaults.standardUserDefaults setObject:self.apiKeyInput.text forKey:@"apiKey"];
+    [NSUserDefaults.standardUserDefaults setObject:self.gptPromptInput.text forKey:@"gptPrompt"];
 }
 @end
 
