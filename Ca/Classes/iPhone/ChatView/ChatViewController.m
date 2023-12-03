@@ -58,7 +58,7 @@
     
 }
 
-//somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
+
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
