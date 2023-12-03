@@ -38,8 +38,8 @@
 	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     [self.inputField setDelegate:self];
-    self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
     
+    self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
     self.inputFieldPlaceholder.hidden = YES;
     
     [[self.insetShadow layer] setMasksToBounds:YES];
@@ -55,6 +55,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
 }
 
 //somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
