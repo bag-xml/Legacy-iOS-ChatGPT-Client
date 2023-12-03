@@ -52,10 +52,6 @@
 }
 
 
-
-// FUNCTIONS
-
-
 //somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
@@ -136,7 +132,6 @@
         NSDictionary *choice = [choices objectAtIndex:0];
         NSDictionary *message = [choice objectForKey:@"message"];
         id contentObject = [message objectForKey:@"content"];
-        [self brotherWhatAreYouDoing:contentObject];
         if (contentObject && ![contentObject isKindOfClass:[NSNull class]]) {
             NSString *assistantReply = [NSString stringWithFormat:@"%@", contentObject];
             NSString *updatedConversation = [NSString stringWithFormat:@"%@\n%@: %@", self.chatTextView.text, assistantNick, assistantReply];
@@ -152,12 +147,6 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
-
-- (void)brotherWhatAreYouDoing:(NSString *)message {
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertBody = message;
-    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-}
 
 - (void)keyboardWillShow:(NSNotification *)notification {
 	
