@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "CAWelcomeTableViewController.h"
 
 @implementation AppDelegate
 
@@ -59,6 +59,7 @@
     if (![defaults objectForKey:@"responseAmount"]) {
         [defaults setObject:responseAmount forKey:@"responseAmount"];
     }
+    
     [defaults synchronize];
     return YES;
 }

@@ -5,12 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Welcome!-->
+        <!--Welcome Table View Controller - Welcome!-->
         <scene sceneID="UYi-nD-uYW">
             <objects>
-                <tableViewController id="OYt-0Q-KQP" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="welcome" id="OYt-0Q-KQP" customClass="CAWelcomeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="IaL-KZ-ugW">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner.png" id="3wz-ri-asw">
@@ -273,6 +273,27 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="You're done!" footerTitle="Alright, you're done now. Have fun! " id="amg-bo-8Pw">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ShF-QS-PGX" rowHeight="44" style="IBUITableViewCellStyleDefault" id="wi5-hS-akN">
+                                        <rect key="frame" x="0.0" y="2183" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wi5-hS-akN" id="zeB-19-LBm">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Continue!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ShF-QS-PGX">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="OYt-0Q-KQP" id="Af9-De-g4X"/>
@@ -283,23 +304,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkV-Sc-dzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2338" y="-1046"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="SCN-KM-XRJ">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="BZg-56-v7o" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="GCY-hh-Nyb"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eD8-pK-sBr">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="OYt-0Q-KQP" kind="relationship" relationship="rootViewController" id="WbV-mT-RTI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pIB-Xy-9sC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2906" y="-1046"/>
+            <point key="canvasLocation" x="-3150" y="-913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5YH-Ui-ZLd">
@@ -314,12 +319,12 @@
                         <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                     <connections>
-                        <segue destination="Bt3-Jm-zrN" kind="relationship" relationship="rootViewController" id="Big-aI-4dg"/>
+                        <segue destination="Bt3-Jm-zrN" kind="relationship" relationship="rootViewController" id="CO5-mC-Fwd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACh-Xn-3ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2906" y="-227"/>
+            <point key="canvasLocation" x="-3150" y="-233"/>
         </scene>
         <!--Table View Controller - ChatGPT-->
         <scene sceneID="mcu-eo-6af">
@@ -358,8 +363,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Conversations" id="ym0-iN-juh">
-                                <string key="footerTitle">Click on the "Save" button in the titlebar save your conversations for later. Your conversations can not be edited later on. Feature is unfinished and will probably be done as the last thing.</string>
+                            <tableViewSection headerTitle="Conversations" footerTitle="Conversation auto-save. You can have infinite conversations saved, and delete them with a click of a button." id="ym0-iN-juh">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8cB-qy-God" imageView="Vhm-Qg-Svs" style="IBUITableViewCellStyleDefault" id="ZpS-Qa-iwR">
                                         <rect key="frame" x="0.0" y="200" width="320" height="46"/>
@@ -387,35 +391,11 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="test" footerTitle="debug" id="asZ-gW-mfy">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Nig-6F-FeG" style="IBUITableViewCellStyleDefault" id="o8W-K5-71g">
-                                        <rect key="frame" x="0.0" y="394" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8W-K5-71g" id="Cew-FU-2pp">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="trigger welcomeviewcontroller" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nig-6F-FeG">
-                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="OYt-0Q-KQP" kind="push" id="dhM-pF-AFU"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection headerTitle="" id="XVH-va-LM6">
                                 <string key="footerTitle">Conversation saving and it's proper logic will be added in a future update properly. If you want to know more about this app's update schedule and whether or not I made an update to it, click the button below.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="w8y-Qe-YbU" style="IBUITableViewCellStyleDefault" id="caj-vL-6Zs">
-                                        <rect key="frame" x="0.0" y="490" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="332" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="caj-vL-6Zs" id="Juv-0d-wTI">
                                             <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -452,7 +432,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I96-O6-93D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2148" y="-233"/>
+            <point key="canvasLocation" x="-2295" y="-233"/>
         </scene>
         <!--Base About Page - About-->
         <scene sceneID="VHb-Vc-Mgk">
@@ -776,7 +756,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="XUo-4T-ZZu">
-                                <string key="footerTitle">There is word going around that OpenAI's API keys are paid, well that's true, but not if you create one for the first time. You get credit on that key (i used mine for 3 months without any issues it should lost you long enough before you have to or want to make any alts.)</string>
+                                <string key="footerTitle">There is word going around that OpenAI's API keys are paid, well that's true, but not if you create one for the first time. You get credit on that key (i used mine for 3 months without any issues it should last you long enough before you have to or want to make any alts.)</string>
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection id="tR0-aK-Eub">
@@ -878,7 +858,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQv-QJ-Vo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="-1613"/>
+            <point key="canvasLocation" x="-3165" y="-1605"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="L1q-zP-Wzc">
@@ -1030,7 +1010,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Kd-mX-c6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="-1497"/>
+            <point key="canvasLocation" x="-700" y="-1605"/>
         </scene>
         <!--Advanced Options View Controller - Advanced Settings-->
         <scene sceneID="Z7P-kj-Wzv">
@@ -1133,7 +1113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcq-y0-hbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="-2378"/>
+            <point key="canvasLocation" x="-691" y="-2354"/>
         </scene>
         <!--Newsletter View Controller - Newsletter-->
         <scene sceneID="BFM-Hf-hFQ">
@@ -1376,7 +1356,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="o7S-sG-hkj"/>
-        <segue reference="WbV-mT-RTI"/>
+        <segue reference="29S-9B-sLj"/>
     </inferredMetricsTieBreakers>
 </document>

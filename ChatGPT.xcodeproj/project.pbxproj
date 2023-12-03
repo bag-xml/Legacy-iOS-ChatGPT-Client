@@ -47,6 +47,7 @@
 		5BFA514B2B1D20910002873D /* guidebanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA514A2B1D20910002873D /* guidebanner.png */; };
 		5BFA514D2B1D30140002873D /* prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA514C2B1D30140002873D /* prompt.png */; };
 		5BFA514F2B1D30FC0002873D /* Naming.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA514E2B1D30FC0002873D /* Naming.png */; };
+		5BFA51522B1D36D40002873D /* CAWelcomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA51512B1D36D40002873D /* CAWelcomeTableViewController.m */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
 		C62AEF622A898C8B00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF642A898C8B00DD8D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF632A898C8B00DD8D5A /* CoreGraphics.framework */; };
@@ -126,6 +127,8 @@
 		5BFA514A2B1D20910002873D /* guidebanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidebanner.png; sourceTree = "<group>"; };
 		5BFA514C2B1D30140002873D /* prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prompt.png; sourceTree = "<group>"; };
 		5BFA514E2B1D30FC0002873D /* Naming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Naming.png; sourceTree = "<group>"; };
+		5BFA51502B1D36D40002873D /* CAWelcomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAWelcomeTableViewController.h; sourceTree = "<group>"; };
+		5BFA51512B1D36D40002873D /* CAWelcomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAWelcomeTableViewController.m; sourceTree = "<group>"; };
 		C62AEF5C2A898C8B00DD8D5A /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C62AEF612A898C8B00DD8D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -304,6 +307,8 @@
 				5B3A1F632B19E5C4004909DE /* tableviewcell */,
 				5B3A1F662B19E5C4004909DE /* TRMalleableFrameView.h */,
 				5B3A1F672B19E5C4004909DE /* TRMalleableFrameView.m */,
+				5BFA51502B1D36D40002873D /* CAWelcomeTableViewController.h */,
+				5BFA51512B1D36D40002873D /* CAWelcomeTableViewController.m */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
 				5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */,
 				5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */,
+				5BFA51522B1D36D40002873D /* CAWelcomeTableViewController.m in Sources */,
 				5B3A1F722B19E5C4004909DE /* JohnViewController.m in Sources */,
 				5B0862B12B1BDCA1008308DE /* CANewsletterViewController.m in Sources */,
 				5B3A1F742B19E5C4004909DE /* AppDelegate.m in Sources */,
