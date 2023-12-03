@@ -18,7 +18,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <sections>
-                            <tableViewSection headerTitle="Now also available on iOS!" footerTitle="You can now use ChatGPT's full power on the go, everywhere you are!" id="let-tr-NGR">
+                            <tableViewSection headerTitle="Now also available on iOS!" footerTitle="You can now use ChatGPT's full power on the go, everywhere you go!" id="let-tr-NGR">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Z3D-Wo-nh9" detailTextLabel="rpI-8G-tXW" imageView="Kn9-VG-vMQ" rowHeight="187" style="IBUITableViewCellStyleSubtitle" id="Eft-5Q-Oxp">
                                         <rect key="frame" x="0.0" y="171" width="320" height="189"/>
@@ -217,7 +217,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="" footerTitle="You can contribute to building a community there, aswell as get help for all my apps. and services. " id="GeL-pS-0gy">
+                            <tableViewSection headerTitle="" footerTitle="You can contribute to building a community there, aswell as get help for all my apps and services. " id="GeL-pS-0gy">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="1Nh-k8-tnT" detailTextLabel="5jx-3u-ePB" imageView="rXV-FD-bsn" rowHeight="136" style="IBUITableViewCellStyleSubtitle" id="RPI-gE-aY1">
                                         <rect key="frame" x="0.0" y="1889" width="320" height="137"/>
@@ -789,29 +789,29 @@
                             <tableViewSection headerTitle="Prompt" id="L9P-kk-w1G">
                                 <string key="footerTitle">You can add prompts to the AI, these will modify the character and responses of the bot. But be aware, NSFW prompts may lead to the AI ignoring your request.</string>
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7wo-ie-rxY" detailTextLabel="5Bn-7R-Res" imageView="Cyl-yl-5uC" rowHeight="74" style="IBUITableViewCellStyleSubtitle" id="E9Z-tS-FXG">
-                                        <rect key="frame" x="0.0" y="878" width="320" height="76"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7wo-ie-rxY" detailTextLabel="5Bn-7R-Res" imageView="Cyl-yl-5uC" rowHeight="109" style="IBUITableViewCellStyleSubtitle" id="E9Z-tS-FXG">
+                                        <rect key="frame" x="0.0" y="878" width="320" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9Z-tS-FXG" id="cDl-aC-FfF">
-                                            <rect key="frame" x="10" y="1" width="300" height="73"/>
+                                            <rect key="frame" x="10" y="1" width="300" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Personalities" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7wo-ie-rxY">
-                                                    <rect key="frame" x="83" y="17" width="108" height="22"/>
+                                                    <rect key="frame" x="84" y="35" width="108" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Give your AI a personality" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Bn-7R-Res">
-                                                    <rect key="frame" x="83" y="39" width="160" height="17"/>
+                                                    <rect key="frame" x="84" y="57" width="160" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="openai.png" id="Cyl-yl-5uC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="prompt.png" id="Cyl-yl-5uC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="74" height="108"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -820,6 +820,52 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection footerTitle="To add a prompt simply input it into the prompt textfield in Settings." id="3Sn-mq-d4j">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Nicknames" footerTitle="Simple feature, doesn't need quite the explanation. You can enable it via the advanced settings page." id="5Nb-4b-JYY">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eT6-6j-cMq" detailTextLabel="hBC-GG-DM4" imageView="Rds-MF-M3O" rowHeight="109" style="IBUITableViewCellStyleSubtitle" id="0OI-qj-JJK">
+                                        <rect key="frame" x="0.0" y="1187" width="320" height="111"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0OI-qj-JJK" id="ByM-fy-zhB">
+                                            <rect key="frame" x="10" y="1" width="300" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Name yourself" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eT6-6j-cMq">
+                                                    <rect key="frame" x="88" y="35" width="120" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="and your AI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hBC-GG-DM4">
+                                                    <rect key="frame" x="88" y="57" width="71" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Naming.png" id="Rds-MF-M3O">
+                                                    <rect key="frame" x="0.0" y="0.0" width="78" height="108"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Advanced options" footerTitle="" id="l1N-vl-ofZ">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="API Endpoint" id="eJx-EO-2fG">
+                                <string key="footerTitle">Basically this is the URL the client accesses to talk to the AI. The option exists so that if the endpoint maybe shifts, it's still easily changeable.</string>
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="AI Model" footerTitle="I don't think I need to explain what GPT-4 or GPT-3.5-Turbo is." id="Ale-bd-19R">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection id="OTA-Wg-fSi">
+                                <string key="footerTitle">However you can set GPT-4 as the model, if your API key allows for that. which is nuts. Imagine fucking using that shit on legacy ios... Oh this is what this app is for.</string>
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -1309,6 +1355,7 @@
         <image name="GuideCellResource.png" width="160" height="160"/>
         <image name="History.png" width="160" height="160"/>
         <image name="Key_Large.png" width="128" height="128"/>
+        <image name="Naming.png" width="228" height="316"/>
         <image name="NewChat.png" width="160" height="160"/>
         <image name="Send.png" width="23" height="20"/>
         <image name="Steve_Jobs.png" width="242" height="334"/>
@@ -1320,6 +1367,7 @@
         <image name="openai.png" width="160" height="160"/>
         <image name="piracy.png" width="228" height="372"/>
         <image name="preferences.png" width="23" height="23"/>
+        <image name="prompt.png" width="228" height="333"/>
     </resources>
     <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

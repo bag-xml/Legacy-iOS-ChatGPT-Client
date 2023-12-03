@@ -45,6 +45,8 @@
 		5BFA51472B1D0B730002873D /* Discord.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51462B1D0B730002873D /* Discord.png */; };
 		5BFA51492B1D1AD80002873D /* guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51482B1D1AD80002873D /* guide.png */; };
 		5BFA514B2B1D20910002873D /* guidebanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA514A2B1D20910002873D /* guidebanner.png */; };
+		5BFA514D2B1D30140002873D /* prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA514C2B1D30140002873D /* prompt.png */; };
+		5BFA514F2B1D30FC0002873D /* Naming.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA514E2B1D30FC0002873D /* Naming.png */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
 		C62AEF622A898C8B00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF642A898C8B00DD8D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF632A898C8B00DD8D5A /* CoreGraphics.framework */; };
@@ -122,6 +124,8 @@
 		5BFA51462B1D0B730002873D /* Discord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Discord.png; sourceTree = "<group>"; };
 		5BFA51482B1D1AD80002873D /* guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide.png; sourceTree = "<group>"; };
 		5BFA514A2B1D20910002873D /* guidebanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidebanner.png; sourceTree = "<group>"; };
+		5BFA514C2B1D30140002873D /* prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prompt.png; sourceTree = "<group>"; };
+		5BFA514E2B1D30FC0002873D /* Naming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Naming.png; sourceTree = "<group>"; };
 		C62AEF5C2A898C8B00DD8D5A /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C62AEF612A898C8B00DD8D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -404,6 +408,8 @@
 		5BB558F12B1BD7F700CB40D2 /* Helper images */ = {
 			isa = PBXGroup;
 			children = (
+				5BFA514E2B1D30FC0002873D /* Naming.png */,
+				5BFA514C2B1D30140002873D /* prompt.png */,
 				5BFA514A2B1D20910002873D /* guidebanner.png */,
 				5BFA51482B1D1AD80002873D /* guide.png */,
 				5BFA51462B1D0B730002873D /* Discord.png */,
@@ -608,11 +614,13 @@
 			files = (
 				5BFA51452B1D01D80002873D /* errorwtf.png in Resources */,
 				C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */,
+				5BFA514F2B1D30FC0002873D /* Naming.png in Resources */,
 				5BFA514B2B1D20910002873D /* guidebanner.png in Resources */,
 				5B1893E42B1C938100AAC4C3 /* piracy.png in Resources */,
 				5B077DF82B1A036200F8D4E9 /* iPhone.storyboard in Resources */,
 				5BB558FC2B1BD7F700CB40D2 /* shiypc.png in Resources */,
 				5BB558FD2B1BD7F700CB40D2 /* banner.png in Resources */,
+				5BFA514D2B1D30140002873D /* prompt.png in Resources */,
 				5BB559032B1BD7F700CB40D2 /* Send@2x.png in Resources */,
 				5BE4580E2B1CACE000885BD5 /* NewChat.png in Resources */,
 				5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */,
