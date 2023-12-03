@@ -22,7 +22,7 @@
     NSString *defaultNickname = @"ChatGPT";
     NSString *defaultUserNickname = @"Me";
     NSString *appVersion = @"v1.0";
-    NSString *aiPrompt = @" ";
+    NSString *aiPrompt = @"";
     NSString *requestAmount = @"0";
     NSString *responseAmount = @"0";
     NSString *newsletterEndpoint = @"https://help.mali357.gay/ios/embedded/CaExperiments/";
