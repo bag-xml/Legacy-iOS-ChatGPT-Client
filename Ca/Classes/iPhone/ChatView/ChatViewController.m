@@ -51,6 +51,10 @@
     [[self.insetShadow layer] setShadowRadius:4.0];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
 
 //somewhere here is an issue. i dont know where but it crashes the app without me being able to debug it.
 - (void)performRequest {
@@ -120,7 +124,6 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [self.responseData appendData:data];
 }
-
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];

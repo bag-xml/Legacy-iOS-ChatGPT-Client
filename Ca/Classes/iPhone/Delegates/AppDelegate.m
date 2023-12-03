@@ -72,6 +72,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     //exit(0); maybe make it toggleable?! (edit, why do i have an exit(0) fetish wtf!!!!!!!!)
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -87,6 +89,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"conversationHistory"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
 }
 
 
