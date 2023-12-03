@@ -776,7 +776,7 @@
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="XUo-4T-ZZu">
-                                <string key="footerTitle">There is word going around that OpenAI's API keys are paid, well thar's true, but not if you create one for the first time. You get credit on that key (i used mine for 3 months without any issues it should lost you long enough before you have to or want to make any alts.)</string>
+                                <string key="footerTitle">There is word going around that OpenAI's API keys are paid, well that's true, but not if you create one for the first time. You get credit on that key (i used mine for 3 months without any issues it should lost you long enough before you have to or want to make any alts.)</string>
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection id="tR0-aK-Eub">
@@ -787,8 +787,9 @@
                                 <cells/>
                             </tableViewSection>
                             <tableViewSection headerTitle="Prompt" id="L9P-kk-w1G">
+                                <string key="footerTitle">You can add prompts to the AI, these will modify the character and responses of the bot. But be aware, NSFW prompts may lead to the AI ignoring your request.</string>
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7wo-ie-rxY" detailTextLabel="5Bn-7R-Res" imageView="Cyl-yl-5uC" rowHeight="74" style="IBUITableViewCellStyleSubtitle" id="E9Z-tS-FXG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="7wo-ie-rxY" detailTextLabel="5Bn-7R-Res" imageView="Cyl-yl-5uC" rowHeight="74" style="IBUITableViewCellStyleSubtitle" id="E9Z-tS-FXG">
                                         <rect key="frame" x="0.0" y="878" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E9Z-tS-FXG" id="cDl-aC-FfF">
@@ -818,6 +819,9 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection footerTitle="To add a prompt simply input it into the prompt textfield in Settings." id="3Sn-mq-d4j">
+                                <cells/>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="3uQ-Fm-JRt" id="T3s-QP-80g"/>
@@ -828,7 +832,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQv-QJ-Vo1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="-1497"/>
+            <point key="canvasLocation" x="803" y="-1613"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="L1q-zP-Wzc">
