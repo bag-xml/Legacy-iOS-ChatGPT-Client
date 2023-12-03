@@ -86,11 +86,45 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Incredible" id="r1n-0U-lQj">
+                                <string key="footerTitle">You can natively input prompts, no need to ask chatgpt weird questions followed by "MESSAGE:" or some other stuff. It's very straightforward. Refer to the guide for more info.</string>
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CuV-37-jqr" detailTextLabel="8nl-lg-WTd" imageView="nqd-wP-mm2" rowHeight="187" style="IBUITableViewCellStyleSubtitle" id="IXd-yj-mUl">
+                                        <rect key="frame" x="0.0" y="773" width="320" height="189"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="186"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Prompt support" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CuV-37-jqr">
+                                                    <rect key="frame" x="145" y="74" width="132" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="pirates, ahoy!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8nl-lg-WTd">
+                                                    <rect key="frame" x="145" y="96" width="85" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Steve_Jobs.png" id="nqd-wP-mm2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="186"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="What you need" id="lcN-dw-eDY">
-                                <string key="footerTitle">You can ask AI about almost anything, as long as it doesn't violate it's rules. Try asking it about food, school related stuff or just have fun.</string>
+                                <string key="footerTitle">An API Key is needed in order to be able to use the AI. I don't provide API keys. API Keys are free as long as you don't cross OpenAI's free $5 credit. Visit the guide on how to create one.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="A7g-1X-nso" detailTextLabel="o9d-Im-yjh" imageView="eJC-fO-rnI" rowHeight="122" style="IBUITableViewCellStyleSubtitle" id="TJW-Bp-Q1C">
-                                        <rect key="frame" x="0.0" y="773" width="320" height="124"/>
+                                        <rect key="frame" x="0.0" y="1110" width="320" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="121"/>
