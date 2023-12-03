@@ -221,14 +221,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Begin your conversation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zRC-lF-ARp">
-                                                    <rect key="frame" x="43" y="0.0" width="227" height="57"/>
+                                                    <rect key="frame" x="67" y="0.0" width="203" height="57"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Send.png" id="iVw-NE-Bso">
-                                                    <rect key="frame" x="10" y="18" width="23" height="20"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="NewChat.png" id="iVw-NE-Bso">
+                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -251,14 +251,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8cB-qy-God">
-                                                    <rect key="frame" x="43" y="0.0" width="227" height="43"/>
+                                                    <rect key="frame" x="53" y="0.0" width="217" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="preferences.png" id="Vhm-Qg-Svs">
-                                                    <rect key="frame" x="10" y="10" width="23" height="23"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="History.png" id="Vhm-Qg-Svs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1068,7 +1068,9 @@
         <image name="Bag-XMLCellResource.png" width="160" height="160"/>
         <image name="CellImage.png" width="228" height="333"/>
         <image name="GuideCellResource.png" width="160" height="160"/>
+        <image name="History.png" width="160" height="160"/>
         <image name="Key_Large.png" width="128" height="128"/>
+        <image name="NewChat.png" width="160" height="160"/>
         <image name="Send.png" width="23" height="20"/>
         <image name="Steve_Jobs.png" width="242" height="334"/>
         <image name="bag-xml.png" width="286" height="286"/>
