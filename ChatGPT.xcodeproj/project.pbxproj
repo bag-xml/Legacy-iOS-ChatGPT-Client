@@ -41,6 +41,10 @@
 		5BE4580D2B1CACE000885BD5 /* History.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580B2B1CACE000885BD5 /* History.png */; };
 		5BE4580E2B1CACE000885BD5 /* NewChat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580C2B1CACE000885BD5 /* NewChat.png */; };
 		5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */; };
+		5BFA51452B1D01D80002873D /* errorwtf.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51442B1D01D80002873D /* errorwtf.png */; };
+		5BFA51472B1D0B730002873D /* Discord.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51462B1D0B730002873D /* Discord.png */; };
+		5BFA51492B1D1AD80002873D /* guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51482B1D1AD80002873D /* guide.png */; };
+		5BFA514B2B1D20910002873D /* guidebanner.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA514A2B1D20910002873D /* guidebanner.png */; };
 		C62AEF602A898C8B00DD8D5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */; };
 		C62AEF622A898C8B00DD8D5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF612A898C8B00DD8D5A /* Foundation.framework */; };
 		C62AEF642A898C8B00DD8D5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62AEF632A898C8B00DD8D5A /* CoreGraphics.framework */; };
@@ -114,6 +118,10 @@
 		5BE4580C2B1CACE000885BD5 /* NewChat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewChat.png; sourceTree = "<group>"; };
 		5BEBC1CB2B1CE4EB000B39CE /* CAHistoryTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHistoryTextViewController.h; sourceTree = "<group>"; };
 		5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHistoryTextViewController.m; sourceTree = "<group>"; };
+		5BFA51442B1D01D80002873D /* errorwtf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errorwtf.png; sourceTree = "<group>"; };
+		5BFA51462B1D0B730002873D /* Discord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Discord.png; sourceTree = "<group>"; };
+		5BFA51482B1D1AD80002873D /* guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide.png; sourceTree = "<group>"; };
+		5BFA514A2B1D20910002873D /* guidebanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guidebanner.png; sourceTree = "<group>"; };
 		C62AEF5C2A898C8B00DD8D5A /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF5F2A898C8B00DD8D5A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C62AEF612A898C8B00DD8D5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -396,6 +404,10 @@
 		5BB558F12B1BD7F700CB40D2 /* Helper images */ = {
 			isa = PBXGroup;
 			children = (
+				5BFA514A2B1D20910002873D /* guidebanner.png */,
+				5BFA51482B1D1AD80002873D /* guide.png */,
+				5BFA51462B1D0B730002873D /* Discord.png */,
+				5BFA51442B1D01D80002873D /* errorwtf.png */,
 				5B1893E32B1C938100AAC4C3 /* piracy.png */,
 				5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */,
 				5BB558F22B1BD7F700CB40D2 /* banner.png */,
@@ -594,7 +606,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BFA51452B1D01D80002873D /* errorwtf.png in Resources */,
 				C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */,
+				5BFA514B2B1D20910002873D /* guidebanner.png in Resources */,
 				5B1893E42B1C938100AAC4C3 /* piracy.png in Resources */,
 				5B077DF82B1A036200F8D4E9 /* iPhone.storyboard in Resources */,
 				5BB558FC2B1BD7F700CB40D2 /* shiypc.png in Resources */,
@@ -604,12 +618,14 @@
 				5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */,
 				5BB559002B1BD7F700CB40D2 /* preferences.png in Resources */,
 				5BE4580D2B1CACE000885BD5 /* History.png in Resources */,
+				5BFA51472B1D0B730002873D /* Discord.png in Resources */,
 				5B4C47D32B1C732300D717C2 /* GuideCellResource.png in Resources */,
 				5B4C47D52B1C748D00D717C2 /* Bag-XMLCellResource.png in Resources */,
 				5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */,
 				5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */,
 				5BB558FE2B1BD7F700CB40D2 /* CellImage.png in Resources */,
 				5BB558FF2B1BD7F700CB40D2 /* Steve_Jobs.png in Resources */,
+				5BFA51492B1D1AD80002873D /* guide.png in Resources */,
 				5B4C47D22B1C732300D717C2 /* AboutCellResource.png in Resources */,
 				5BB559012B1BD7F700CB40D2 /* preferences@2x.png in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
