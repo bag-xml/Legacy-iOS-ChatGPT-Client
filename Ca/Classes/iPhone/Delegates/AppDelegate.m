@@ -25,7 +25,7 @@
     NSString *aiPrompt = @" ";
     NSString *requestAmount = @"0";
     NSString *responseAmount = @"0";
-    NSString *newsletterEndpoint = @"https://help.mali357.gay/ios/quickinst/install/";
+    NSString *newsletterEndpoint = @"https://help.mali357.gay/ios/embedded/CaExperiments/";
     NSString *sourcecodepageendpoint = @"https://github.com/bag-xml/iOS-5-ChatGPT-Client";
     
     //sets nsuserdefault to default objects, if none are specified, aka. default keys before user modifies them.
@@ -71,7 +71,8 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    //exit(0); maybe make it toggleable?! (edit, why do i have an exit(0) fetish wtf!!!!!!!!)
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"conversationHistory"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
 }

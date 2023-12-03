@@ -88,22 +88,25 @@
         // HTTP Request headers
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
-        NSMutableDictionary *bodyData = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                        @"model": [NSString stringWithFormat:@"%@", modelType],
-                                                                                        @"messages": [NSMutableArray arrayWithArray:@[
-                                                                                                                                      @{
-                                                                                                                                          @"role": @"user",
-                                                                                                                                          @"content": [gptprompt stringByAppendingString:message]
-                                                                                                                                          }
-                                                                                                                                      ]]
-                                                                                        }];
+        
+        NSMutableArray *messagesArray = [NSMutableArray arrayWithArray:@[
+                                                                         @{
+                                                                             @"role": @"user",
+                                                                             @"content": [gptprompt stringByAppendingString:message]
+                                                                             }
+                                                                         ]];
         
         if (conversationHistory && ![conversationHistory isKindOfClass:[NSNull class]]) {
-            [bodyData[@"messages"] addObject:@{
-                                               @"role": @"assistant",
-                                               @"content": conversationHistory
-                                               }];
+            [messagesArray addObject:@{
+                                       @"role": @"assistant",
+                                       @"content": conversationHistory
+                                       }];
         }
+        
+        NSMutableDictionary *bodyData = [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                        @"model": [NSString stringWithFormat:@"%@", modelType],
+                                                                                        @"messages": messagesArray
+                                                                                        }];
         
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyData options:0 error:nil];
         [request setHTTPBody:jsonData];
@@ -114,20 +117,9 @@
     }
 }
 
-
-#pragma mark - NSURLConnectionDelegate
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    self.responseData.length = 0;
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [self.responseData appendData:data];
-}
-
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
-    NSLog(@"Response recieved");
+    NSLog(@"Response received");
     
     NSArray *choices = [responseDictionary objectForKey:@"choices"];
     NSString *assistantNick = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
@@ -136,11 +128,12 @@
         NSDictionary *choice = [choices objectAtIndex:0];
         NSDictionary *message = [choice objectForKey:@"message"];
         id contentObject = [message objectForKey:@"content"];
+        
         if (contentObject && ![contentObject isKindOfClass:[NSNull class]]) {
             NSString *assistantReply = [NSString stringWithFormat:@"%@", contentObject];
             NSString *updatedConversation = [NSString stringWithFormat:@"%@\n%@: %@", self.chatTextView.text, assistantNick, assistantReply];
             
-            [[NSUserDefaults standardUserDefaults] setObject:updatedConversation forKey:@"conversationHistory"];
+            [[NSUserDefaults standardUserDefaults] setObject:assistantReply forKey:@"conversationHistory"];
             [[NSUserDefaults standardUserDefaults] synchronize];
             
             self.chatTextView.text = updatedConversation;
@@ -151,6 +144,15 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
+#pragma mark - NSURLConnectionDelegate
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    self.responseData.length = 0;
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.responseData appendData:data];
+}
 
 - (void)keyboardWillShow:(NSNotification *)notification {
 	

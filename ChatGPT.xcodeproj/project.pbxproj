@@ -22,6 +22,9 @@
 		5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */; };
 		5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */; };
 		5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */; };
+		5B4C47D22B1C732300D717C2 /* AboutCellResource.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C47D02B1C732200D717C2 /* AboutCellResource.png */; };
+		5B4C47D32B1C732300D717C2 /* GuideCellResource.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C47D12B1C732300D717C2 /* GuideCellResource.png */; };
+		5B4C47D52B1C748D00D717C2 /* Bag-XMLCellResource.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C47D42B1C748D00D717C2 /* Bag-XMLCellResource.png */; };
 		5B69E4372B1BE06F00D7A1EB /* CASourceControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B69E4362B1BE06F00D7A1EB /* CASourceControlViewController.m */; };
 		5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558EE2B1BD7F700CB40D2 /* bag-xml.png */; };
 		5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558EF2B1BD7F700CB40D2 /* openai.png */; };
@@ -84,6 +87,9 @@
 		5B3A1F6D2B19E5C4004909DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key_Large@2x.png"; sourceTree = "<group>"; };
+		5B4C47D02B1C732200D717C2 /* AboutCellResource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutCellResource.png; sourceTree = "<group>"; };
+		5B4C47D12B1C732300D717C2 /* GuideCellResource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuideCellResource.png; sourceTree = "<group>"; };
+		5B4C47D42B1C748D00D717C2 /* Bag-XMLCellResource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bag-XMLCellResource.png"; sourceTree = "<group>"; };
 		5B69E4352B1BE06F00D7A1EB /* CASourceControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASourceControlViewController.h; sourceTree = "<group>"; };
 		5B69E4362B1BE06F00D7A1EB /* CASourceControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASourceControlViewController.m; sourceTree = "<group>"; };
 		5BB558EE2B1BD7F700CB40D2 /* bag-xml.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-xml.png"; sourceTree = "<group>"; };
@@ -321,6 +327,16 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
+		5B4C47CF2B1C732200D717C2 /* Tableviewcells */ = {
+			isa = PBXGroup;
+			children = (
+				5B4C47D42B1C748D00D717C2 /* Bag-XMLCellResource.png */,
+				5B4C47D02B1C732200D717C2 /* AboutCellResource.png */,
+				5B4C47D12B1C732300D717C2 /* GuideCellResource.png */,
+			);
+			path = Tableviewcells;
+			sourceTree = "<group>";
+		};
 		5B69E4342B1BE05800D7A1EB /* GitHub */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +349,7 @@
 		5BB558EC2B1BD7F700CB40D2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5B4C47CF2B1C732200D717C2 /* Tableviewcells */,
 				C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */,
 				5BB558ED2B1BD7F700CB40D2 /* About */,
 				5BB558F12B1BD7F700CB40D2 /* Helper images */,
@@ -549,10 +566,13 @@
 				5BB559032B1BD7F700CB40D2 /* Send@2x.png in Resources */,
 				5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */,
 				5BB559002B1BD7F700CB40D2 /* preferences.png in Resources */,
+				5B4C47D32B1C732300D717C2 /* GuideCellResource.png in Resources */,
+				5B4C47D52B1C748D00D717C2 /* Bag-XMLCellResource.png in Resources */,
 				5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */,
 				5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */,
 				5BB558FE2B1BD7F700CB40D2 /* CellImage.png in Resources */,
 				5BB558FF2B1BD7F700CB40D2 /* Steve_Jobs.png in Resources */,
+				5B4C47D22B1C732300D717C2 /* AboutCellResource.png in Resources */,
 				5BB559012B1BD7F700CB40D2 /* preferences@2x.png in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
 				5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */,
