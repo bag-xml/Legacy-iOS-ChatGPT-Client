@@ -86,9 +86,39 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="test" id="lcN-dw-eDY">
+                            <tableViewSection headerTitle="What you need" id="lcN-dw-eDY">
                                 <string key="footerTitle">You can ask AI about almost anything, as long as it doesn't violate it's rules. Try asking it about food, school related stuff or just have fun.</string>
-                                <cells/>
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="A7g-1X-nso" detailTextLabel="o9d-Im-yjh" imageView="eJC-fO-rnI" rowHeight="122" style="IBUITableViewCellStyleSubtitle" id="TJW-Bp-Q1C">
+                                        <rect key="frame" x="0.0" y="773" width="320" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="121"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="an API key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A7g-1X-nso">
+                                                    <rect key="frame" x="131" y="41" width="89" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="see guide for info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o9d-Im-yjh">
+                                                    <rect key="frame" x="131" y="63" width="108" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Key_Large.png" id="eJC-fO-rnI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
                             </tableViewSection>
                         </sections>
                         <connections>
@@ -596,7 +626,7 @@
                         <sections>
                             <tableViewSection id="RyS-Kb-vvU">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="qkA-LS-CR6" detailTextLabel="Mb8-fz-vSN" imageView="He8-gO-0Kr" rowHeight="82" style="IBUITableViewCellStyleSubtitle" id="BUS-99-1i5">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="qkA-LS-CR6" detailTextLabel="Mb8-fz-vSN" imageView="He8-gO-0Kr" rowHeight="82" style="IBUITableViewCellStyleSubtitle" id="BUS-99-1i5">
                                         <rect key="frame" x="0.0" y="10" width="320" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1154,6 +1184,7 @@
     </scenes>
     <resources>
         <image name="CellImage.png" width="228" height="333"/>
+        <image name="Key_Large.png" width="128" height="128"/>
         <image name="Send.png" width="23" height="20"/>
         <image name="Steve_Jobs.png" width="242" height="333"/>
         <image name="bag-xml.png" width="286" height="286"/>

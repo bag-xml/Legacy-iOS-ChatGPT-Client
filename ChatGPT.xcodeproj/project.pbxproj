@@ -21,6 +21,7 @@
 		5B3A1F762B19E5C4004909DE /* TRMalleableFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F672B19E5C4004909DE /* TRMalleableFrameView.m */; };
 		5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */; };
 		5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */; };
+		5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */; };
 		5B69E4372B1BE06F00D7A1EB /* CASourceControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B69E4362B1BE06F00D7A1EB /* CASourceControlViewController.m */; };
 		5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558EE2B1BD7F700CB40D2 /* bag-xml.png */; };
 		5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558EF2B1BD7F700CB40D2 /* openai.png */; };
@@ -82,6 +83,7 @@
 		5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedOptionsViewController.m; sourceTree = "<group>"; };
 		5B3A1F6D2B19E5C4004909DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key_Large@2x.png"; sourceTree = "<group>"; };
 		5B69E4352B1BE06F00D7A1EB /* CASourceControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CASourceControlViewController.h; sourceTree = "<group>"; };
 		5B69E4362B1BE06F00D7A1EB /* CASourceControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASourceControlViewController.m; sourceTree = "<group>"; };
 		5BB558EE2B1BD7F700CB40D2 /* bag-xml.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bag-xml.png"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		5BB558F12B1BD7F700CB40D2 /* Helper images */ = {
 			isa = PBXGroup;
 			children = (
+				5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */,
 				5BB558F22B1BD7F700CB40D2 /* banner.png */,
 				5BB558F32B1BD7F700CB40D2 /* CellImage.png */,
 				5BB558F42B1BD7F700CB40D2 /* Steve_Jobs.png */,
@@ -544,6 +547,7 @@
 				5BB558FC2B1BD7F700CB40D2 /* shiypc.png in Resources */,
 				5BB558FD2B1BD7F700CB40D2 /* banner.png in Resources */,
 				5BB559032B1BD7F700CB40D2 /* Send@2x.png in Resources */,
+				5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */,
 				5BB559002B1BD7F700CB40D2 /* preferences.png in Resources */,
 				5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */,
 				5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */,

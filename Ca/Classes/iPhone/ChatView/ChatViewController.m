@@ -13,6 +13,7 @@
 
 #import "ChatViewController.h"
 #import "TRMalleableFrameView.h"
+#import <sqlite3.h>
 
 @interface ChatViewController () <UITextViewDelegate, NSURLConnectionDelegate>
 
@@ -87,7 +88,6 @@
         // HTTP Request headers
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
-        // HELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELLELL HELL HELL
         NSMutableDictionary *bodyData = [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                         @"model": [NSString stringWithFormat:@"%@", modelType],
                                                                                         @"messages": [NSMutableArray arrayWithArray:@[
@@ -127,6 +127,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
+    NSLog(@"Response recieved");
     
     NSArray *choices = [responseDictionary objectForKey:@"choices"];
     NSString *assistantNick = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
