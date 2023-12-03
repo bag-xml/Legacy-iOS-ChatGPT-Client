@@ -54,10 +54,33 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    [self tryToWriteHistoryOhMyGod:self.chatTextView.text];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
 }
-
+//this saves chat cotnents to txt file
+- (void)tryToWriteHistoryOhMyGod:(NSString *)conversation {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSInteger lastConversationNumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"lastConversationNumber"];
+    lastConversationNumber++;
+    
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filename = [NSString stringWithFormat:@"%ld.txt", (long)lastConversationNumber];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:filename];
+    
+    //fuck this shit i hate this
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:documentsDirectory]) {
+        [fileManager createDirectoryAtPath:documentsDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    if (![fileManager fileExistsAtPath:filePath]) {
+        [fileManager createFileAtPath:filePath contents:nil attributes:nil];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:lastConversationNumber forKey:@"lastConversationNumber"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [conversation writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+}
 
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
@@ -222,7 +245,7 @@
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"conversation.txt"];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"sharedConversation.txt"];
     NSURL *fileURL = [NSURL fileURLWithPath:filePath];
     
     NSError *error = nil;
@@ -239,5 +262,11 @@
     
 }
 
+- (NSString *)getCurrentTimestamp {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyyMMdd_HHmmss"];
+    NSString *timestamp = [formatter stringFromDate:[NSDate date]];
+    return timestamp;
+}
 
 @end
