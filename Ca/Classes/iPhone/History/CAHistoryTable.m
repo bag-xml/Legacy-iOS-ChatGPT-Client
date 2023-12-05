@@ -33,7 +33,7 @@
     [self.tableView reloadData];
 }
 
-- (void)clearAllTxtFilesInDocumentsDirectory {
+- (void)impendingDoomOfDeletion {
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
@@ -93,8 +93,20 @@
 
 
 //Button actions
-- (IBAction)clearAllTxtFiles:(id)sender {
-    [self clearAllTxtFilesInDocumentsDirectory];
+- (IBAction)deleteeverything:(id)sender {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Clear All Conversation?"
+                                                        message:@"Are you sure you want to remove your previous conversations? Note that these cannot be restored, and if you wish to back them up, go to the application's local Documents directory and back them up."
+                                                       delegate:self
+                                              cancelButtonTitle:@"No"
+                                              otherButtonTitles:@"Yes", nil];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        //i fr need keybag deleter some time
+        [self impendingDoomOfDeletion];
+    }
 }
 
 @end

@@ -391,8 +391,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="" id="XVH-va-LM6">
-                                <string key="footerTitle">Conversation saving and it's proper logic will be added in a future update properly. If you want to know more about this app's update schedule and whether or not I made an update to it, click the button below.</string>
+                            <tableViewSection headerTitle="" footerTitle="Stay up-to-date about the app's newest updates. There is more to come in the future." id="XVH-va-LM6">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="w8y-Qe-YbU" style="IBUITableViewCellStyleDefault" id="caj-vL-6Zs">
                                         <rect key="frame" x="0.0" y="332" width="320" height="46"/>
@@ -1184,7 +1183,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="igq-xc-M1a" kind="push" identifier="conv to mainview" id="HGZ-Gk-uCS"/>
+                                    <segue destination="igq-xc-M1a" kind="push" identifier="timeToViewMyShit" id="HGZ-Gk-uCS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1196,7 +1195,7 @@
                     <navigationItem key="navigationItem" title="Conversations" id="bjP-lM-6Yv">
                         <barButtonItem key="rightBarButtonItem" title="Clear all" id="NG2-pd-k21">
                             <connections>
-                                <action selector="clearAllTxtFiles:" destination="G7a-IZ-bAz" id="srp-Hs-fvq"/>
+                                <action selector="deleteeverything:" destination="G7a-IZ-bAz" id="5CR-l4-uOq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1213,7 +1212,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="5Hv-6A-k8x">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Feature isn't added yet, please wait for the next update." id="5Hv-6A-k8x">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

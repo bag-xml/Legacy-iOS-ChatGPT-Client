@@ -14,4 +14,8 @@
 
 @implementation CAHistoryTextViewController
 
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.textView.text = self.textToShow;
+}
 @end

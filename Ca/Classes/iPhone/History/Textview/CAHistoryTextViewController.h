@@ -11,5 +11,6 @@
 @interface CAHistoryTextViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (nonatomic, strong) NSString *textToShow;
 
 @end
