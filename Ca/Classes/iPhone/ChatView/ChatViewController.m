@@ -82,6 +82,13 @@
     [conversation writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
+- (void)YourKeyProbablyExpired {
+    NSString *errorMessage = @"Your API key is missing, please specify it in the settings page. If the AI doesn't respond to your key despite you having a solid internet connection, your key may've expired.";
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"Take me to settings." otherButtonTitles:nil];
+    [alertView show];
+}
+
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
@@ -89,8 +96,13 @@
     NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
     NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     NSString *userNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
-    NSString *userAgent = [[NSUserDefaults standardUserDefaults] objectForKey:@"User-Agent"];
+    //NSString *userAgent = [[NSUserDefaults standardUserDefaults] objectForKey:@"User-Agent"]; //soon
     NSString *conversationHistory = [[NSUserDefaults standardUserDefaults] objectForKey:@"conversationHistory"];
+    
+    if (apiKey.length == 0) {
+        [self YourKeyProbablyExpired];
+        return;
+    }
     
     if (message.length > 0) {
         NSString *previousChat = self.chatTextView.text;
@@ -110,6 +122,7 @@
         [request setHTTPMethod:@"POST"];
         
         // HTTP Request headers
+        //[request setValue:[NSString stringWithFormat:@"%@", userAgent] forHTTPHeaderField:@"User-Agent"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
