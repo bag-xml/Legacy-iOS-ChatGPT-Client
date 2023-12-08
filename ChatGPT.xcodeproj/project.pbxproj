@@ -43,6 +43,7 @@
 		5BB559012B1BD7F700CB40D2 /* preferences@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558F72B1BD7F700CB40D2 /* preferences@2x.png */; };
 		5BB559022B1BD7F700CB40D2 /* Send.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558F82B1BD7F700CB40D2 /* Send.png */; };
 		5BB559032B1BD7F700CB40D2 /* Send@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BB558F92B1BD7F700CB40D2 /* Send@2x.png */; };
+		5BD49F602B23D88600617A49 /* CAPrefTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD49F5F2B23D88600617A49 /* CAPrefTable.m */; };
 		5BE4580D2B1CACE000885BD5 /* History.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580B2B1CACE000885BD5 /* History.png */; };
 		5BE4580E2B1CACE000885BD5 /* NewChat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580C2B1CACE000885BD5 /* NewChat.png */; };
 		5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */; };
@@ -127,6 +128,8 @@
 		5BB558F72B1BD7F700CB40D2 /* preferences@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preferences@2x.png"; sourceTree = "<group>"; };
 		5BB558F82B1BD7F700CB40D2 /* Send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Send.png; sourceTree = "<group>"; };
 		5BB558F92B1BD7F700CB40D2 /* Send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Send@2x.png"; sourceTree = "<group>"; };
+		5BD49F5E2B23D88600617A49 /* CAPrefTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPrefTable.h; sourceTree = "<group>"; };
+		5BD49F5F2B23D88600617A49 /* CAPrefTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPrefTable.m; sourceTree = "<group>"; };
 		5BE4580B2B1CACE000885BD5 /* History.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = History.png; sourceTree = "<group>"; };
 		5BE4580C2B1CACE000885BD5 /* NewChat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewChat.png; sourceTree = "<group>"; };
 		5BEBC1CB2B1CE4EB000B39CE /* CAHistoryTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHistoryTextViewController.h; sourceTree = "<group>"; };
@@ -210,6 +213,7 @@
 		5B3A1F4D2B19E5C4004909DE /* iPad */ = {
 			isa = PBXGroup;
 			children = (
+				5BD49F5D2B23D86D00617A49 /* Pref */,
 				5B3A1F4E2B19E5C4004909DE /* Chat */,
 				5B3A1F4F2B19E5C4004909DE /* Sidebar */,
 			);
@@ -452,6 +456,15 @@
 				5BB558F92B1BD7F700CB40D2 /* Send@2x.png */,
 			);
 			path = "Icon Glyphs";
+			sourceTree = "<group>";
+		};
+		5BD49F5D2B23D86D00617A49 /* Pref */ = {
+			isa = PBXGroup;
+			children = (
+				5BD49F5E2B23D88600617A49 /* CAPrefTable.h */,
+				5BD49F5F2B23D88600617A49 /* CAPrefTable.m */,
+			);
+			path = Pref;
 			sourceTree = "<group>";
 		};
 		5BEBC1CA2B1CE4B5000B39CE /* Textview */ = {
@@ -712,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
+				5BD49F602B23D88600617A49 /* CAPrefTable.m in Sources */,
 				5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */,
 				5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */,
 				5BFA51522B1D36D40002873D /* CAWelcomeTableViewController.m in Sources */,
