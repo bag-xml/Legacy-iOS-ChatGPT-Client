@@ -10,4 +10,6 @@
 
 @interface CASidebarTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *conversationFiles;
+
 @end
