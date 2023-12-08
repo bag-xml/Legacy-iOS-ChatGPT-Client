@@ -13,7 +13,6 @@
 
 #import "ChatViewController.h"
 #import "TRMalleableFrameView.h"
-#import <sqlite3.h>
 
 @interface ChatViewController () <UITextViewDelegate, NSURLConnectionDelegate>
 
