@@ -13,6 +13,11 @@
 		5B077DFD2B1A03FE00F8D4E9 /* CASidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */; };
 		5B0862B12B1BDCA1008308DE /* CANewsletterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0862B02B1BDCA1008308DE /* CANewsletterViewController.m */; };
 		5B1893E42B1C938100AAC4C3 /* piracy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B1893E32B1C938100AAC4C3 /* piracy.png */; };
+		5B29A2EA2B236B8A00E91E18 /* Chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B29A2E92B236B8A00E91E18 /* Chat.png */; };
+		5B29A2EC2B236EDF00E91E18 /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B29A2EB2B236EDF00E91E18 /* Share.png */; };
+		5B29A2EF2B2371B400E91E18 /* Clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B29A2ED2B2371B400E91E18 /* Clear.png */; };
+		5B29A2F02B2371B400E91E18 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B29A2EE2B2371B400E91E18 /* mail.png */; };
+		5B29A2F22B23742A00E91E18 /* Done.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B29A2F12B23742A00E91E18 /* Done.png */; };
 		5B3A1F702B19E5C4004909DE /* BaseAboutPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */; };
 		5B3A1F712B19E5C4004909DE /* APIHolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F582B19E5C4004909DE /* APIHolderViewController.m */; };
 		5B3A1F722B19E5C4004909DE /* JohnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F5B2B19E5C4004909DE /* JohnViewController.m */; };
@@ -81,6 +86,11 @@
 		5B0862AF2B1BDCA1008308DE /* CANewsletterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CANewsletterViewController.h; sourceTree = "<group>"; };
 		5B0862B02B1BDCA1008308DE /* CANewsletterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CANewsletterViewController.m; sourceTree = "<group>"; };
 		5B1893E32B1C938100AAC4C3 /* piracy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piracy.png; sourceTree = "<group>"; };
+		5B29A2E92B236B8A00E91E18 /* Chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chat.png; sourceTree = "<group>"; };
+		5B29A2EB2B236EDF00E91E18 /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Share.png; sourceTree = "<group>"; };
+		5B29A2ED2B2371B400E91E18 /* Clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clear.png; sourceTree = "<group>"; };
+		5B29A2EE2B2371B400E91E18 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		5B29A2F12B23742A00E91E18 /* Done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Done.png; sourceTree = "<group>"; };
 		5B3A1F532B19E5C4004909DE /* BaseAboutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAboutPage.h; sourceTree = "<group>"; };
 		5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAboutPage.m; sourceTree = "<group>"; };
 		5B3A1F572B19E5C4004909DE /* APIHolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHolderViewController.h; sourceTree = "<group>"; };
@@ -413,6 +423,11 @@
 		5BB558F12B1BD7F700CB40D2 /* Helper images */ = {
 			isa = PBXGroup;
 			children = (
+				5B29A2F12B23742A00E91E18 /* Done.png */,
+				5B29A2ED2B2371B400E91E18 /* Clear.png */,
+				5B29A2EE2B2371B400E91E18 /* mail.png */,
+				5B29A2EB2B236EDF00E91E18 /* Share.png */,
+				5B29A2E92B236B8A00E91E18 /* Chat.png */,
 				5BFA514E2B1D30FC0002873D /* Naming.png */,
 				5BFA514C2B1D30140002873D /* prompt.png */,
 				5BFA514A2B1D20910002873D /* guidebanner.png */,
@@ -618,12 +633,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BFA51452B1D01D80002873D /* errorwtf.png in Resources */,
+				5B29A2F22B23742A00E91E18 /* Done.png in Resources */,
 				C684EAF82A8BFFB900EDDDB7 /* Images.xcassets in Resources */,
 				5BFA514F2B1D30FC0002873D /* Naming.png in Resources */,
 				5BFA514B2B1D20910002873D /* guidebanner.png in Resources */,
 				5B1893E42B1C938100AAC4C3 /* piracy.png in Resources */,
 				5B077DF82B1A036200F8D4E9 /* iPhone.storyboard in Resources */,
 				5BB558FC2B1BD7F700CB40D2 /* shiypc.png in Resources */,
+				5B29A2EA2B236B8A00E91E18 /* Chat.png in Resources */,
 				5BB558FD2B1BD7F700CB40D2 /* banner.png in Resources */,
 				5BFA514D2B1D30140002873D /* prompt.png in Resources */,
 				5BB559032B1BD7F700CB40D2 /* Send@2x.png in Resources */,
@@ -634,6 +651,8 @@
 				5BFA51472B1D0B730002873D /* Discord.png in Resources */,
 				5B4C47D32B1C732300D717C2 /* GuideCellResource.png in Resources */,
 				5B4C47D52B1C748D00D717C2 /* Bag-XMLCellResource.png in Resources */,
+				5B29A2EC2B236EDF00E91E18 /* Share.png in Resources */,
+				5B29A2EF2B2371B400E91E18 /* Clear.png in Resources */,
 				5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */,
 				5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */,
 				5BB558FE2B1BD7F700CB40D2 /* CellImage.png in Resources */,
@@ -642,6 +661,7 @@
 				5B4C47D22B1C732300D717C2 /* AboutCellResource.png in Resources */,
 				5BB559012B1BD7F700CB40D2 /* preferences@2x.png in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
+				5B29A2F02B2371B400E91E18 /* mail.png in Resources */,
 				5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */,
 				5BB559022B1BD7F700CB40D2 /* Send.png in Resources */,
 			);

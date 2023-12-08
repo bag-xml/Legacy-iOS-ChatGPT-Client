@@ -39,7 +39,7 @@
     
     [self.inputField setDelegate:self];
     
-    self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
+    //self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
     self.inputFieldPlaceholder.hidden = YES;
     
     [[self.insetShadow layer] setMasksToBounds:YES];
@@ -85,7 +85,7 @@
 - (void)YourKeyProbablyExpired {
     NSString *errorMessage = @"Your API key is missing, please specify it in the settings page. If the AI doesn't respond to your key despite you having a solid internet connection, your key may've expired.";
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"Take me to settings." otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
     [alertView show];
 }
 
@@ -118,11 +118,10 @@
         
         NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-        NSLog(@"Request was sent. Endpoint specified is %@", apiEndpoint);
-        [request setHTTPMethod:@"POST"];
-        
+
         // HTTP Request headers
         //[request setValue:[NSString stringWithFormat:@"%@", userAgent] forHTTPHeaderField:@"User-Agent"];
+        [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
         
@@ -150,7 +149,6 @@
         
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
         [connection start];
-        NSLog(@"Connection started, as an overview, the specified model is %@, and the prompt is %@ as well as the Bearer Auth header being %@.", modelType, gptprompt, apiKey);
     }
 }
 
