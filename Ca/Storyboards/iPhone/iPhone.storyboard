@@ -1464,7 +1464,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="igq-xc-M1a" kind="push" identifier="timeToViewMyShit" id="HGZ-Gk-uCS"/>
+                                    <segue destination="ADI-jy-8QZ" kind="push" id="D6I-Ea-bif"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1485,33 +1485,55 @@
             </objects>
             <point key="canvasLocation" x="-700" y="376"/>
         </scene>
-        <!--History Text View Controller - View-->
-        <scene sceneID="W7w-Bn-481">
+        <!--Table View Controller - View-->
+        <scene sceneID="ux9-oR-3sY">
             <objects>
-                <viewController storyboardIdentifier="hello" title="View" id="igq-xc-M1a" customClass="CAHistoryTextViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cg4-VH-hbn">
+                <tableViewController id="ADI-jy-8QZ" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AhC-Sd-xt9">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Feature isn't added yet, please wait for the next update." id="5Hv-6A-k8x">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="View" id="Ppu-HV-h19"/>
-                    <connections>
-                        <outlet property="textView" destination="5Hv-6A-k8x" id="JrL-hq-TbQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pyY-Yq-Jpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Hey!" id="WfP-PG-hbx">
+                                <string key="footerTitle">This feature doesn't exist yet. To view your text documents, visit your local app directory and the the Documents folder. For instance on an iOS 5-8 device that'd be var/mobile/Applications/(Chatgpt)/Documents. and on iOS 9+ it's be var/mobile/containers/Applications/(chatgpt)/Documents. The documents are saved numerically. If you'd like to reset the amount, edit the preference file of this application.</string>
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="D9Q-3O-lLw" detailTextLabel="M1P-oL-J2a" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="ASE-4K-D72">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ASE-4K-D72" id="0tN-RY-faQ">
+                                            <rect key="frame" x="10" y="1" width="300" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="This feature doesn't exist!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D9Q-3O-lLw">
+                                                    <rect key="frame" x="10" y="10" width="215" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="well, not yet." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M1P-oL-J2a">
+                                                    <rect key="frame" x="10" y="32" width="78" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ADI-jy-8QZ" id="8qC-qZ-m2Z"/>
+                            <outlet property="delegate" destination="ADI-jy-8QZ" id="MOG-l3-gmS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="View" id="dFT-uQ-KK6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kED-TR-qDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257" y="376"/>
+            <point key="canvasLocation" x="-227" y="376"/>
         </scene>
         <!--Chat View Controller - Chat-->
         <scene sceneID="quL-cf-FaW">
