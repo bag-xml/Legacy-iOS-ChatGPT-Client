@@ -28,13 +28,12 @@
     
     self.responseData = [[NSMutableData alloc] init];
     
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    /*[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 	
-	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];*/ //wonky in landscape
     
     [self.inputField setDelegate:self];
     
-    //self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
     self.inputFieldPlaceholder.hidden = YES;
     
     [[self.insetShadow layer] setMasksToBounds:YES];
@@ -183,7 +182,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [self.responseData appendData:data];
 }
-
+/*
 - (void)keyboardWillShow:(NSNotification *)notification {
 	
 	//thx to Pierre Legrain
@@ -220,7 +219,7 @@
 	[self.toolbar setY:self.view.height - self.toolbar.height];
 	[UIView commitAnimations];
 }
-
+*/ //wonky in landscape
 
 //button actions
 

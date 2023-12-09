@@ -393,7 +393,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Need help?" footerTitle="I strongly urge to check this, there is information on all things in there. And for when you need help what measures to take." id="i1e-Lv-Iyr">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="f0o-Dt-xFt" detailTextLabel="soq-GE-mFs" imageView="aHA-cU-Q69" style="IBUITableViewCellStyleSubtitle" id="tyP-vJ-uVG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="f0o-Dt-xFt" imageView="aHA-cU-Q69" style="IBUITableViewCellStyleDefault" id="tyP-vJ-uVG">
                                         <rect key="frame" x="0.0" y="358" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tyP-vJ-uVG" id="oEO-vL-UBI">
@@ -401,9 +401,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Check the guide!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f0o-Dt-xFt">
-                                                    <rect key="frame" x="53" y="2" width="141" height="22"/>
+                                                    <rect key="frame" x="53" y="0.0" width="217" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -411,13 +411,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Need help? Click here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="soq-GE-mFs">
-                                                    <rect key="frame" x="53" y="24" width="138" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -655,7 +648,6 @@
         <!--Source Control View Controller - iOS-5-ChatGPT-Client-->
         <scene sceneID="WHk-3T-BUX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yrw-Xo-Lzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Opx-es-My5" customClass="CASourceControlViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cng-3r-sbR">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -681,6 +673,7 @@
                         <outlet property="webView" destination="gkW-Dp-DkR" id="mU3-sl-vbg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrw-Xo-Lzj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1600" y="-284"/>
         </scene>
