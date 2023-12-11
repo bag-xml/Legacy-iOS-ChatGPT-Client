@@ -1219,9 +1219,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
                             <tableViewSection headerTitle="Hey!" id="F8R-VV-Ku5">
-                                <string key="footerTitle">This feature doesn't exist yet. To view your text documents, visit your local app directory and the the Documents folder. For instance on an iOS 5-8 device that'd be var/mobile/Applications/(Chatgpt)/Documents. and on iOS 9+ it's be var/mobile/containers/Applications/(chatgpt)/Documents. The documents are saved numerically. If you'd like to reset the amount, edit the preference file of this application.</string>
+                                <string key="footerTitle">This feature doesn't exist yet. To view your text documents, visit your local app directory and the the Documents folder. For instance on an iOS 5-8 device that'd be var/mobile/Applications/(ChatGPT)/Documents. and on iOS 9+ it's be var/mobile/containers/Applications/(ChatGPT)/Documents. The documents are saved numerically. If you'd like to reset the amount, edit the preference file of this application.</string>
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TaM-JJ-tyg" detailTextLabel="vYl-Ru-Xd3" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Hhe-gP-XVi">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TaM-JJ-tyg" detailTextLabel="vYl-Ru-Xd3" imageView="wI8-rx-dp6" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Hhe-gP-XVi">
                                         <rect key="frame" x="0.0" y="119" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhe-gP-XVi" id="GaX-R0-hjM">
@@ -1229,19 +1229,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="This feature doesn't exist!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TaM-JJ-tyg">
-                                                    <rect key="frame" x="15" y="10" width="215" height="22"/>
+                                                    <rect key="frame" x="89" y="10" width="215" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="well, not yet." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYl-Ru-Xd3">
-                                                    <rect key="frame" x="15" y="32" width="78" height="17"/>
+                                                    <rect key="frame" x="89" y="32" width="78" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="no.png" id="wI8-rx-dp6">
+                                                    <rect key="frame" x="15" y="0.0" width="59" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1277,6 +1281,7 @@
         <image name="errorwtf.png" width="228" height="374"/>
         <image name="guidebanner.png" width="640" height="270"/>
         <image name="mail.png" width="232" height="193"/>
+        <image name="no.png" width="121" height="121"/>
         <image name="openai.png" width="160" height="160"/>
         <image name="preferences.png" width="23" height="23"/>
         <image name="prompt.png" width="228" height="333"/>

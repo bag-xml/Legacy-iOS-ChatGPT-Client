@@ -39,4 +39,5 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
+
 @end

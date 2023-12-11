@@ -21,6 +21,7 @@
     NSURL *url = [NSURL URLWithString:newsletterURL];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self.webView loadRequest:request];
 }
 
@@ -29,6 +30,15 @@
     NSString *pageTitle = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     
     self.navigationItem.title = pageTitle;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
+- (void)viewDidDisappear {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
 }
 
 @end
