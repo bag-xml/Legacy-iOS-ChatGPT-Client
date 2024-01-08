@@ -12,6 +12,7 @@
 		5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B077DF92B1A037D00F8D4E9 /* iPad.storyboard */; };
 		5B077DFD2B1A03FE00F8D4E9 /* CASidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */; };
 		5B0862B12B1BDCA1008308DE /* CANewsletterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0862B02B1BDCA1008308DE /* CANewsletterViewController.m */; };
+		5B0A1F102B4CBABF00FA85F7 /* PREFHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B0A1F0F2B4CBABF00FA85F7 /* PREFHeader.png */; };
 		5B1893E42B1C938100AAC4C3 /* piracy.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B1893E32B1C938100AAC4C3 /* piracy.png */; };
 		5B29A2EA2B236B8A00E91E18 /* Chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B29A2E92B236B8A00E91E18 /* Chat.png */; };
 		5B29A2EC2B236EDF00E91E18 /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B29A2EB2B236EDF00E91E18 /* Share.png */; };
@@ -86,6 +87,7 @@
 		5B077DFC2B1A03FE00F8D4E9 /* CASidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CASidebarTableViewController.m; sourceTree = "<group>"; };
 		5B0862AF2B1BDCA1008308DE /* CANewsletterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CANewsletterViewController.h; sourceTree = "<group>"; };
 		5B0862B02B1BDCA1008308DE /* CANewsletterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CANewsletterViewController.m; sourceTree = "<group>"; };
+		5B0A1F0F2B4CBABF00FA85F7 /* PREFHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PREFHeader.png; sourceTree = "<group>"; };
 		5B1893E32B1C938100AAC4C3 /* piracy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piracy.png; sourceTree = "<group>"; };
 		5B29A2E92B236B8A00E91E18 /* Chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chat.png; sourceTree = "<group>"; };
 		5B29A2EB2B236EDF00E91E18 /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Share.png; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 		5BB558F12B1BD7F700CB40D2 /* Helper images */ = {
 			isa = PBXGroup;
 			children = (
+				5B0A1F0F2B4CBABF00FA85F7 /* PREFHeader.png */,
 				5B8D907D2B27792700AC7E2D /* no.png */,
 				5B29A2F12B23742A00E91E18 /* Done.png */,
 				5B29A2ED2B2371B400E91E18 /* Clear.png */,
@@ -649,6 +652,7 @@
 				5BB558FD2B1BD7F700CB40D2 /* banner.png in Resources */,
 				5BFA514D2B1D30140002873D /* prompt.png in Resources */,
 				5BB559032B1BD7F700CB40D2 /* Send@2x.png in Resources */,
+				5B0A1F102B4CBABF00FA85F7 /* PREFHeader.png in Resources */,
 				5BE4580E2B1CACE000885BD5 /* NewChat.png in Resources */,
 				5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */,
 				5BB559002B1BD7F700CB40D2 /* preferences.png in Resources */,
@@ -787,7 +791,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				COPY_PHASE_STRIP = NO;
+				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -802,6 +806,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos7.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -826,6 +831,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos7.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

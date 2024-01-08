@@ -630,7 +630,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Description" footerTitle="only person who developed this app" id="ele-Zj-wgJ">
+                            <tableViewSection headerTitle="Description" footerTitle="Creator of this app, only person who worked on it." id="ele-Zj-wgJ">
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -718,7 +718,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Description" footerTitle="own chatgpt" id="FX8-li-36S">
+                            <tableViewSection headerTitle="Description" footerTitle="OpenAI Is the owner of ChatGPT, and the API maintaniers." id="FX8-li-36S">
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -1177,6 +1177,10 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PREFHeader.png" id="4k9-qj-h5q">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <sections>
                             <tableViewSection headerTitle="Settings" footerTitle="Here you can toggle preferences for ChatGPT and this app in general." id="icw-Zv-j2O">
                                 <cells/>
@@ -1184,7 +1188,7 @@
                             <tableViewSection headerTitle="API key" footerTitle="Please look for more detailed information on how to obtain an OpenAI API Key in the guide." id="XIV-7H-8PX">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YDd-2D-ODO">
-                                        <rect key="frame" x="0.0" y="140" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="228" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YDd-2D-ODO" id="ZKQ-GG-AVx">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -1203,7 +1207,7 @@
                             <tableViewSection headerTitle="Prompt" footerTitle="Prompts can define the character of your AI. (they are not required)" id="gvD-aU-yrS">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="otu-Nu-Sy6">
-                                        <rect key="frame" x="0.0" y="298" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="386" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="otu-Nu-Sy6" id="aQ5-m9-Qzb">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -1223,7 +1227,7 @@
                                 <string key="footerTitle">You can set Display names of the AI Chatbot and of you, this gives you more customization and combined with custom prompts can generally give a better experience to the user.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="B2R-de-2G4">
-                                        <rect key="frame" x="0.0" y="438" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="526" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B2R-de-2G4" id="IXs-wW-Wp8">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -1238,7 +1242,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vBE-qk-BBn">
-                                        <rect key="frame" x="0.0" y="483" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="571" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vBE-qk-BBn" id="jb1-2q-Bs8">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
@@ -1257,7 +1261,7 @@
                             <tableViewSection headerTitle="API Endpoint" footerTitle="Very handy option once the current endpoint becomes inaccesible after years." id="kjL-KZ-spF">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="G3V-ab-w7Y">
-                                        <rect key="frame" x="0.0" y="676" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="764" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G3V-ab-w7Y" id="OVN-Ui-pvt">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -1276,7 +1280,7 @@
                             <tableViewSection headerTitle="AI Model" footerTitle="Depending on what your API Key is, you can potentially get more out of ChatGPT" id="05q-sY-qia">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="x8M-xX-qpe">
-                                        <rect key="frame" x="0.0" y="834" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="922" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x8M-xX-qpe" id="KYk-JF-Tfn">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -1295,7 +1299,7 @@
                             <tableViewSection headerTitle="Other pages" footerTitle="" id="f4v-hS-veO">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g7Z-BN-shX" detailTextLabel="SMD-Xa-Bme" imageView="96j-CI-agb" rowHeight="46" style="IBUITableViewCellStyleSubtitle" id="1BQ-00-Rkr">
-                                        <rect key="frame" x="0.0" y="974" width="320" height="48"/>
+                                        <rect key="frame" x="0.0" y="1062" width="320" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1BQ-00-Rkr" id="0km-zX-V2j">
                                             <rect key="frame" x="10" y="1" width="280" height="45"/>
@@ -1596,6 +1600,7 @@
         <image name="Key_Large.png" width="128" height="128"/>
         <image name="Naming.png" width="228" height="316"/>
         <image name="NewChat.png" width="160" height="160"/>
+        <image name="PREFHeader.png" width="640" height="197"/>
         <image name="Send.png" width="23" height="20"/>
         <image name="Share.png" width="280" height="149"/>
         <image name="Steve_Jobs.png" width="242" height="334"/>
