@@ -84,6 +84,7 @@
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="NEL-s5-JzQ"/>
                                         </items>
+                                        <color key="barTintColor" red="0.45353452620967744" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
                                     </toolbar>
                                     <view contentMode="scaleToFill" id="Xwh-2x-j0o">
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="980"/>
@@ -1168,25 +1169,25 @@
                                         <rect key="frame" x="0.0" y="99" width="320" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPh-wl-DcM" id="Blu-hZ-er3">
-                                            <rect key="frame" x="10" y="1" width="300" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="OpenAI" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ctz-PG-w5G">
-                                                    <rect key="frame" x="90" y="21" width="63" height="22"/>
+                                                    <rect key="frame" x="110" y="21" width="63" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="gpt owners" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oIz-Vr-Y4B">
-                                                    <rect key="frame" x="90" y="43" width="69" height="17"/>
+                                                    <rect key="frame" x="110" y="43" width="69" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="openai.png" id="Um3-RM-xS6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <rect key="frame" x="15" y="0.0" width="80" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1221,29 +1222,29 @@
                             <tableViewSection headerTitle="Hey!" id="F8R-VV-Ku5">
                                 <string key="footerTitle">This feature doesn't exist yet. To view your text documents, visit your local app directory and the the Documents folder. For instance on an iOS 5-8 device that'd be var/mobile/Applications/(ChatGPT)/Documents. and on iOS 9+ it's be var/mobile/containers/Applications/(ChatGPT)/Documents. The documents are saved numerically. If you'd like to reset the amount, edit the preference file of this application.</string>
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TaM-JJ-tyg" detailTextLabel="vYl-Ru-Xd3" imageView="wI8-rx-dp6" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="Hhe-gP-XVi">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="60"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="TaM-JJ-tyg" detailTextLabel="vYl-Ru-Xd3" imageView="wI8-rx-dp6" rowHeight="78" style="IBUITableViewCellStyleSubtitle" id="Hhe-gP-XVi">
+                                        <rect key="frame" x="0.0" y="119" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhe-gP-XVi" id="GaX-R0-hjM">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="This feature doesn't exist!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TaM-JJ-tyg">
-                                                    <rect key="frame" x="89" y="10" width="215" height="22"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Hold on!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TaM-JJ-tyg">
+                                                    <rect key="frame" x="107" y="19" width="71" height="22"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="well, not yet." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYl-Ru-Xd3">
-                                                    <rect key="frame" x="89" y="32" width="78" height="17"/>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="There's something missing..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vYl-Ru-Xd3">
+                                                    <rect key="frame" x="107" y="41" width="178" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="no.png" id="wI8-rx-dp6">
-                                                    <rect key="frame" x="15" y="0.0" width="59" height="59"/>
+                                                    <rect key="frame" x="15" y="0.0" width="77" height="77"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1281,7 +1282,7 @@
         <image name="errorwtf.png" width="228" height="374"/>
         <image name="guidebanner.png" width="640" height="270"/>
         <image name="mail.png" width="232" height="193"/>
-        <image name="no.png" width="121" height="121"/>
+        <image name="no.png" width="190" height="190"/>
         <image name="openai.png" width="160" height="160"/>
         <image name="preferences.png" width="23" height="23"/>
         <image name="prompt.png" width="228" height="333"/>

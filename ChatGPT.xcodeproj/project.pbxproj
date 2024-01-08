@@ -25,7 +25,6 @@
 		5B3A1F742B19E5C4004909DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F612B19E5C4004909DE /* AppDelegate.m */; };
 		5B3A1F752B19E5C4004909DE /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F652B19E5C4004909DE /* ChatTableViewCell.m */; };
 		5B3A1F762B19E5C4004909DE /* TRMalleableFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F672B19E5C4004909DE /* TRMalleableFrameView.m */; };
-		5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */; };
 		5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */; };
 		5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */; };
 		5B4C47D22B1C732300D717C2 /* AboutCellResource.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B4C47D02B1C732200D717C2 /* AboutCellResource.png */; };
@@ -93,24 +92,22 @@
 		5B29A2ED2B2371B400E91E18 /* Clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clear.png; sourceTree = "<group>"; };
 		5B29A2EE2B2371B400E91E18 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		5B29A2F12B23742A00E91E18 /* Done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Done.png; sourceTree = "<group>"; };
-		5B3A1F532B19E5C4004909DE /* BaseAboutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAboutPage.h; sourceTree = "<group>"; };
-		5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAboutPage.m; sourceTree = "<group>"; };
+		5B3A1F532B19E5C4004909DE /* BaseAboutPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BaseAboutPage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5B3A1F542B19E5C4004909DE /* BaseAboutPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BaseAboutPage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5B3A1F572B19E5C4004909DE /* APIHolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHolderViewController.h; sourceTree = "<group>"; };
 		5B3A1F582B19E5C4004909DE /* APIHolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHolderViewController.m; sourceTree = "<group>"; };
 		5B3A1F5A2B19E5C4004909DE /* JohnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JohnViewController.h; sourceTree = "<group>"; };
 		5B3A1F5B2B19E5C4004909DE /* JohnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JohnViewController.m; sourceTree = "<group>"; };
-		5B3A1F5D2B19E5C4004909DE /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
-		5B3A1F5E2B19E5C4004909DE /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
-		5B3A1F602B19E5C4004909DE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5B3A1F612B19E5C4004909DE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5B3A1F642B19E5C4004909DE /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
-		5B3A1F652B19E5C4004909DE /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
+		5B3A1F5D2B19E5C4004909DE /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ChatViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5B3A1F5E2B19E5C4004909DE /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ChatViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5B3A1F602B19E5C4004909DE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5B3A1F612B19E5C4004909DE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5B3A1F642B19E5C4004909DE /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ChatTableViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5B3A1F652B19E5C4004909DE /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ChatTableViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5B3A1F662B19E5C4004909DE /* TRMalleableFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMalleableFrameView.h; sourceTree = "<group>"; };
 		5B3A1F672B19E5C4004909DE /* TRMalleableFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMalleableFrameView.m; sourceTree = "<group>"; };
-		5B3A1F6A2B19E5C4004909DE /* AdvancedOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedOptionsViewController.h; sourceTree = "<group>"; };
-		5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedOptionsViewController.m; sourceTree = "<group>"; };
-		5B3A1F6D2B19E5C4004909DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		5B3A1F6D2B19E5C4004909DE /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SettingsViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SettingsViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5B4C47CD2B1C6A0F00D717C2 /* Key_Large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Key_Large@2x.png"; sourceTree = "<group>"; };
 		5B4C47D02B1C732200D717C2 /* AboutCellResource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutCellResource.png; sourceTree = "<group>"; };
 		5B4C47D12B1C732300D717C2 /* GuideCellResource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GuideCellResource.png; sourceTree = "<group>"; };
@@ -150,14 +147,14 @@
 		C62AEF632A898C8B00DD8D5A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C62AEF672A898C8B00DD8D5A /* ChatGPT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatGPT-Info.plist"; sourceTree = "<group>"; };
 		C62AEF692A898C8B00DD8D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C62AEF6B2A898C8B00DD8D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C62AEF6B2A898C8B00DD8D5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C62AEF6D2A898C8B00DD8D5A /* ChatGPT-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatGPT-Prefix.pch"; sourceTree = "<group>"; };
 		C62AEF822A898C8C00DD8D5A /* ChatGPTTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatGPTTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62AEF832A898C8C00DD8D5A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C62AEF8B2A898C8C00DD8D5A /* ChatGPTTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChatGPTTests-Info.plist"; sourceTree = "<group>"; };
 		C62AEF8D2A898C8C00DD8D5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C62AEF8F2A898C8C00DD8D5A /* CaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaTests.h; sourceTree = "<group>"; };
-		C62AEF902A898C8C00DD8D5A /* CaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaTests.m; sourceTree = "<group>"; };
+		C62AEF8F2A898C8C00DD8D5A /* CaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CaTests.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C62AEF902A898C8C00DD8D5A /* CaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CaTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../ChatGPT/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -341,22 +338,12 @@
 		5B3A1F682B19E5C4004909DE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				5B3A1F692B19E5C4004909DE /* Advanced */,
 				5B3A1F6C2B19E5C4004909DE /* iPad */,
 				5B3A1F6D2B19E5C4004909DE /* SettingsViewController.h */,
 				5B3A1F6E2B19E5C4004909DE /* SettingsViewController.m */,
 				5B3A1F6F2B19E5C4004909DE /* Statistics */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		5B3A1F692B19E5C4004909DE /* Advanced */ = {
-			isa = PBXGroup;
-			children = (
-				5B3A1F6A2B19E5C4004909DE /* AdvancedOptionsViewController.h */,
-				5B3A1F6B2B19E5C4004909DE /* AdvancedOptionsViewController.m */,
-			);
-			path = Advanced;
 			sourceTree = "<group>";
 		};
 		5B3A1F6C2B19E5C4004909DE /* iPad */ = {
@@ -731,7 +718,6 @@
 			files = (
 				C62AEF6C2A898C8B00DD8D5A /* main.m in Sources */,
 				5BD49F602B23D88600617A49 /* CAPrefTable.m in Sources */,
-				5B3A1F772B19E5C4004909DE /* AdvancedOptionsViewController.m in Sources */,
 				5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */,
 				5BFA51522B1D36D40002873D /* CAWelcomeTableViewController.m in Sources */,
 				5B3A1F722B19E5C4004909DE /* JohnViewController.m in Sources */,

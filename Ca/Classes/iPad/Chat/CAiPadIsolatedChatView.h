@@ -3,7 +3,7 @@
 //  ChatGPT
 //
 //  Created by bag.xml on 01/12/23.
-//  Copyright (c) 2023 China DOS Union. All rights reserved.
+//  Copyright (c) 2023 bag.xml DOS Union. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
