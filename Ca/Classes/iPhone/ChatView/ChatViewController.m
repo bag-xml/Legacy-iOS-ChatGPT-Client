@@ -105,14 +105,11 @@
     
     if (message.length > 0) {
         NSString *previousChat = self.chatTextView.text;
-        
-        // Append an empty line between the user's message and the previous conversation
         NSString *separator = @"\n\n";
         
         if (previousChat.length > 0) {
             NSString *lastCharacter = [previousChat substringFromIndex:previousChat.length - 1];
             
-            // Check if the last character is already a newline, if not, append the separator
             if (![lastCharacter isEqualToString:@"\n"]) {
                 self.chatTextView.text = [NSString stringWithFormat:@"%@%@%@: %@", previousChat, separator, userNickname, message];
             } else {

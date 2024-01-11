@@ -100,8 +100,16 @@
     
     if (message.length > 0) {
         NSString *previousChat = self.chatTextView.text;
+        NSString *separator = @"\n\n";
+        
         if (previousChat.length > 0) {
-            self.chatTextView.text = [NSString stringWithFormat:@"%@\n%@: %@", previousChat, userNickname, message];
+            NSString *lastCharacter = [previousChat substringFromIndex:previousChat.length - 1];
+            
+            if (![lastCharacter isEqualToString:@"\n"]) {
+                self.chatTextView.text = [NSString stringWithFormat:@"%@%@%@: %@", previousChat, separator, userNickname, message];
+            } else {
+                self.chatTextView.text = [NSString stringWithFormat:@"%@%@: %@", previousChat, userNickname, message];
+            }
         } else {
             self.chatTextView.text = [NSString stringWithFormat:@"%@: %@", userNickname, message];
         }
@@ -160,7 +168,20 @@
         
         if (contentObject && ![contentObject isKindOfClass:[NSNull class]]) {
             NSString *assistantReply = [NSString stringWithFormat:@"%@", contentObject];
-            NSString *updatedConversation = [NSString stringWithFormat:@"%@\n%@: %@", self.chatTextView.text, assistantNick, assistantReply];
+            NSString *separator = @"\n\n";
+            NSString *updatedConversation;
+            
+            if (self.chatTextView.text.length > 0) {
+                NSString *lastCharacter = [self.chatTextView.text substringFromIndex:self.chatTextView.text.length - 1];
+                
+                if (![lastCharacter isEqualToString:@"\n"]) {
+                    updatedConversation = [NSString stringWithFormat:@"%@%@%@: %@", self.chatTextView.text, separator, assistantNick, assistantReply];
+                } else {
+                    updatedConversation = [NSString stringWithFormat:@"%@%@: %@", self.chatTextView.text, assistantNick, assistantReply];
+                }
+            } else {
+                updatedConversation = [NSString stringWithFormat:@"%@: %@", assistantNick, assistantReply];
+            }
             
             [[NSUserDefaults standardUserDefaults] setObject:assistantReply forKey:@"conversationHistory"];
             [[NSUserDefaults standardUserDefaults] synchronize];
