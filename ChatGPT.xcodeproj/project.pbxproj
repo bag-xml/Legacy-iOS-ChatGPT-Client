@@ -47,6 +47,21 @@
 		5BD49F602B23D88600617A49 /* CAPrefTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD49F5F2B23D88600617A49 /* CAPrefTable.m */; };
 		5BE4580D2B1CACE000885BD5 /* History.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580B2B1CACE000885BD5 /* History.png */; };
 		5BE4580E2B1CACE000885BD5 /* NewChat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580C2B1CACE000885BD5 /* NewChat.png */; };
+		5BE68FA22B5FDF9D000F1EC4 /* bubbleMine.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F8C2B5FDF9D000F1EC4 /* bubbleMine.png */; };
+		5BE68FA32B5FDF9D000F1EC4 /* bubbleMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F8D2B5FDF9D000F1EC4 /* bubbleMine@2x.png */; };
+		5BE68FA42B5FDF9D000F1EC4 /* bubbleSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F8E2B5FDF9D000F1EC4 /* bubbleSomeone.png */; };
+		5BE68FA52B5FDF9D000F1EC4 /* bubbleSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F8F2B5FDF9D000F1EC4 /* bubbleSomeone@2x.png */; };
+		5BE68FA62B5FDF9D000F1EC4 /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F902B5FDF9D000F1EC4 /* missingAvatar.png */; };
+		5BE68FA72B5FDF9D000F1EC4 /* missingAvatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F912B5FDF9D000F1EC4 /* missingAvatar@2x.png */; };
+		5BE68FA82B5FDF9D000F1EC4 /* typingMine.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F922B5FDF9D000F1EC4 /* typingMine.png */; };
+		5BE68FA92B5FDF9D000F1EC4 /* typingMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F932B5FDF9D000F1EC4 /* typingMine@2x.png */; };
+		5BE68FAA2B5FDF9D000F1EC4 /* typingSomeone.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F942B5FDF9D000F1EC4 /* typingSomeone.png */; };
+		5BE68FAB2B5FDF9D000F1EC4 /* typingSomeone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F952B5FDF9D000F1EC4 /* typingSomeone@2x.png */; };
+		5BE68FAC2B5FDF9D000F1EC4 /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE68F972B5FDF9D000F1EC4 /* NSBubbleData.m */; };
+		5BE68FAD2B5FDF9D000F1EC4 /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE68F992B5FDF9D000F1EC4 /* UIBubbleHeaderTableViewCell.m */; };
+		5BE68FAE2B5FDF9D000F1EC4 /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE68F9B2B5FDF9D000F1EC4 /* UIBubbleTableView.m */; };
+		5BE68FAF2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE68F9D2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.m */; };
+		5BE68FB02B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE68FA12B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m */; };
 		5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */; };
 		5BFA51452B1D01D80002873D /* errorwtf.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51442B1D01D80002873D /* errorwtf.png */; };
 		5BFA51472B1D0B730002873D /* Discord.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51462B1D0B730002873D /* Discord.png */; };
@@ -133,6 +148,28 @@
 		5BD49F5F2B23D88600617A49 /* CAPrefTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPrefTable.m; sourceTree = "<group>"; };
 		5BE4580B2B1CACE000885BD5 /* History.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = History.png; sourceTree = "<group>"; };
 		5BE4580C2B1CACE000885BD5 /* NewChat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewChat.png; sourceTree = "<group>"; };
+		5BE68F8C2B5FDF9D000F1EC4 /* bubbleMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleMine.png; sourceTree = "<group>"; };
+		5BE68F8D2B5FDF9D000F1EC4 /* bubbleMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleMine@2x.png"; sourceTree = "<group>"; };
+		5BE68F8E2B5FDF9D000F1EC4 /* bubbleSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbleSomeone.png; sourceTree = "<group>"; };
+		5BE68F8F2B5FDF9D000F1EC4 /* bubbleSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubbleSomeone@2x.png"; sourceTree = "<group>"; };
+		5BE68F902B5FDF9D000F1EC4 /* missingAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missingAvatar.png; sourceTree = "<group>"; };
+		5BE68F912B5FDF9D000F1EC4 /* missingAvatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "missingAvatar@2x.png"; sourceTree = "<group>"; };
+		5BE68F922B5FDF9D000F1EC4 /* typingMine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingMine.png; sourceTree = "<group>"; };
+		5BE68F932B5FDF9D000F1EC4 /* typingMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingMine@2x.png"; sourceTree = "<group>"; };
+		5BE68F942B5FDF9D000F1EC4 /* typingSomeone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = typingSomeone.png; sourceTree = "<group>"; };
+		5BE68F952B5FDF9D000F1EC4 /* typingSomeone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "typingSomeone@2x.png"; sourceTree = "<group>"; };
+		5BE68F962B5FDF9D000F1EC4 /* NSBubbleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBubbleData.h; sourceTree = "<group>"; };
+		5BE68F972B5FDF9D000F1EC4 /* NSBubbleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBubbleData.m; sourceTree = "<group>"; };
+		5BE68F982B5FDF9D000F1EC4 /* UIBubbleHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleHeaderTableViewCell.h; sourceTree = "<group>"; };
+		5BE68F992B5FDF9D000F1EC4 /* UIBubbleHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleHeaderTableViewCell.m; sourceTree = "<group>"; };
+		5BE68F9A2B5FDF9D000F1EC4 /* UIBubbleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableView.h; sourceTree = "<group>"; };
+		5BE68F9B2B5FDF9D000F1EC4 /* UIBubbleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableView.m; sourceTree = "<group>"; };
+		5BE68F9C2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewCell.h; sourceTree = "<group>"; };
+		5BE68F9D2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTableViewCell.m; sourceTree = "<group>"; };
+		5BE68F9E2B5FDF9D000F1EC4 /* UIBubbleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewDataSource.h; sourceTree = "<group>"; };
+		5BE68F9F2B5FDF9D000F1EC4 /* UIBubbleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTableViewDelegate.h; sourceTree = "<group>"; };
+		5BE68FA02B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleTypingTableViewCell.h; sourceTree = "<group>"; };
+		5BE68FA12B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
 		5BEBC1CB2B1CE4EB000B39CE /* CAHistoryTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHistoryTextViewController.h; sourceTree = "<group>"; };
 		5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHistoryTextViewController.m; sourceTree = "<group>"; };
 		5BFA51442B1D01D80002873D /* errorwtf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errorwtf.png; sourceTree = "<group>"; };
@@ -205,6 +242,7 @@
 		5B3A1F4C2B19E5C4004909DE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5BE68F8A2B5FDF8E000F1EC4 /* BubbleView */,
 				5B3A1F4D2B19E5C4004909DE /* iPad */,
 				5B3A1F502B19E5C4004909DE /* iPhone */,
 			);
@@ -460,6 +498,43 @@
 			path = Pref;
 			sourceTree = "<group>";
 		};
+		5BE68F8A2B5FDF8E000F1EC4 /* BubbleView */ = {
+			isa = PBXGroup;
+			children = (
+				5BE68F8B2B5FDF9D000F1EC4 /* images */,
+				5BE68F962B5FDF9D000F1EC4 /* NSBubbleData.h */,
+				5BE68F972B5FDF9D000F1EC4 /* NSBubbleData.m */,
+				5BE68F982B5FDF9D000F1EC4 /* UIBubbleHeaderTableViewCell.h */,
+				5BE68F992B5FDF9D000F1EC4 /* UIBubbleHeaderTableViewCell.m */,
+				5BE68F9A2B5FDF9D000F1EC4 /* UIBubbleTableView.h */,
+				5BE68F9B2B5FDF9D000F1EC4 /* UIBubbleTableView.m */,
+				5BE68F9C2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.h */,
+				5BE68F9D2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.m */,
+				5BE68F9E2B5FDF9D000F1EC4 /* UIBubbleTableViewDataSource.h */,
+				5BE68F9F2B5FDF9D000F1EC4 /* UIBubbleTableViewDelegate.h */,
+				5BE68FA02B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.h */,
+				5BE68FA12B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m */,
+			);
+			path = BubbleView;
+			sourceTree = "<group>";
+		};
+		5BE68F8B2B5FDF9D000F1EC4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5BE68F8C2B5FDF9D000F1EC4 /* bubbleMine.png */,
+				5BE68F8D2B5FDF9D000F1EC4 /* bubbleMine@2x.png */,
+				5BE68F8E2B5FDF9D000F1EC4 /* bubbleSomeone.png */,
+				5BE68F8F2B5FDF9D000F1EC4 /* bubbleSomeone@2x.png */,
+				5BE68F902B5FDF9D000F1EC4 /* missingAvatar.png */,
+				5BE68F912B5FDF9D000F1EC4 /* missingAvatar@2x.png */,
+				5BE68F922B5FDF9D000F1EC4 /* typingMine.png */,
+				5BE68F932B5FDF9D000F1EC4 /* typingMine@2x.png */,
+				5BE68F942B5FDF9D000F1EC4 /* typingSomeone.png */,
+				5BE68F952B5FDF9D000F1EC4 /* typingSomeone@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		5BEBC1CA2B1CE4B5000B39CE /* Textview */ = {
 			isa = PBXGroup;
 			children = (
@@ -650,9 +725,11 @@
 				5BB558FC2B1BD7F700CB40D2 /* shiypc.png in Resources */,
 				5B29A2EA2B236B8A00E91E18 /* Chat.png in Resources */,
 				5BB558FD2B1BD7F700CB40D2 /* banner.png in Resources */,
+				5BE68FA42B5FDF9D000F1EC4 /* bubbleSomeone.png in Resources */,
 				5BFA514D2B1D30140002873D /* prompt.png in Resources */,
 				5BB559032B1BD7F700CB40D2 /* Send@2x.png in Resources */,
 				5B0A1F102B4CBABF00FA85F7 /* PREFHeader.png in Resources */,
+				5BE68FA52B5FDF9D000F1EC4 /* bubbleSomeone@2x.png in Resources */,
 				5BE4580E2B1CACE000885BD5 /* NewChat.png in Resources */,
 				5B4C47CE2B1C6A0F00D717C2 /* Key_Large@2x.png in Resources */,
 				5BB559002B1BD7F700CB40D2 /* preferences.png in Resources */,
@@ -661,17 +738,25 @@
 				5B4C47D32B1C732300D717C2 /* GuideCellResource.png in Resources */,
 				5B4C47D52B1C748D00D717C2 /* Bag-XMLCellResource.png in Resources */,
 				5B29A2EC2B236EDF00E91E18 /* Share.png in Resources */,
+				5BE68FAB2B5FDF9D000F1EC4 /* typingSomeone@2x.png in Resources */,
 				5B29A2EF2B2371B400E91E18 /* Clear.png in Resources */,
 				5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */,
 				5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */,
+				5BE68FA92B5FDF9D000F1EC4 /* typingMine@2x.png in Resources */,
 				5BB558FE2B1BD7F700CB40D2 /* CellImage.png in Resources */,
 				5BB558FF2B1BD7F700CB40D2 /* Steve_Jobs.png in Resources */,
+				5BE68FA22B5FDF9D000F1EC4 /* bubbleMine.png in Resources */,
+				5BE68FA82B5FDF9D000F1EC4 /* typingMine.png in Resources */,
 				5BFA51492B1D1AD80002873D /* guide.png in Resources */,
 				5B4C47D22B1C732300D717C2 /* AboutCellResource.png in Resources */,
+				5BE68FA62B5FDF9D000F1EC4 /* missingAvatar.png in Resources */,
 				5BB559012B1BD7F700CB40D2 /* preferences@2x.png in Resources */,
 				C62AEF6A2A898C8B00DD8D5A /* InfoPlist.strings in Resources */,
+				5BE68FAA2B5FDF9D000F1EC4 /* typingSomeone.png in Resources */,
+				5BE68FA32B5FDF9D000F1EC4 /* bubbleMine@2x.png in Resources */,
 				5B29A2F02B2371B400E91E18 /* mail.png in Resources */,
 				5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */,
+				5BE68FA72B5FDF9D000F1EC4 /* missingAvatar@2x.png in Resources */,
 				5BB559022B1BD7F700CB40D2 /* Send.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,17 +810,22 @@
 				5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */,
 				5BFA51522B1D36D40002873D /* CAWelcomeTableViewController.m in Sources */,
 				5B3A1F722B19E5C4004909DE /* JohnViewController.m in Sources */,
+				5BE68FAE2B5FDF9D000F1EC4 /* UIBubbleTableView.m in Sources */,
+				5BE68FAF2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.m in Sources */,
 				5B0862B12B1BDCA1008308DE /* CANewsletterViewController.m in Sources */,
 				5B3A1F742B19E5C4004909DE /* AppDelegate.m in Sources */,
 				5B3A1F752B19E5C4004909DE /* ChatTableViewCell.m in Sources */,
 				5B3A1F762B19E5C4004909DE /* TRMalleableFrameView.m in Sources */,
+				5BE68FAD2B5FDF9D000F1EC4 /* UIBubbleHeaderTableViewCell.m in Sources */,
 				5B077DFD2B1A03FE00F8D4E9 /* CASidebarTableViewController.m in Sources */,
 				5B3A1F732B19E5C4004909DE /* ChatViewController.m in Sources */,
 				5B3A1F782B19E5C4004909DE /* SettingsViewController.m in Sources */,
+				5BE68FB02B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m in Sources */,
 				5B077DF62B1A000000F8D4E9 /* CAiPadIsolatedChatView.m in Sources */,
 				5B3A1F702B19E5C4004909DE /* BaseAboutPage.m in Sources */,
 				5B3A1F712B19E5C4004909DE /* APIHolderViewController.m in Sources */,
 				5B69E4372B1BE06F00D7A1EB /* CASourceControlViewController.m in Sources */,
+				5BE68FAC2B5FDF9D000F1EC4 /* NSBubbleData.m in Sources */,
 				5B5723642B1CC2F400C391B2 /* CAHistoryTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

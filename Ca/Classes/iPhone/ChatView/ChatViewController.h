@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "UIBubbleTableView.h"
 
-@interface ChatViewController : UIViewController <NSURLConnectionDelegate, UINavigationControllerDelegate, UITextViewDelegate, UIActionSheetDelegate>
+@interface ChatViewController : UIViewController <NSURLConnectionDelegate, UINavigationControllerDelegate, UIBubbleTableViewDataSource, UIBubbleTableViewDelegate, UIActionSheetDelegate>
+
 
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UITextView *chatTextView;
 @property (weak, nonatomic) IBOutlet UITextView *inputField;
+@property (weak, nonatomic) IBOutlet UIBubbleTableView *chatTableView;
 @property (weak, nonatomic) IBOutlet UILabel *inputFieldPlaceholder;
 @property (weak, nonatomic) IBOutlet UIImageView *insetShadow;
 

@@ -12,6 +12,8 @@
 //not the actual content aka mainview
 
 #import "ChatViewController.h"
+#import "UIBubbleTableView.h"
+#import "NSBubbleData.h"
 #import "TRMalleableFrameView.h"
 
 @interface ChatViewController () <UITextViewDelegate, NSURLConnectionDelegate>
@@ -22,6 +24,8 @@
 @end
 
 @implementation ChatViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -161,6 +165,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
     NSLog(@"Response received");
     
@@ -248,6 +253,19 @@
 	[UIView commitAnimations];
 }
 
+
+//BUBBLE TABLE VIEW
+
+#pragma mark uibubbletableview data source
+
+-(NSInteger)rowsForBubbleTable:(UIBubbleTableView *)tableView{
+}
+
+
+-(NSBubbleData *)bubbleTableView:(UIBubbleTableView *)tableView dataForRow:(NSInteger)row{
+    NSBubbleData *bubbleData;
+    return bubbleData;
+}
 
 //button actions
 

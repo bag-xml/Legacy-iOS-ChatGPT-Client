@@ -15,6 +15,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
+    CGFloat iOSVersion = [systemVersion floatValue];
     
     //all default presets.
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completions";
@@ -25,7 +27,7 @@
     NSString *aiPrompt = @"";
     NSString *requestAmount = @"0";
     NSString *responseAmount = @"0";
-    NSString *newsletterEndpoint = @"https://help.mali357.gay/ios/embedded/CaExperiments/";
+    NSString *newsletterEndpoint = @"http://ax.init.mali357.gay/";
     NSString *sourcecodepageendpoint = @"https://github.com/bag-xml/iOS-5-ChatGPT-Client";
     
     //sets nsuserdefault to default objects, if none are specified, aka. default keys before user modifies them.
@@ -61,6 +63,13 @@
     }
     
     [defaults synchronize];
+    
+    if (iOSVersion < 7.0) {
+        
+    } else {
+        
+    }
+    
     return YES;
 }
 
