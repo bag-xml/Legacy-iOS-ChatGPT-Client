@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "APLSlideMenuViewController.h"
 
 @interface SettingsViewController () <UITextFieldDelegate>
 

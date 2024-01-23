@@ -15,6 +15,7 @@
 #import "UIBubbleTableView.h"
 #import "NSBubbleData.h"
 #import "TRMalleableFrameView.h"
+#import "APLSlideMenuViewController.h"
 
 @interface ChatViewController () <UITextViewDelegate, NSURLConnectionDelegate>
 
@@ -29,6 +30,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.slideMenuController.bouncing = YES;
+    self.slideMenuController.gestureSupport = APLSlideMenuGestureSupportDrag;
+    self.slideMenuController.separatorColor = [UIColor grayColor];
     
     self.isKeyboardVisible = NO;
     
@@ -292,6 +297,12 @@
 
 //ok
 - (IBAction)exportButtonTapped:(id)sender {
+    UIActionSheet *messageActionSheet = [[UIActionSheet alloc] initWithTitle:@"What do you want to do" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Clear conversation" otherButtonTitles:nil];
+    [messageActionSheet setTag:1];
+    [messageActionSheet setDelegate:self];
+    [messageActionSheet showInView:self.view];
+    
+    /*
     NSString *textContent = self.chatTextView.text;
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -305,13 +316,16 @@
     
     //open activityviewcontroller
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[fileURL] applicationActivities:nil];
-    [self presentViewController:activityViewController animated:YES completion:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];*/
 }
 //mail
 
--(IBAction)killYourSelf:(id)sender {
-    
+
+
+- (IBAction)glorious:(id)sender {
+    [self.slideMenuController showLeftMenu:YES];
 }
+
 
 - (NSString *)getCurrentTimestamp {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
