@@ -63,6 +63,8 @@
 		5BE68FAF2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE68F9D2B5FDF9D000F1EC4 /* UIBubbleTableViewCell.m */; };
 		5BE68FB02B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE68FA12B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m */; };
 		5BEBC1CD2B1CE4EB000B39CE /* CAHistoryTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */; };
+		5BF4B8D62B60397A00094E46 /* TbarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF4B8D42B60397A00094E46 /* TbarBG.png */; };
+		5BF4B8D72B60397A00094E46 /* TbarBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BF4B8D52B60397A00094E46 /* TbarBG@2x.png */; };
 		5BFA51452B1D01D80002873D /* errorwtf.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51442B1D01D80002873D /* errorwtf.png */; };
 		5BFA51472B1D0B730002873D /* Discord.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51462B1D0B730002873D /* Discord.png */; };
 		5BFA51492B1D1AD80002873D /* guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BFA51482B1D1AD80002873D /* guide.png */; };
@@ -172,6 +174,8 @@
 		5BE68FA12B5FDF9D000F1EC4 /* UIBubbleTypingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBubbleTypingTableViewCell.m; sourceTree = "<group>"; };
 		5BEBC1CB2B1CE4EB000B39CE /* CAHistoryTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHistoryTextViewController.h; sourceTree = "<group>"; };
 		5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHistoryTextViewController.m; sourceTree = "<group>"; };
+		5BF4B8D42B60397A00094E46 /* TbarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TbarBG.png; sourceTree = "<group>"; };
+		5BF4B8D52B60397A00094E46 /* TbarBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TbarBG@2x.png"; sourceTree = "<group>"; };
 		5BFA51442B1D01D80002873D /* errorwtf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = errorwtf.png; sourceTree = "<group>"; };
 		5BFA51462B1D0B730002873D /* Discord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Discord.png; sourceTree = "<group>"; };
 		5BFA51482B1D1AD80002873D /* guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guide.png; sourceTree = "<group>"; };
@@ -434,6 +438,7 @@
 		5BB558EC2B1BD7F700CB40D2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5BF4B8D22B60397A00094E46 /* UI Elements */,
 				5B4C47CF2B1C732200D717C2 /* Tableviewcells */,
 				C684EAF72A8BFFB900EDDDB7 /* Images.xcassets */,
 				5BB558ED2B1BD7F700CB40D2 /* About */,
@@ -542,6 +547,23 @@
 				5BEBC1CC2B1CE4EB000B39CE /* CAHistoryTextViewController.m */,
 			);
 			path = Textview;
+			sourceTree = "<group>";
+		};
+		5BF4B8D22B60397A00094E46 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				5BF4B8D32B60397A00094E46 /* Titlebar */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		5BF4B8D32B60397A00094E46 /* Titlebar */ = {
+			isa = PBXGroup;
+			children = (
+				5BF4B8D42B60397A00094E46 /* TbarBG.png */,
+				5BF4B8D52B60397A00094E46 /* TbarBG@2x.png */,
+			);
+			path = Titlebar;
 			sourceTree = "<group>";
 		};
 		C62AEF532A898C8B00DD8D5A = {
@@ -740,6 +762,7 @@
 				5B29A2EC2B236EDF00E91E18 /* Share.png in Resources */,
 				5BE68FAB2B5FDF9D000F1EC4 /* typingSomeone@2x.png in Resources */,
 				5B29A2EF2B2371B400E91E18 /* Clear.png in Resources */,
+				5BF4B8D72B60397A00094E46 /* TbarBG@2x.png in Resources */,
 				5BB558FA2B1BD7F700CB40D2 /* bag-xml.png in Resources */,
 				5BB558FB2B1BD7F700CB40D2 /* openai.png in Resources */,
 				5BE68FA92B5FDF9D000F1EC4 /* typingMine@2x.png in Resources */,
@@ -756,6 +779,7 @@
 				5BE68FA32B5FDF9D000F1EC4 /* bubbleMine@2x.png in Resources */,
 				5B29A2F02B2371B400E91E18 /* mail.png in Resources */,
 				5B077DFA2B1A037D00F8D4E9 /* iPad.storyboard in Resources */,
+				5BF4B8D62B60397A00094E46 /* TbarBG.png in Resources */,
 				5BE68FA72B5FDF9D000F1EC4 /* missingAvatar@2x.png in Resources */,
 				5BB559022B1BD7F700CB40D2 /* Send.png in Resources */,
 			);

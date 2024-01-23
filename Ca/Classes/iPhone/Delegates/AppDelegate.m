@@ -65,7 +65,7 @@
     [defaults synchronize];
     
     if (iOSVersion < 7.0) {
-        
+        //[UINavigationBar.appearance setBackgroundImage:[UIImage imageNamed:@"TbarBG"] forBarMetrics:UIBarMetricsDefault];
     } else {
         
     }
