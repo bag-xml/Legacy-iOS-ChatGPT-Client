@@ -92,7 +92,7 @@
     
     if (apiKey.length == 0) {
         NSString *errorMessage = @"You have no API key set, please go to the settings page to set one, or refer to the guide on how to create a valid one + set it";
-        [self showAlertWithTitle:@"Error" message:errorMessage];
+        [self showAlertWithTitle:@"API Key Error" message:errorMessage];
         return;
     }
     
@@ -251,6 +251,7 @@
 
 //and... off it goes!
 - (IBAction)sendButtonTapped:(id)sender {
+            [self.inputField resignFirstResponder];
     [self performRequest];
     
     if(![self.inputField.text isEqual: @""]){
