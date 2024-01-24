@@ -70,7 +70,7 @@
             self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Remove history"];
             
             [self.chatTableView addSubview:self.refreshControl];
-        
+            
             self.refreshControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
     } else {
         
@@ -90,6 +90,11 @@
     [alertView show];
 }
 
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
     NSString *modelType = [[NSUserDefaults standardUserDefaults] objectForKey:@"AIModel"];
@@ -100,7 +105,8 @@
     NSString *conversationHistory = [[NSUserDefaults standardUserDefaults] objectForKey:@"conversationHistory"];
     
     if (apiKey.length == 0) {
-        [self YourKeyProbablyExpired];
+        NSString *errorMessage = @"You have no API key set, please go to the settings page to set one, or refer to the guide on how to create a valid one + set it";
+        [self showAlertWithTitle:@"Error" message:errorMessage];
         return;
     }
     
@@ -167,6 +173,14 @@
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
     NSLog(@"Response received");
     
+    NSDictionary *errorInfo = [responseDictionary objectForKey:@"error"];
+    if (errorInfo) {
+        NSString *errorMessage = [errorInfo objectForKey:@"message"];
+        [self showAlertWithTitle:@"Error" message:errorMessage];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        return;
+    }
+
     NSArray *choices = [responseDictionary objectForKey:@"choices"];
     NSString *assistantNick = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
     
