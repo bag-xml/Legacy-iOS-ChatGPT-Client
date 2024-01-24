@@ -36,9 +36,8 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
-- (void)viewDidDisappear {
+- (void)viewDidDisappear:(BOOL)animated {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-    
 }
 
 @end

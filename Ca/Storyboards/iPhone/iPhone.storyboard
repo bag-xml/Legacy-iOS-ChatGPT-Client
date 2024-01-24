@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F1911" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="MTR-v3-Ofb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="MTR-v3-Ofb">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -301,146 +301,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkV-Sc-dzV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2341" y="753"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="5YH-Ui-ZLd">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="pdZ-9K-PwU" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aWA-Wf-d9u">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8xZ-Zc-bbe">
-                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.45490196078431372" green="0.66666666666666663" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="Bt3-Jm-zrN" kind="relationship" relationship="rootViewController" id="CO5-mC-Fwd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ACh-Xn-3ou" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-662" y="-1233"/>
-        </scene>
-        <!--Table View Controller - ChatGPT-->
-        <scene sceneID="mcu-eo-6af">
-            <objects>
-                <tableViewController id="Bt3-Jm-zrN" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="cUb-oE-bx1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.84705882352941175" green="0.85882352941176465" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                        <sections>
-                            <tableViewSection headerTitle="Home" footerTitle="They are saved until you terminate the app." id="sSZ-Oi-RW1">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="josdv" textLabel="zRC-lF-ARp" imageView="iVw-NE-Bso" rowHeight="58" style="IBUITableViewCellStyleDefault" id="7tS-VC-z0q">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7tS-VC-z0q" id="gDI-gT-IUm">
-                                            <rect key="frame" x="10" y="1" width="280" height="57"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Begin your conversation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zRC-lF-ARp">
-                                                    <rect key="frame" x="67" y="0.0" width="203" height="57"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="NewChat.png" id="iVw-NE-Bso">
-                                                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Conversations" footerTitle="Conversation auto-save. You can have infinite conversations saved, and delete them with a click of a button." id="ym0-iN-juh">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="8cB-qy-God" imageView="Vhm-Qg-Svs" style="IBUITableViewCellStyleDefault" id="ZpS-Qa-iwR">
-                                        <rect key="frame" x="0.0" y="200" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZpS-Qa-iwR" id="sQ0-tL-AfP">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8cB-qy-God">
-                                                    <rect key="frame" x="53" y="0.0" width="217" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="History.png" id="Vhm-Qg-Svs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Need help?" footerTitle="I strongly urge to check this, there is information on all things in there. And for when you need help what measures to take." id="i1e-Lv-Iyr">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="f0o-Dt-xFt" imageView="aHA-cU-Q69" style="IBUITableViewCellStyleDefault" id="tyP-vJ-uVG">
-                                        <rect key="frame" x="0.0" y="358" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tyP-vJ-uVG" id="oEO-vL-UBI">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Check the guide!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f0o-Dt-xFt">
-                                                    <rect key="frame" x="53" y="0.0" width="217" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="GuideCellResource.png" id="aHA-cU-Q69">
-                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="" footerTitle="Stay up-to-date about the app's newest updates. There is more to come in the future." id="XVH-va-LM6">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="w8y-Qe-YbU" style="IBUITableViewCellStyleDefault" id="caj-vL-6Zs">
-                                        <rect key="frame" x="0.0" y="508" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="caj-vL-6Zs" id="Juv-0d-wTI">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Always stay Up-To-Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w8y-Qe-YbU">
-                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Bt3-Jm-zrN" id="2Wx-ER-Nm6"/>
-                            <outlet property="delegate" destination="Bt3-Jm-zrN" id="iyG-ab-jxf"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="ChatGPT" id="FyM-4a-aJh">
-                        <barButtonItem key="rightBarButtonItem" image="preferences.png" id="xUy-rp-T5c"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I96-O6-93D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="14" y="-1199"/>
+            <point key="canvasLocation" x="-2643" y="-79"/>
         </scene>
         <!--Base About Page - About-->
         <scene sceneID="VHb-Vc-Mgk">
@@ -1301,7 +1162,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GIq-8w-gRn" customClass="UIBubbleTableView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.93321572580645151" green="0.93548318614130432" blue="0.93548318614130432" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.93321572580000001" green="0.93548318610000003" blue="0.93548318610000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93321572580000001" green="0.93548318610000003" blue="0.93548318610000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1355,7 +1216,7 @@
                                 <color key="tintColor" red="0.40000000000000002" green="0.58431372549019611" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="0.93548318614130432" green="0.93548318614130432" blue="0.93548318614130432" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93321572580000001" green="0.93548318610000003" blue="0.93548318610000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="tVe-tN-qfE">
                         <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="Tb0-VY-0Gr">
@@ -1513,7 +1374,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="Welcome to the redesign of the ChatGPT app. The application has radically changed." id="5T5-bv-HLO">
+                            <tableViewSection footerTitle="Welcome to ChatGPT, the best and most powerful AI anywhere you go!" id="5T5-bv-HLO">
                                 <cells/>
                             </tableViewSection>
                         </sections>
@@ -1572,7 +1433,6 @@
         <image name="Discord.png" width="228" height="333"/>
         <image name="Done.png" width="232" height="193"/>
         <image name="GuideCellResource.png" width="160" height="160"/>
-        <image name="History.png" width="160" height="160"/>
         <image name="Key_Large.png" width="128" height="128"/>
         <image name="Naming.png" width="228" height="316"/>
         <image name="NarrowPrefHelper.png" width="520" height="197"/>

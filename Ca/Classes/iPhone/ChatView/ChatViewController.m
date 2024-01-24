@@ -23,8 +23,6 @@
 
 @implementation ChatViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
@@ -65,11 +63,12 @@
     [[self.insetShadow layer] setShadowRadius:4.0];
     
     //dishery
+
     if (iOSVersion < 6.0) {
         NSString *errorMessage = @"Just a quick warning by me, this app may show unintended behaviors on iOS 5.x.x. If you wish to disregard this, just press 'Okay' and go on with your day.";
         [self showAlertWithTitle:@"Woah there buddy" message:errorMessage];
-    } else {
-        
+    } else if(iOSVersion > 7.0) {
+        self.chatTableView.backgroundColor = [UIColor whiteColor];
     }
 
 }
