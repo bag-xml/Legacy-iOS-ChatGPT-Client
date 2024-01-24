@@ -15,11 +15,9 @@
 #import "UIBubbleTableView.h"
 #import "NSBubbleData.h"
 #import "TRMalleableFrameView.h"
+#import "APLSlideMenuViewController.h"
 
-@interface ChatViewController () <UITextViewDelegate, NSURLConnectionDelegate>
-
-@property (nonatomic, strong) NSMutableData *responseData;
-@property (nonatomic, assign) BOOL isKeyboardVisible;
+@interface ChatViewController () <UIBubbleTableViewDelegate, UIBubbleTableViewDataSource, NSURLConnectionDelegate>
 
 @end
 
@@ -29,6 +27,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
+    CGFloat iOSVersion = [systemVersion floatValue];
+    
+    self.slideMenuController.bouncing = YES;
+    self.slideMenuController.gestureSupport = APLSlideMenuGestureSupportDrag;
+    self.slideMenuController.separatorColor = [UIColor grayColor];
+    
+    self.chatTableView.showAvatars = YES;
+    self.chatTableView.watchingInRealTime = YES;
+    self.chatTableView.snapInterval = 2800;
+    self.chatTableView.bubbleDataSource = self;
+    self.bubbleDataArray = [NSMutableArray array];
+    [self.chatTableView reloadData];
     
     self.isKeyboardVisible = NO;
     
@@ -36,15 +47,14 @@
     
     self.responseData = [[NSMutableData alloc] init];
     
+    
+    //the bottom
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 	
 	[NSNotificationCenter.defaultCenter addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
     
     [self.inputField setDelegate:self];
-    
-    //self.inputFieldPlaceholder.text = [NSString stringWithFormat:@"Topic: %@", self.navigationItem.title];
     self.inputFieldPlaceholder.hidden = YES;
-    
     [[self.insetShadow layer] setMasksToBounds:YES];
     [[self.insetShadow layer] setCornerRadius:16.0f];
     [[self.insetShadow layer] setBorderColor:[UIColor whiteColor].CGColor];
@@ -53,44 +63,23 @@
     [[self.insetShadow layer] setShadowOffset:CGSizeMake(0, 0)];
     [[self.insetShadow layer] setShadowOpacity:1];
     [[self.insetShadow layer] setShadowRadius:4.0];
+    
+    //dishery
+    if (iOSVersion < 6.0) {
+        NSString *errorMessage = @"Just a quick warning by me, this app may show unintended behaviors on iOS 5.x.x. If you wish to disregard this, just press 'Okay' and go on with your day.";
+        [self showAlertWithTitle:@"Woah there buddy" message:errorMessage];
+    } else {
+        
+    }
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self tryToWriteHistoryOhMyGod:self.chatTextView.text];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
 }
-//this saves chat cotnents to txt file
-- (void)tryToWriteHistoryOhMyGod:(NSString *)conversation {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSInteger lastConversationNumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"lastConversationNumber"];
-    lastConversationNumber++;
-    
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filename = [NSString stringWithFormat:@"%ld.txt", (long)lastConversationNumber];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:filename];
-    
-    //fuck this shit i hate this
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:documentsDirectory]) {
-        [fileManager createDirectoryAtPath:documentsDirectory withIntermediateDirectories:YES attributes:nil error:nil];
-    }
-    if (![fileManager fileExistsAtPath:filePath]) {
-        [fileManager createFileAtPath:filePath contents:nil attributes:nil];
-    }
-    
-    [[NSUserDefaults standardUserDefaults] setInteger:lastConversationNumber forKey:@"lastConversationNumber"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [conversation writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-}
 
-- (void)YourKeyProbablyExpired {
-    NSString *errorMessage = @"Your API key is missing, please specify it in the settings page. If the AI doesn't respond to your key despite you having a solid internet connection, your key may've expired.";
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-    [alertView show];
-}
 
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
@@ -99,30 +88,15 @@
     NSString *apiEndpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiEndpoint"];
     NSString *apiKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"apiKey"];
     NSString *userNickname = [[NSUserDefaults standardUserDefaults] objectForKey:@"userNick"];
-    //NSString *userAgent = [[NSUserDefaults standardUserDefaults] objectForKey:@"User-Agent"]; //soon
     NSString *conversationHistory = [[NSUserDefaults standardUserDefaults] objectForKey:@"conversationHistory"];
     
     if (apiKey.length == 0) {
-        [self YourKeyProbablyExpired];
+        NSString *errorMessage = @"You have no API key set, please go to the settings page to set one, or refer to the guide on how to create a valid one + set it";
+        [self showAlertWithTitle:@"API Key Error" message:errorMessage];
         return;
     }
     
     if (message.length > 0) {
-        NSString *previousChat = self.chatTextView.text;
-        NSString *separator = @"\n\n";
-        
-        if (previousChat.length > 0) {
-            NSString *lastCharacter = [previousChat substringFromIndex:previousChat.length - 1];
-            
-            if (![lastCharacter isEqualToString:@"\n"]) {
-                self.chatTextView.text = [NSString stringWithFormat:@"%@%@%@: %@", previousChat, separator, userNickname, message];
-            } else {
-                self.chatTextView.text = [NSString stringWithFormat:@"%@%@: %@", previousChat, userNickname, message];
-            }
-        } else {
-            self.chatTextView.text = [NSString stringWithFormat:@"%@: %@", userNickname, message];
-        }
-        
         self.inputField.text = @"";
         
         
@@ -130,9 +104,7 @@
         
         NSURL *url = [NSURL URLWithString:apiEndpoint];
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-
         // HTTP Request headers
-        //[request setValue:[NSString stringWithFormat:@"%@", userAgent] forHTTPHeaderField:@"User-Agent"];
         [request setHTTPMethod:@"POST"];
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [request setValue:[NSString stringWithFormat:@"Bearer %@", apiKey] forHTTPHeaderField:@"Authorization"];
@@ -159,16 +131,28 @@
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:bodyData options:0 error:nil];
         [request setHTTPBody:jsonData];
         
+        NSBubbleData *userBubbleData = [NSBubbleData dataWithText:[gptprompt stringByAppendingString:message] date:[NSDate date] type:BubbleTypeMine];
+        
+        [self.bubbleDataArray addObject:userBubbleData];
+        [self.chatTableView reloadData];
+        
         NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
         [connection start];
     }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    
     NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:self.responseData options:0 error:nil];
     NSLog(@"Response received");
     
+    NSDictionary *errorInfo = [responseDictionary objectForKey:@"error"];
+    if (errorInfo) {
+        NSString *errorMessage = [errorInfo objectForKey:@"message"];
+        [self showAlertWithTitle:@"Error" message:errorMessage];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        return;
+    }
+
     NSArray *choices = [responseDictionary objectForKey:@"choices"];
     NSString *assistantNick = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
     
@@ -179,27 +163,19 @@
         
         if (contentObject && ![contentObject isKindOfClass:[NSNull class]]) {
             NSString *assistantReply = [NSString stringWithFormat:@"%@", contentObject];
-            NSString *separator = @"\n\n";
-            NSString *updatedConversation;
-            
-            if (self.chatTextView.text.length > 0) {
-                NSString *lastCharacter = [self.chatTextView.text substringFromIndex:self.chatTextView.text.length - 1];
+            NSString *previousConversationHistory = [[NSUserDefaults standardUserDefaults] objectForKey:@"conversationHistory"];
+            if (![assistantReply isEqualToString:previousConversationHistory]) {
+                NSBubbleData *assistantBubbleData = [NSBubbleData dataWithText:assistantReply date:[NSDate date] type:BubbleTypeSomeoneElse];
+                assistantBubbleData.avatar = [UIImage imageNamed:@"assistant.png"];
+                [self.bubbleDataArray addObject:assistantBubbleData];
                 
-                if (![lastCharacter isEqualToString:@"\n"]) {
-                    updatedConversation = [NSString stringWithFormat:@"%@%@%@: %@", self.chatTextView.text, separator, assistantNick, assistantReply];
-                } else {
-                    updatedConversation = [NSString stringWithFormat:@"%@%@: %@", self.chatTextView.text, assistantNick, assistantReply];
-                }
-            } else {
-                updatedConversation = [NSString stringWithFormat:@"%@: %@", assistantNick, assistantReply];
+                [[NSUserDefaults standardUserDefaults] setObject:assistantReply forKey:@"conversationHistory"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                [self.chatTableView reloadData];
+                
+                [self.chatTableView scrollBubbleViewToBottomAnimated:YES];
             }
-            
-            [[NSUserDefaults standardUserDefaults] setObject:assistantReply forKey:@"conversationHistory"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            
-            self.chatTextView.text = updatedConversation;
-            NSRange bottomRange = NSMakeRange(self.chatTextView.text.length, 1);
-            [self.chatTextView scrollRangeToVisible:bottomRange];
         }
     }
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
@@ -229,13 +205,13 @@
 	[UIView setAnimationDuration:keyboardAnimationDuration];
 	[UIView setAnimationCurve:keyboardAnimationCurve];
 	[UIView setAnimationBeginsFromCurrentState:YES];
-	[self.chatTextView setHeight:self.view.height - keyboardHeight - self.toolbar.height];
+	[self.chatTableView setHeight:self.view.height - keyboardHeight - self.toolbar.height];
 	[self.toolbar setY:self.view.height - keyboardHeight - self.toolbar.height];
 	[UIView commitAnimations];
 	
 	
 	if(self.viewingPresentTime)
-		[self.chatTextView setContentOffset:CGPointMake(0, self.chatTextView.contentSize.height - self.chatTextView.frame.size.height) animated:NO];
+		[self.chatTableView setContentOffset:CGPointMake(0, self.chatTableView.contentSize.height - self.chatTableView.frame.size.height) animated:NO];
 }
 
 
@@ -248,7 +224,7 @@
 	[UIView setAnimationDuration:keyboardAnimationDuration];
 	[UIView setAnimationCurve:keyboardAnimationCurve];
 	[UIView setAnimationBeginsFromCurrentState:YES];
-	[self.chatTextView setHeight:self.view.height - self.toolbar.height];
+	[self.chatTableView setHeight:self.view.height - self.toolbar.height];
 	[self.toolbar setY:self.view.height - self.toolbar.height];
 	[UIView commitAnimations];
 }
@@ -258,66 +234,78 @@
 
 #pragma mark uibubbletableview data source
 
--(NSInteger)rowsForBubbleTable:(UIBubbleTableView *)tableView{
+- (NSInteger)rowsForBubbleTable:(UIBubbleTableView *)tableView {
+    return [self.bubbleDataArray count];
 }
 
-
--(NSBubbleData *)bubbleTableView:(UIBubbleTableView *)tableView dataForRow:(NSInteger)row{
-    NSBubbleData *bubbleData;
-    return bubbleData;
+- (NSBubbleData *)bubbleTableView:(UIBubbleTableView *)tableView dataForRow:(NSInteger)row {
+    return [self.bubbleDataArray objectAtIndex:row];
 }
+//end of bubbles :(
 
-//button actions
-
-- (BOOL)textViewShouldReturn:(UITextView *)textView {
-    [textView resignFirstResponder]; // make th keyboard go down when pressed return
+//misc
+- (BOOL)textViewShouldReturn:(UITextView *)chatTableView {
+    [chatTableView resignFirstResponder]; // make th keyboard go down when pressed return
     return YES;
 }
 
-//this sends the inputted contents of inputTextView (just check void(sendMessageTChatGPTAPI) to see what it exactly does.
+//and... off it goes!
 - (IBAction)sendButtonTapped:(id)sender {
+            [self.inputField resignFirstResponder];
     [self performRequest];
     
     if(![self.inputField.text isEqual: @""]){
         
 		[self.inputField setText:@""];
         self.inputFieldPlaceholder.hidden = NO;
-	}else
-		[self.inputField resignFirstResponder];
+	} else
 	
 	if(self.viewingPresentTime)
-		[self.chatTextView setContentOffset:CGPointMake(0, self.chatTextView.contentSize.height - self.chatTextView.frame.size.height) animated:YES];
+		[self.chatTableView setContentOffset:CGPointMake(0, self.chatTableView.contentSize.height - self.chatTableView.frame.size.height) animated:YES];
 }
 
 
-//ok
+//this is for actionsheets and alerts
 - (IBAction)exportButtonTapped:(id)sender {
-    NSString *textContent = self.chatTextView.text;
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"sharedConversation.txt"];
-    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-    
-    NSError *error = nil;
-    [textContent writeToURL:fileURL atomically:YES encoding:NSUTF8StringEncoding error:&error];
-    
-    
-    //open activityviewcontroller
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[fileURL] applicationActivities:nil];
-    [self presentViewController:activityViewController animated:YES completion:nil];
-}
-//mail
-
--(IBAction)killYourSelf:(id)sender {
+    UIActionSheet *messageActionSheet = [[UIActionSheet alloc] initWithTitle:@"What do you want to do" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Clear conversation" otherButtonTitles:nil];
+    [messageActionSheet setTag:1];
+    [messageActionSheet setDelegate:self];
+    [messageActionSheet showInView:self.view];
     
 }
 
-- (NSString *)getCurrentTimestamp {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyyMMdd_HHmmss"];
-    NSString *timestamp = [formatter stringFromDate:[NSDate date]];
-    return timestamp;
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (actionSheet.tag == 1) {
+        if (buttonIndex == actionSheet.destructiveButtonIndex) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Clear Conversation" message:@"Are you sure you want to clear the entire conversation?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Clear", nil];
+            [alertView show];
+        }
+    }
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == alertView.firstOtherButtonIndex) {
+        [self removeEverything];
+    }
+}
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
+- (void)removeEverything {
+    [self.bubbleDataArray removeAllObjects];
+    [self.chatTableView reloadData];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"conversationHistory"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.chatTableView scrollBubbleViewToBottomAnimated:YES];
+}
+//actionsheet + alert end
+
+
+
+- (IBAction)glorious:(id)sender {
+    [self.slideMenuController showLeftMenu:YES];
 }
 
 @end

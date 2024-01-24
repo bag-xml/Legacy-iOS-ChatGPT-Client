@@ -18,6 +18,9 @@
     NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
     CGFloat iOSVersion = [systemVersion floatValue];
     
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"conversationHistory"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     //all default presets.
     NSString *defaultApiEndpoint = @"https://api.openai.com/v1/chat/completions";
     NSString *defaultAIModel = @"gpt-3.5-turbo";
@@ -61,14 +64,7 @@
     if (![defaults objectForKey:@"responseAmount"]) {
         [defaults setObject:responseAmount forKey:@"responseAmount"];
     }
-    
     [defaults synchronize];
-    
-    if (iOSVersion < 7.0) {
-        //[UINavigationBar.appearance setBackgroundImage:[UIImage imageNamed:@"TbarBG"] forBarMetrics:UIBarMetricsDefault];
-    } else {
-        
-    }
     
     return YES;
 }
