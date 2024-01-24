@@ -65,13 +65,9 @@
     [[self.insetShadow layer] setShadowRadius:4.0];
     
     //dishery
-    if (iOSVersion > 6.0) {
-            self.refreshControl = UIRefreshControl.new;
-            self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Remove history"];
-            
-            [self.chatTableView addSubview:self.refreshControl];
-            
-            self.refreshControl.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+    if (iOSVersion < 6.0) {
+        NSString *errorMessage = @"Just a quick warning by me, this app may show unintended behaviors on iOS 5.x.x. If you wish to disregard this, just press 'Okay' and go on with your day.";
+        [self showAlertWithTitle:@"Woah there buddy" message:errorMessage];
     } else {
         
     }
@@ -83,17 +79,7 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
 }
-- (void)YourKeyProbablyExpired {
-    NSString *errorMessage = @"Your API key is missing, please specify it in the settings page. If the AI doesn't respond to your key despite you having a solid internet connection, your key may've expired.";
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
-    [alertView show];
-}
 
-- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alertView show];
-}
 
 - (void)performRequest {
     NSString *gptprompt = [[NSUserDefaults standardUserDefaults] objectForKey:@"gptPrompt"];
@@ -111,20 +97,6 @@
     }
     
     if (message.length > 0) {
-        NSString *previousChat = self.chatTextView.text;
-        NSString *separator = @"\n\n";
-        
-        if (previousChat.length > 0) {
-            NSString *lastCharacter = [previousChat substringFromIndex:previousChat.length - 1];
-            
-            if (![lastCharacter isEqualToString:@"\n"]) {
-                self.chatTextView.text = [NSString stringWithFormat:@"%@%@%@: %@", previousChat, separator, userNickname, message];
-            } else {
-                self.chatTextView.text = [NSString stringWithFormat:@"%@%@: %@", previousChat, userNickname, message];
-            }
-        } else {
-            self.chatTextView.text = [NSString stringWithFormat:@"%@: %@", userNickname, message];
-        }
         self.inputField.text = @"";
         
         
@@ -285,15 +257,14 @@
         
 		[self.inputField setText:@""];
         self.inputFieldPlaceholder.hidden = NO;
-	}else
-		[self.inputField resignFirstResponder];
+	} else
 	
 	if(self.viewingPresentTime)
 		[self.chatTableView setContentOffset:CGPointMake(0, self.chatTableView.contentSize.height - self.chatTableView.frame.size.height) animated:YES];
 }
 
 
-//ok
+//this is for actionsheets and alerts
 - (IBAction)exportButtonTapped:(id)sender {
     UIActionSheet *messageActionSheet = [[UIActionSheet alloc] initWithTitle:@"What do you want to do" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Clear conversation" otherButtonTitles:nil];
     [messageActionSheet setTag:1];
@@ -316,6 +287,11 @@
     }
 }
 
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+}
+
 - (void)removeEverything {
     [self.bubbleDataArray removeAllObjects];
     [self.chatTableView reloadData];
@@ -323,7 +299,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self.chatTableView scrollBubbleViewToBottomAnimated:YES];
 }
-
+//actionsheet + alert end
 
 
 
