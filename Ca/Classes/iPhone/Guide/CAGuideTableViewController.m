@@ -1,21 +1,32 @@
 //
-//  BaseAboutPage.m
+//  CAGuideTableViewController.m
 //  ChatGPT
 //
-//  Created by Mali 357 on 30/09/23.
-//  Copyright (c) 2023 bag.xml. All rights reserved.
+//  Created by bag.xml on 24/01/24.
+//  Copyright (c) 2024 electron. All rights reserved.
 //
 
-#import "BaseAboutPage.h"
+#import "CAGuideTableViewController.h"
 
-@interface BaseAboutPage ()
-
+@interface CAGuideTableViewController ()
 
 @end
 
-@implementation BaseAboutPage
+@implementation CAGuideTableViewController
 
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     header.textLabel.textColor = [UIColor colorWithRed:116.0/255.0 green:116.0/255.0 blue:116.0/255.0 alpha:1.0];
@@ -27,5 +38,6 @@
     footer.textLabel.textColor = [UIColor colorWithRed:116.0/255.0 green:116.0/255.0 blue:116.0/255.0 alpha:1.0];
     footer.textLabel.shadowOffset = CGSizeMake(0, 0);
 }
+
 
 @end

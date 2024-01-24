@@ -21,5 +21,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *inputFieldPlaceholder;
 @property (weak, nonatomic) IBOutlet UIImageView *insetShadow;
 
+@property (nonatomic, strong) NSMutableData *responseData;
+@property (nonatomic, assign) BOOL isKeyboardVisible;
+@property (nonatomic, strong) NSMutableArray *bubbleDataArray;
+
+@property UIRefreshControl *refreshControl;
+
 @property bool viewingPresentTime;
 @end
