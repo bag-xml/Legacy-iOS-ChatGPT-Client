@@ -55,21 +55,22 @@
     
     [self.inputField setDelegate:self];
     self.inputFieldPlaceholder.hidden = YES;
-    [[self.insetShadow layer] setMasksToBounds:YES];
-    [[self.insetShadow layer] setCornerRadius:16.0f];
-    [[self.insetShadow layer] setBorderColor:[UIColor whiteColor].CGColor];
-    [[self.insetShadow layer] setBorderWidth:1.0f];
-    [[self.insetShadow layer] setShadowColor:[UIColor blackColor].CGColor];
-    [[self.insetShadow layer] setShadowOffset:CGSizeMake(0, 0)];
-    [[self.insetShadow layer] setShadowOpacity:1];
-    [[self.insetShadow layer] setShadowRadius:4.0];
     
     //dishery
     if (iOSVersion < 6.0) {
-        NSString *errorMessage = @"Just a quick warning by me, this app may show unintended behaviors on iOS 5.x.x. If you wish to disregard this, just press 'Okay' and go on with your day.";
-        [self showAlertWithTitle:@"Woah there buddy" message:errorMessage];
-    } else {
-        
+        NSString *errorMessage = @"This app may show unintended behaviors on iOS 5.x.x. I may recommend installing the ISRG Root X1 Certificate. If you wish to disregard this, just press 'Okay'.";
+        [self showAlertWithTitle:@"Warning" message:errorMessage];
+    } else if (iOSVersion < 7.0) {
+        [[self.insetShadow layer] setMasksToBounds:YES];
+        [[self.insetShadow layer] setCornerRadius:16.0f];
+        [[self.insetShadow layer] setBorderColor:[UIColor whiteColor].CGColor];
+        [[self.insetShadow layer] setBorderWidth:0.5f];
+        [[self.insetShadow layer] setShadowColor:[UIColor blackColor].CGColor];
+        [[self.insetShadow layer] setShadowOffset:CGSizeMake(0, 0)];
+        [[self.insetShadow layer] setShadowOpacity:1];
+        [[self.insetShadow layer] setShadowRadius:2.0];
+    } else if(iOSVersion > 7.0) {
+        //self.
     }
 
 }
@@ -238,16 +239,13 @@
     return [self.bubbleDataArray count];
 }
 
+- (void)bubbleTableView:(UIBubbleTableView *)bubbleTableView didSelectRow:(int)row  {
+    
+}
 - (NSBubbleData *)bubbleTableView:(UIBubbleTableView *)tableView dataForRow:(NSInteger)row {
     return [self.bubbleDataArray objectAtIndex:row];
 }
 //end of bubbles :(
-
-//misc
-- (BOOL)textViewShouldReturn:(UITextView *)chatTableView {
-    [chatTableView resignFirstResponder]; // make th keyboard go down when pressed return
-    return YES;
-}
 
 //and... off it goes!
 - (IBAction)sendButtonTapped:(id)sender {

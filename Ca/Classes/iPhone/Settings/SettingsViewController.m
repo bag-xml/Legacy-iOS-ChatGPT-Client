@@ -37,6 +37,7 @@
     if (AIModel) {
         self.AIModelInput.text = AIModel;
     }
+    /*
     NSString *aiNickName = [[NSUserDefaults standardUserDefaults] objectForKey:@"assistantNick"];
     if (aiNickName) {
         self.aiNickName.text = aiNickName;
@@ -45,6 +46,7 @@
     if (userNickName) {
         self.userNickName.text = userNickName;
     }
+    */
 }
 
 
@@ -70,8 +72,10 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [NSUserDefaults.standardUserDefaults setObject:self.apiKeyInput.text forKey:@"apiKey"];
     [NSUserDefaults.standardUserDefaults setObject:self.gptPromptInput.text forKey:@"gptPrompt"];
+    /*
     [NSUserDefaults.standardUserDefaults setObject:self.userNickName.text forKey:@"userNick"];
     [NSUserDefaults.standardUserDefaults setObject:self.aiNickName.text forKey:@"assistantNick"];
+     */
     [NSUserDefaults.standardUserDefaults setObject:self.AIModelInput.text forKey:@"AIModel"];
     [NSUserDefaults.standardUserDefaults setObject:self.endpointSubmitInput.text forKey:@"apiEndpoint"];
 }

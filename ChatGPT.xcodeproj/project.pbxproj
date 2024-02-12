@@ -59,6 +59,8 @@
 		5BC0FC1A2B614520005A596D /* NarrowPrefHelper.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0FC192B614520005A596D /* NarrowPrefHelper.png */; };
 		5BC0FC1E2B6147C2005A596D /* CAGuideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BC0FC1D2B6147C2005A596D /* CAGuideTableViewController.m */; };
 		5BC0FC202B614988005A596D /* slimguide.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC0FC1F2B614988005A596D /* slimguide.png */; };
+		5BD77CF82B670C5F0004D245 /* sidebarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD77CF72B670C5F0004D245 /* sidebarbg.png */; };
+		5BD77CFA2B670F9E0004D245 /* sidebarcell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BD77CF92B670F9E0004D245 /* sidebarcell@2x.png */; };
 		5BE4580D2B1CACE000885BD5 /* History.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580B2B1CACE000885BD5 /* History.png */; };
 		5BE4580E2B1CACE000885BD5 /* NewChat.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4580C2B1CACE000885BD5 /* NewChat.png */; };
 		5BE68FA62B5FDF9D000F1EC4 /* missingAvatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE68F902B5FDF9D000F1EC4 /* missingAvatar.png */; };
@@ -173,6 +175,8 @@
 		5BC0FC1C2B6147C2005A596D /* CAGuideTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAGuideTableViewController.h; sourceTree = "<group>"; };
 		5BC0FC1D2B6147C2005A596D /* CAGuideTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAGuideTableViewController.m; sourceTree = "<group>"; };
 		5BC0FC1F2B614988005A596D /* slimguide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slimguide.png; sourceTree = "<group>"; };
+		5BD77CF72B670C5F0004D245 /* sidebarbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidebarbg.png; sourceTree = "<group>"; };
+		5BD77CF92B670F9E0004D245 /* sidebarcell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sidebarcell@2x.png"; sourceTree = "<group>"; };
 		5BE4580B2B1CACE000885BD5 /* History.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = History.png; sourceTree = "<group>"; };
 		5BE4580C2B1CACE000885BD5 /* NewChat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewChat.png; sourceTree = "<group>"; };
 		5BE68F902B5FDF9D000F1EC4 /* missingAvatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = missingAvatar.png; sourceTree = "<group>"; };
@@ -438,6 +442,8 @@
 		5B4C47CF2B1C732200D717C2 /* Tableviewcells */ = {
 			isa = PBXGroup;
 			children = (
+				5BD77CF92B670F9E0004D245 /* sidebarcell@2x.png */,
+				5BD77CF72B670C5F0004D245 /* sidebarbg.png */,
 				5BE4580B2B1CACE000885BD5 /* History.png */,
 				5BE4580C2B1CACE000885BD5 /* NewChat.png */,
 				5B4C47D42B1C748D00D717C2 /* Bag-XMLCellResource.png */,
@@ -806,6 +812,7 @@
 				5B4C47D32B1C732300D717C2 /* GuideCellResource.png in Resources */,
 				5B3495F42B60788100B11990 /* assistant@2x.png in Resources */,
 				5B4C47D52B1C748D00D717C2 /* Bag-XMLCellResource.png in Resources */,
+				5BD77CFA2B670F9E0004D245 /* sidebarcell@2x.png in Resources */,
 				5B29A2EC2B236EDF00E91E18 /* Share.png in Resources */,
 				5BE68FAB2B5FDF9D000F1EC4 /* typingSomeone@2x.png in Resources */,
 				5B29A2EF2B2371B400E91E18 /* Clear.png in Resources */,
@@ -817,6 +824,7 @@
 				5BB558FF2B1BD7F700CB40D2 /* Steve_Jobs.png in Resources */,
 				5BC0FC1A2B614520005A596D /* NarrowPrefHelper.png in Resources */,
 				5BE68FA82B5FDF9D000F1EC4 /* typingMine.png in Resources */,
+				5BD77CF82B670C5F0004D245 /* sidebarbg.png in Resources */,
 				5BFA51492B1D1AD80002873D /* guide.png in Resources */,
 				5B4C47D22B1C732300D717C2 /* AboutCellResource.png in Resources */,
 				5BE68FA62B5FDF9D000F1EC4 /* missingAvatar.png in Resources */,
@@ -969,7 +977,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -994,6 +1002,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos7.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
